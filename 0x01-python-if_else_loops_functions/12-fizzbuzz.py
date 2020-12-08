@@ -12,4 +12,4 @@ def fizzbuzz():
         else:
             print("{:d} ".format(count), end='')
         count += 1
-    print("Buzz", end='')
+    print("Buzz ", end='')
