@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def islower(c):
-    if (c >= 'a') and (c <= 'z'):
+    codeUnicode = ord(c)
+    if (codeUnicode >= 97) and (codeUnicode <= 122):
         return True
     else:
         return False
