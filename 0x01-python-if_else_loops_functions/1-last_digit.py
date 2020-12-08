@@ -8,6 +8,6 @@ if lastN > 5:
 elif lastN == 0:
     print("Last digit of {:d} is {:d} and is ".format(number, lastN))
 else:
-    print("Last digit of {:d} is {:d} is less than 6 and not ".format(
+    print("Last digit of {:d} is {:d} is less than 6 and not 0".format(
                                                                     number,
                                                                     lastN))
