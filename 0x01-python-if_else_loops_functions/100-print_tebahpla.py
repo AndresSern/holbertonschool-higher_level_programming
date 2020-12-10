@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-letter = 122
-while letter >= 65:
-    print("{:c}".format(letter), end='')
-    letter -= 1
+for i in range(122, 96, -1):
+    print("{:s}".format(chr(i) if i % 2 == 0 else chr(i - 32)), end="")
