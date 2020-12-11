@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
 
-    from calculator_1 import add, sub, mul,div
+    from calculator_1 import add, sub, mul, div
     from sys import argv
     numb1 = int(argv[1])
     numb2 = int(argv[3])
@@ -13,3 +13,9 @@ if __name__ == "__main__":
         exit(1)
     elif argv[2] is "+":
         print(add(numb1, numb2))
+    elif argv[2] is "-":
+        print(sub(numb1, numb2))
+    elif argv[2] is "*":
+        print(mul(numb1, numb2))
+    elif argv[2] is "/":
+        print(div(numb1, numb2))
