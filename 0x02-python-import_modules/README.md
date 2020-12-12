@@ -223,7 +223,7 @@ guillaume@ubuntu:~/0x02$
 ###   5. Everything can be imported 
 * File: **5-variable_load.py**
 
-*Write a program that imports the variable a from the file variable_load_5.py and prints its value.*
+* Write a program that imports the variable a from the file variable_load_5.py and prints its value.*
 
 1.  You are not allowed to use * for importing or __import__
 2.  Your code should not be executed when imported
@@ -243,7 +243,7 @@ guillaume@ubuntu:~/0x02$
 ### 6. Build my own calculator! 
 *   File: **100-my_calculator.py**
 
-* Write a program that imports all functions from the file calculator_1.py and handles basic operations.*
+* Write a program that imports all functions from the file calculator_1.py and handles basic operations. *
 
 1.   Usage: ./100-my_calculator.py a operator b
      - If the number of arguments is not 3, your program has to:
