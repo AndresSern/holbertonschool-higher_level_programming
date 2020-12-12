@@ -258,8 +258,8 @@ guillaume@ubuntu:~/0x02$
           - Print Unknown operator. Available operators: +, -, * and / followed with a new line
           - Exit with the value 1
      - You can cast a and b into integers by using int() (you can assume that all arguments will be castable into integers)
-     - The result should be printed like this: <a> <operator> <b> = <result>, followed by a new line
-2.   You are not allowed to use * for importing or __import__
+     - The result should be printed like this: \<a\> <operator\> \<b\> = \<result\>, followed by a new line
+2.   You are not allowed to use \* for importing or __import__
 3.   Your code should not be executed when imported
 
 ```
