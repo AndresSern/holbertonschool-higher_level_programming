@@ -1,261 +1,357 @@
-# 0x00. Python - Hello, World
-In this directory you will learn how to use conditional if, and the while and for loop and differentiate each one
+# 0x02. Python - import & modules
+In this directory you will learn how import functions and global variables of the other file or import libraries the python
 
 ## GENERAL:
-
-1.  Why Python programming is awesome
-2.  Who created Python
-3.  Who is Guido van Rossum
-4.  Where does the name ‘Python’ come from
-5.  What is the Zen of Python
-6.  How to use the Python interpreter
-7.  How to print text and variables using print
-8.  How to use strings
-9.  What are indexing and slicing in Python
-10.  What is the official Holberton Python coding style and how to check your code with PEP 8
+1.    Why Python programming is awesome  
+2.    How to import functions from another file
+3.    How to use imported functions
+4.    How to create a module
+5.    How to use the built-in function dir()
+6.    How to prevent code in your script from being executed when imported
+7.    How to use command line arguments with your Python programs
 
 ## Read or watch:
 
-1.   The Python tutorial (only the first three chapters below):  **https://docs.python.org/3.4/tutorial/index.html**
-     - Whetting Your Appetite: **https://docs.python.org/3.4/tutorial/appetite.html**
-     - Using the Python Interpreter: **https://docs.python.org/3.4/tutorial/interpreter.html**
-     - An Informal Introduction to Python: **https://docs.python.org/3.4/tutorial/introduction.html**
-2.   How To Use String Formatters in Python 3: **https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3**
-3.   Learn to Program: **https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt**
-4.   PEP 8 – Style Guide for Python Code: **https://www.python.org/dev/peps/pep-0008/**
-
+1.    Modules: **https://docs.python.org/3.4/tutorial/modules.html**
+2.    Command line arguments: **https://docs.python.org/3.4/tutorial/stdlib.html#command-line-arguments**
+3.    PEP 8 – Style Guide for Python Code: **https://www.python.org/dev/peps/pep-0008/** 
 
 ## Files:
 
-1.  **0-run**: Write a Shell script that runs a Python script.
-2.  **1-run_inline** : Write a Shell script that runs Python code.
-3.  **2-print.py** : Write a Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
-4.  **3-print_number.py** : Complete this source code in order to print the integer stored in the variable number, followed by Battery street, followed by a new line.
-5.  **4-print_float.py** : Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.
-6.  **5-print_string.py** : Complete this source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.
-7.  **6-concat.py** : Complete this source code to print Welcome to Holberton School!
-8.  **7-edges.py** : Complete this source code
-9.  **8-concat_edges.py** : Complete this source code to print object-oriented programming with Python, followed by a new line.
-10.  **9-easter_egg.py** : Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
-11.  **100-write.py** : Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.
-
+1.  **0-add.py**
+2.  **1-calculation.py**
+3.  **2-args.py**
+4.  **3-infinite_add.py**
+5.  **4-hidden_discovery.py**
+6.  **5-variable_load.py**
+7.  **100-my_calculator.py**
+8.  **101-easy_print.py   **
+9.  **103-fast_alphabet.py**
 
 ## Tasks
 
-### 0\. 0. Run Python file
-*   File: **0-run**
+### 0. Import a simple function from a simple file 
+*   File: **0-add.py**
 
-*Write a Shell script that runs a Python script.*
+*Write a program that imports the function def add(a, b): from the file add_0.py and prints the result of the addition 1 + 2 = 3*
 
-1.  The Python file name will be saved in the environment variable $PYFILE
+1.   You have to use print function with string format to display integers
+2.   You have to assign: 
+     -  the value 1 to a variable called a
+     -  the value 2 to a variable called b
+     -  and use those two variables as arguments when calling the functions add and print
+4.   a and b must be defined in 2 different lines: a = 1 and another b = 2 
+5.   Your program should print: <a value> + <b value> = <add(a, b) value> followed with a new line 
+6.   You can only use the word add_0 once in your code
+7.   You are not allowed to use * for importing or __import__
+8.   Your code should not be executed when imported - by using __import__, like the example below 
+
 
 Example:
+
 ```
-guillaume@ubuntu:~/py/0x00$ cat main.py 
+guillaume@ubuntu:~/0x02$ cat add_0.py
 #!/usr/bin/python3
-print("Holberton School")
+def add(a, b):
+    """My addition function
 
-guillaume@ubuntu:~/py/0x00$ export PYFILE=main.py
-guillaume@ubuntu:~/py/0x00$ ./0-run
-Holberton School
-guillaume@ubuntu:~/py/0x00$ 
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a + b
+    """
+    return (a + b)
+
+guillaume@ubuntu:~/0x02$ ./0-add.py
+1 + 2 = 3
+guillaume@ubuntu:~/0x02$ cat 0-import_add.py
+__import__("0-add")
+guillaume@ubuntu:~/0x02$ python3 0-import_add.py 
+guillaume@ubuntu:~/0x02$ 
 ```
 
-### 1. Run inline
-*   File: **1-run_inline**
+### 1. My first toolbox! 
+*   File: **1-calculation.py**
 
-*Write a Shell script that runs Python code.*
+*Write a program that imports functions from the file calculator_1.py, does some Maths, and prints the result.*
 
-1.  The Python code will be saved in the environment variable $PYCODE
-
-```
-guillaume@ubuntu:~/py/0x00$ export PYCODE='print("Holberton School: {}".format(88+10))'
-guillaume@ubuntu:~/py/0x00$ ./1-run_inline 
-Holberton School: 98
-guillaume@ubuntu:~/py/0x00$ 
-```
-
-###  2. Hello, print 
-*   File: ** 2-print.py**
-
-*Write a Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.*
-
-1.  Use the function print
+1.   Do not use the function print (with string format to display integers) more than 4 times
+2.   You have to define:
+     -the value 10 to a variable a
+     -the value 5 to a variable b
+     -and use those two variables only, as arguments when calling functions (including print)
+3.   a and b must be defined in 2 different lines: a = 10 and another b = 5
+4.   Your program should call each of the imported functions. See example below for format
+5.   The word calculator_1 should be used only once in your file
+6.   You are not allowed to use * for importing or __import__
+7.   Your code should not be executed when imported 
 
 ```
-guillaume@ubuntu:~/py/0x00$ ./2-print.py 
-"Programming is like building a multilingual puzzle
-guillaume@ubuntu:~/py/0x00$
+guillaume@ubuntu:~/0x02$ cat calculator_1.py
+#!/usr/bin/python3
+def add(a, b):
+    """My addition function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a + b
+    """
+    return (a + b)
+
+
+def sub(a, b):
+    """My subtraction function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a - b
+    """
+    return (a - b)
+
+
+def mul(a, b):
+    """My multiplication function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a * b
+    """
+    return (a * b)
+
+
+def div(a, b):
+    """My division function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a / b
+    """
+    return int(a / b)
+
+guillaume@ubuntu:~/0x02$ ./1-calculation.py
+10 + 5 = 15
+10 - 5 = 5
+10 * 5 = 50
+10 / 5 = 2
+guillaume@ubuntu:~/0x02$
 ```
 
-###  3. Print integer 
-*   File: **3-print_number.py**
+###  2. How to make a script dynamic!
+*   File: **2-args.py**
 
-*Complete this source code in order to print the integer stored in the variable number, followed by Battery street, followed by a new line.*
+*Write a program that prints the number of and the list of its arguments.*
 
-1.  You can find the source code here
-2.  The output of the script should be
-     - the number, followed by Battery street,
-     - followed by a new line
-3.  You are not allowed to cast the variable number into a string
-4.  Your code must be 3 lines long
-5.  You have to use the new print numbers tips (with .format(...))
-
-```
-guillaume@ubuntu:~/py/0x00$ ./3-print_number.py
-98 Battery street
-guillaume@ubuntu:~/py/0x00$ 
-```
-
-###  4. Print float 
-*   File: **4-print_float.py**
-
-*Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.*
-
-1.  You can find the source code here
-2.  The output of the program should be:
-     - Float:, followed by the float with only 2 digits
-     - followed by a new line
-3.  You are not allowed to cast number to string
-4.  You have to use the new print formatting tips (with .format(...))
+1.   The output should be:
+     -Number of argument(s) followed by argument (if number is one) or arguments (otherwise), followed by
+     -: (or . if no arguments were passed) followed by
+     -a new line, followed by (if at least one argument),
+     -one line per argument:
+          -the position of the argument (starting at 1) followed by :, followed by the argument value and a new line
+2.   Your code should not be executed when imported
+3.   The number of elements of argv can be retrieved by using: len(argv)
+3.   You do not have to fully understand lists yet, but imagine that argv can be used just like a C array: you can use an index to walk through it. There are other ways (which will be preferred for future project tasks), if you know them you can use them.
 
 ```
-guillaume@ubuntu:~/py/0x00$ ./4-print_float.py
-Float: 3.14
-guillaume@ubuntu:~/py/0x00$ 
+guillaume@ubuntu:~/0x02$ ./2-args.py 
+0 arguments.
+guillaume@ubuntu:~/0x02$ ./2-args.py Hello
+1 argument:
+1: Hello
+guillaume@ubuntu:~/0x02$ ./2-args.py Hello Holberton School 98 Battery street
+6 arguments:
+1: Hello
+2: Holberton
+3: School
+4: 98
+5: Battery
+6: street
+guillaume@ubuntu:~/0x02$ 
 ```
 
-###   5. Print string 
-* File: **5-print\_numbers.c**
-*Complete this source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.*
+###  3. Infinite addition
+*   File: **3-infinite_add.py**
 
-1.  You can find the source code here
-2.  The output of the program should be:
-     - 3 times the value of str
-     - followed by a new line
-     - followed by the 9 first characters of str
-     - followed by a new line
-3.  You are not allowed to use any loops or conditional statement
-4.  Your program should be maximum 5 lines long
+*Write a program that prints the result of the addition of all arguments*
+
+1.   The output should be the result of the addition of all arguments, followed by a new line
+2.   You can cast arguments into integers by using int() (you can assume that all arguments can be casted into integers)
+3.   Your code should not be executed when imported
 
 ```
-guillaume@ubuntu:~/py/0x00$ ./5-print_string.py 
-Holberton SchoolHolberton SchoolHolberton School
-Holberton
-guillaume@ubuntu:~/py/0x00$  
+guillaume@ubuntu:~/0x02$ ./3-infinite_add.py
+0
+guillaume@ubuntu:~/0x02$ ./3-infinite_add.py 79 10
+89
+guillaume@ubuntu:~/0x02$ ./3-infinite_add.py 79 10 -40 -300 89 
+-162
+guillaume@ubuntu:~/0x02$ 
 ```
 
-### 6. Play with strings
-*   File: **6-print\_numberz.c**
+###  4. Who are you? 
+*   File: **4-hidden_discovery.py**
 
-*Complete this source code to print Welcome to Holberton School!*
+*Write a program that prints all the names defined by the compiled module hidden_4.pyc (please download it locally).*
 
-1. You can find the source code here
-2. You are not allowed to use any loops or conditional statements.
-3. You have to use the variables str1 and str2 in your new line of code
-4. Your program should be exactly 5 lines long
-
-```
-guillaume@ubuntu:~/py/0x00$ ./6-concat.py
-Welcome to Holberton School!
-guillaume@ubuntu:~/py/0x00$ wc -l 6-concat.py
-5 6-concat.py
-guillaume@ubuntu:~/py/0x00$ 
-```
-
-
-### 7. Copy - Cut - Paste 
-*   File: **7-edges.py**
-
-*Complete this source code*
-
-1.  You can find the source code here
-2.  You are not allowed to use any loops or conditional statements
-3.  Your program should be exactly 8 lines long
-4.  word_first_3 should contain the first 3 letters of the variable word
-5.  word_last_2 should contain the last 2 letters of the variable word
-6.  middle_word should contain the value of the variable word without the first and last letters
+1.   You should print one name per line, in alpha order
+2.   You should print only names that do not start with __
+3.   Your code should not be executed when imported
+4.   Make sure you are running your code in Python3.4.x (hidden_4.pyc has been compiled with this version)
 
 ```
-guillaume@ubuntu:~/py/0x00$ ./7-edges.py
-First 3 letters: Hol
-Last 2 letters: on
-Middle word: olberto
-guillaume@ubuntu:~/py/0x00$ wc -l 7-edges.py
-8 7-edges.py
-guillaume@ubuntu:~/py/0x00$ 
+guillaume@ubuntu:~/0x02$ curl -Lso "hidden_4.pyc" "https://github.com/holbertonschool/0x02.py/raw/master/hidden_4.pyc"
+guillaume@ubuntu:~/0x02$ ./4-hidden_discovery.py | sort
+my_secret_santa
+print_holberton
+print_school
+guillaume@ubuntu:~/0x02$ 
 ```
 
-### 8. Create a new sentence 
-*   File: **8-concat_edges.py**
+###   5. Everything can be imported 
+* File: **5-variable_load.py**
 
-*Complete this source code to print object-oriented programming with Python, followed by a new line.*
+*Write a program that imports the variable a from the file variable_load_5.py and prints its value.*
 
-1.  You can find the source code here
-2.  You are not allowed to use any loops or conditional statements
-3.  Your program should be exactly 5 lines long
-4.  You are not allowed to create new variables
-5.  You are not allowed to use string literals
+1.  You are not allowed to use * for importing or __import__
+2.  Your code should not be executed when imported
 
 ```
-guillaume@ubuntu:~/py/0x00$ ./8-concat_edges.py
-object-oriented programming with Python
-guillaume@ubuntu:~/py/0x00$ wc -l 8-concat_edges.py
-5 8-concat_edges.py
-guillaume@ubuntu:~/py/0x00$ 
+guillaume@ubuntu:~/0x02$ cat variable_load_5.py
+#!/usr/bin/python3
+a = 98
+"""Simple variable
+"""
+
+guillaume@ubuntu:~/0x02$ ./5-variable_load.py
+98
+guillaume@ubuntu:~/0x02$
 ```
 
-###  9. Easter Egg 
-*   File: **9-easter_egg.py**
+### 6. Build my own calculator! 
+*   File: **100-my_calculator.py**
 
-*Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.*
+* Write a program that imports all functions from the file calculator_1.py and handles basic operations.*
 
-1.   Your script should be maximum 98 characters long (please check with wc -m 9-easter_egg.py)
-
-```
-guillaume@ubuntu:~/py/0x00$ ./9-easter_egg.py
-The Zen of Python, by Tim Peters
-
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
-guillaume@ubuntu:~/py/0x00$
-```
-
-### 11. Hello, write 
-*   File: **100-write.py **
-
-*Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.*
-
-1.   Use the function write from the sys module
-2.   You are not allowed to use print
-3.   Your script should print to stderr
-4.   Your script should exit with the status code 1
-5.   (Dora Korpar was a Holberton student in Cohort 0 of San Francisco)
+1.   Usage: ./100-my_calculator.py a operator b
+     - If the number of arguments is not 3, your program has to:
+          -print Usage: ./100-my_calculator.py <a> <operator> <b> followed with a new line
+          - exit with the value 1
+     -operator can be:
+          - + for addition
+          - for subtraction
+          - * for multiplication
+          - / for division
+     - If the operator is not one of the above:
+          - Print Unknown operator. Available operators: +, -, * and / followed with a new line
+          - Exit with the value 1
+     - You can cast a and b into integers by using int() (you can assume that all arguments will be castable into integers)
+     - The result should be printed like this: <a> <operator> <b> = <result>, followed by a new line
+2.   You are not allowed to use * for importing or __import__
+3.   Your code should not be executed when imported
 
 ```
-guillaume@ubuntu:~/py/0x00$ ./100-write.py
-and that piece of art is useful - Dora Korpar, 2015-10-19
-guillaume@ubuntu:~/py/0x00$ echo $?
+guillaume@ubuntu:~/0x02$ cat calculator_1.py
+#!/usr/bin/python3
+def add(a, b):
+    """My addition function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a + b
+    """
+    return (a + b)
+
+
+def sub(a, b):
+    """My subtraction function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a - b
+    """
+    return (a - b)
+
+
+def mul(a, b):
+    """My multiplication function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a * b
+    """
+    return (a * b)
+
+
+def div(a, b):
+    """My division function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a / b
+    """
+    return int(a / b)
+
+guillaume@ubuntu:~/0x02$ ./100-my_calculator.py ; echo $?
+Usage: ./100-my_calculator.py <a> <operator> <b>
 1
-guillaume@ubuntu:~/py/0x00$ ./100-write.py 2> q
-guillaume@ubuntu:~/py/0x00$ cat q
-and that piece of art is useful - Dora Korpar, 2015-10-19
-guillaume@ubuntu:~/py/0x00$ 
+guillaume@ubuntu:~/0x02$ ./100-my_calculator.py 3 + 5 ; echo $?
+3 + 5 = 8
+0
+guillaume@ubuntu:~/0x02$ ./100-my_calculator.py 3 H 5 ; echo $?
+Unknown operator. Available operators: +, -, * and /
+1
+guillaume@ubuntu:~/0x02$
 ```
+
+
+### 7. Easy print 
+*   File: **101-easy_print.py** 
+
+*Write a program that prints #pythoniscool, followed by a new line, in the standard output.*
+
+1.   Your program should be maximum 2 lines long
+2.   You are not allowed to use print or eval or open or import sys in your file 101-easy_print.py
+
+```
+guillaume@ubuntu:~/0x02$ ./101-easy_print.py
+#pythoniscool
+guillaume@ubuntu:~/0x02$ 
+```
+
+### 9. Fast alphabet  
+*   File: **03-fast_alphabet.py**
+
+*Write a program that prints the alphabet in uppercase, followed by a new line.*
+
+1.   Your program should be maximum 3 lines long
+2.   You are not allowed to use:
+     - any loops
+     - any conditional statements
+     - str.join()
+     - any string literal
+     - any system calls    
