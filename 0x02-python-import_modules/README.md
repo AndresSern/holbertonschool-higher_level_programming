@@ -25,7 +25,7 @@ In this directory you will learn how import functions and global variables of th
 5.  **4-hidden_discovery.py**
 6.  **5-variable_load.py**
 7.  **100-my_calculator.py**
-8.  **101-easy_print.py   **
+8.  **101-easy_print.py**
 9.  **103-fast_alphabet.py**
 
 ## Tasks
@@ -40,11 +40,11 @@ In this directory you will learn how import functions and global variables of th
      -  the value 1 to a variable called a
      -  the value 2 to a variable called b
      -  and use those two variables as arguments when calling the functions add and print
-4.   a and b must be defined in 2 different lines: a = 1 and another b = 2 
-5.   Your program should print: <a value> + <b value> = <add(a, b) value> followed with a new line 
-6.   You can only use the word add_0 once in your code
-7.   You are not allowed to use * for importing or __import__
-8.   Your code should not be executed when imported - by using __import__, like the example below 
+3.   a and b must be defined in 2 different lines: a = 1 and another b = 2 
+4.   Your program should print: \<a value\> + \<b value\> = <add(a, b) value> followed with a new line 
+5.   You can only use the word add_0 once in your code
+6.   You are not allowed to use * for importing or __import__
+7.   Your code should not be executed when imported - by using __import__, like the example below 
 
 
 Example:
@@ -79,9 +79,9 @@ guillaume@ubuntu:~/0x02$
 
 1.   Do not use the function print (with string format to display integers) more than 4 times
 2.   You have to define:
-     -the value 10 to a variable a
-     -the value 5 to a variable b
-     -and use those two variables only, as arguments when calling functions (including print)
+     - the value 10 to a variable a
+     - the value 5 to a variable b
+     - and use those two variables only, as arguments when calling functions (including print)
 3.   a and b must be defined in 2 different lines: a = 10 and another b = 5
 4.   Your program should call each of the imported functions. See example below for format
 5.   The word calculator_1 should be used only once in your file
@@ -156,11 +156,11 @@ guillaume@ubuntu:~/0x02$
 *Write a program that prints the number of and the list of its arguments.*
 
 1.   The output should be:
-     -Number of argument(s) followed by argument (if number is one) or arguments (otherwise), followed by
-     -: (or . if no arguments were passed) followed by
-     -a new line, followed by (if at least one argument),
-     -one line per argument:
-          -the position of the argument (starting at 1) followed by :, followed by the argument value and a new line
+     - Number of argument(s) followed by argument (if number is one) or arguments (otherwise), followed by
+     - : (or . if no arguments were passed) followed by
+     - a new line, followed by (if at least one argument),
+     - one line per argument:
+          - the position of the argument (starting at 1) followed by :, followed by the argument value and a new line
 2.   Your code should not be executed when imported
 3.   The number of elements of argv can be retrieved by using: len(argv)
 3.   You do not have to fully understand lists yet, but imagine that argv can be used just like a C array: you can use an index to walk through it. There are other ways (which will be preferred for future project tasks), if you know them you can use them.
@@ -240,20 +240,20 @@ guillaume@ubuntu:~/0x02$ ./5-variable_load.py
 guillaume@ubuntu:~/0x02$
 ```
 
-### 6. Build my own calculator! 
-*   File: **100-my_calculator.py**
+###  6. Build my own calculator 
+*    File: **100-my_calculator.py**
 
-* Write a program that imports all functions from the file calculator_1.py and handles basic operations. *
+*Write a program that imports all functions from the file calculator\_1.py and handles basic operations.*
 
-1.   Usage: ./100-my_calculator.py a operator b
+1.   Usage: .\/100-my_calculator.py a operator b
      - If the number of arguments is not 3, your program has to:
-          -print Usage: ./100-my_calculator.py <a> <operator> <b> followed with a new line
+          - print Usage: ./100-my_calculator.py \<a> \<operator> \<b> followed with a new line
           - exit with the value 1
-     -operator can be:
-          - + for addition
+     - operator can be:
+          - \+ for addition
           - for subtraction
-          - * for multiplication
-          - / for division
+          - \* for multiplication
+          - \/ for division
      - If the operator is not one of the above:
           - Print Unknown operator. Available operators: +, -, * and / followed with a new line
           - Exit with the value 1
