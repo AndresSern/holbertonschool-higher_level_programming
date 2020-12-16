@@ -4,8 +4,8 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *temp;
 	int count = 0;
-	int reverse = 0, i;
-	int array[1024];
+	int reverse, i;
+	long int array[1024];
 	if (*head == NULL)
 		return 1;
 	temp = *head;
