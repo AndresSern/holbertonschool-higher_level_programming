@@ -11,4 +11,4 @@ def roman_to_int(roman_string):
             if anterior < my_dict[i]:
                 actual -= anterior * 2
             anterior = my_dict[i]
-        return actual
+    return actual
