@@ -7,8 +7,8 @@ def roman_to_int(roman_string):
     anterior = 0
     for i in roman_string:
         if i in my_dict:
-            if anterior < my_dict[i]:
-                actual -= anterior
             actual += my_dict[i]
+            if anterior < my_dict[i]:
+                actual -= anterior * 2
             anterior = my_dict[i]
         return actual
