@@ -7,7 +7,7 @@ int is_palindrome(listint_t **head)
 	int i = 0;
 	int array[1024];
 	if (*head == NULL)
-		return 1;
+		return SUCCESS;
 	temp = *head;
 	while(*head != NULL || head == NULL)
 	{
@@ -22,5 +22,5 @@ int is_palindrome(listint_t **head)
 		i += 1;
 		temp = temp->next;
 	}
-	return 1;
+	return SUCESS;
 }
