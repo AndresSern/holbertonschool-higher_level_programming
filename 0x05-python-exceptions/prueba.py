@@ -6,13 +6,7 @@
  *
  * Return: True if value has been correctly printed (it means
  *         the value is an integer)
- *         Otherwise, returns False)
-"""
+ *
+ """
+print("{:d}".format(12.54))
 
-
-def safe_print_integer(value):
-    try:
-        print("{:d}".format(value))
-    except (TypeError, ValueError):
-        return False
-    return True
