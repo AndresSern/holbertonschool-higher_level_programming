@@ -23,8 +23,6 @@ int is_palindrome(listint_t **head)
 		aux = aux->next;
 		current = current->next;
 	}
-	printf("-------------------------------\n");
-	print_listint(current);
 	(void)aux;
 	return 1;
 }
