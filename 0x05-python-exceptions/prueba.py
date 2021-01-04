@@ -8,5 +8,5 @@
  *         the value is an integer)
  *
  """
-print("{:d}".format(12.54))
+print("{}".format(12/0))
 
