@@ -1,26 +1,48 @@
 #include "lists.h"
 
+listint_t *reverse_listint(listint_t **head);
+	
 int is_palindrome(listint_t **head)
 {
-	listint_t *temp;
-	int count = 0;
-	int i = 0;
-	int array[1024];
+	listint_t *aux = *head, *current = *head;
 	if (*head == NULL)
-		return SUCCESS;
-	temp = *head;
-	while(*head != NULL || head == NULL)
+		return 1;
+	if((*head)->next == NULL)
+		return 1;
+	while (current != NULL && aux != NULL && aux->next != NULL)
 	{
-		array[count] = (*head)->n;
-		*head = (*head)->next;
-		count += 1;
+		current = current->next;
+		aux = aux->next->next;
 	}
-	while(temp != NULL)
-	{
-		if(array[i] != temp->n)
+	current = reverse_listint(&current);
+	aux = *head;
+	while(aux != NULL && current != NULL)
+	{	
+		if (aux->n != current->n)
 			return 0;
-		i += 1;
-		temp = temp->next;
+		aux = aux->next;
+		current = current->next;
 	}
-	return SUCESS;
+	printf("-------------------------------\n");
+	print_listint(current);
+	(void)aux;
+	return 1;
+}
+listint_t *reverse_listint(listint_t **head)
+{
+	listint_t *next = *head, *current = NULL;
+
+	if (*head == NULL)
+		return (NULL);
+	if ((*head)->next == NULL)
+		return (*head);
+	while (*head != NULL)
+	{
+		next = (*head)->next;
+		(*head)->next = current;
+		current = *head;
+		*head = next;
+	}
+	*head = current;
+	return (*head);
 }
