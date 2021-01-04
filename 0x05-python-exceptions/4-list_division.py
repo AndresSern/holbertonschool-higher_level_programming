@@ -10,6 +10,8 @@
  * If 2 elements cant be divided, the division result should be equal to 0
  *
 """
+
+
 def list_division(my_list_1, my_list_2, list_length):
     new_list = []
     result = 0
@@ -32,5 +34,3 @@ def list_division(my_list_1, my_list_2, list_length):
         finally:
             new_list.append(result)
     return new_list
-
-
