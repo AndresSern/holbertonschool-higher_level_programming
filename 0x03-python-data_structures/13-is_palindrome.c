@@ -37,7 +37,6 @@ int is_palindrome(listint_t **head)
 	}
 	return (1);
 }
-
 /**
  * reverse_listint - Function that reverses a listint_t linked list
  *
@@ -50,10 +49,6 @@ listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *next = *head, *current = NULL;
 
-	if (*head == NULL)
-		return (NULL);
-	if ((*head)->next == NULL)
-		return (*head);
 	while (*head != NULL)
 	{
 		next = (*head)->next;
