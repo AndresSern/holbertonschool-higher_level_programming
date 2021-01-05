@@ -5,6 +5,6 @@ Write an empty class Square that defines a square
 
 """
 #This Is The Empty Class
-class Square():
+class Square:
     pass
 
