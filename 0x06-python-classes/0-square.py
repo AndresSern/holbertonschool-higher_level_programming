@@ -8,4 +8,5 @@ Write an empty class Square that defines a square
 
 
 class Square:
+    """ Pass Works to do nothing in the class"""
     pass
