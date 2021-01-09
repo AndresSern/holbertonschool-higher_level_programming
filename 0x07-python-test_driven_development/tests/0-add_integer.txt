@@ -62,46 +62,6 @@
     ...
     TypeError: a must be an integer
 
-    #----------------------------| Correct cases |----------------------------#
-
-    #----------------------------- int cases -----------------------------#
-
-    ### int + int
-    >>> add_integer(3, 3)
-    6
-
-    ### -int + int
-    >>> add_integer(-3, 3)
-    0
-
-    ### int + -int
-    >>> add_integer(3, -3)
-    0
-
-    ### -int + -int
-    >>> add_integer(-3, -3)
-    -6
-
-
-    #---------------------------- float cases ----------------------------#
-
-    ### float + float
-    >>> add_integer(3.9, 3.5)
-    6
-
-    ### float + -float
-    >>> add_integer(3.2, -3.2)
-    0
-
-    ### -float + float
-    >>> add_integer(-3.9, 3.2)
-    0
-
-    ### -float + -float
-    >>> add_integer(-3.9, -3.2)
-    -6
-
-
     #------------------ Mixed Correct cases, int, float ------------------#
 
     ### int + float
@@ -130,6 +90,18 @@
 
     ### -int + -float
     >>> add_integer(-3, -3.5)
+    -6
+
+    ### Only one int.
+    >>> add_integer(2)
+    100
+
+    ### float + float
+    >>> add_integer(3.9, 3.5)
+    6
+
+    ### -int + -int
+    >>> add_integer(-3, -3)
     -6
 
     #--------------------------| Incorrect cases |--------------------------#
