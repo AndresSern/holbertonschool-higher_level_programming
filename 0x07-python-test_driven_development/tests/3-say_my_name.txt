@@ -1,0 +1,68 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+    ---- Check that the file is executable ----
+    >>> import os
+    >>> os.access('3-say_my_name.py', os.X_OK)
+    True
+
+    ---- Check for the documentation of the module ----
+    >>> len(__import__("3-say_my_name").__doc__) > 10
+    True
+
+    ---- Check for the documentation of the function ----
+    >>> len(__import__("3-say_my_name").say_my_name.__doc__) > 10
+    True
+
+    ---- Check for pep8 style ----
+    >>> os.popen("pep8 3-say_my_name.py").read()
+    ''
+
+    ---- Check for a newline at the end of the file ----
+    >>> os.popen("cat -e 3-say_my_name.py | tail -1").read()[-1]
+    '\n'
+
+    ---- Check for the file has a shebang ----
+    >>> os.popen("cat 3-say_my_name.py | head -1").read()
+    '#!/usr/bin/python3\n'
+
+    ---- Check that the README file exists ----
+    >>> cwd = os.getcwd()
+    >>> check_readme = cwd + '/README.md'
+    >>> os.path.exists(check_readme)
+    True
+
+    #------------------ CORRECT CASES ------------------#
+
+    ### first_name = string --- second_name = string
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+    ### first_name = string --- last_name = "123"
+    >>> say_my_name("Bob", "123")
+    My name is Bob 123
+
+    ### first_name = string --- last_name = string
+    >>> say_my_name("123", "123")
+    My name is 123 123
+
+    ### first_name = string --- last_name = string
+    >>> say_my_name("123", "Roberto")
+    My name is 123 Roberto
+
+
+    #--------------------------| Incorrect cases |--------------------------#
+
+    #------------------------- Not Correct Types -------------------------#
+
+    ### Complex type
+    >>> say_my_name(22, "Roberto")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    ### Complex type
+    >>> say_my_name("Roberto", 22)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
