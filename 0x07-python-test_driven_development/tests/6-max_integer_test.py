@@ -16,6 +16,10 @@ class TestMaxInteger(unittest.TestCase):
     def test_firstInteger(self):
         firstInteger = max_integer([4, 3, 2, 1])
         self.assertEqual(4, firstInteger)
+    def test_only_negative_Number(self):
+        my_list = max_integer([1, -4, 20, 10])
+        self.assertEqual(20, my_list)
 
 if __name__ == '__main__':
     unittest.main()
+
