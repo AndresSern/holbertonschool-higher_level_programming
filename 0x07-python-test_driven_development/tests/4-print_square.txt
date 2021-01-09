@@ -1,0 +1,77 @@
+>>> print_square = __import__('4-print_square').print_square
+
+    ---- Check that the file is executable ----
+    >>> import os
+    >>> os.access('4-print_square.py', os.X_OK)
+    True
+
+    ---- Check for the documentation of the module ----
+    >>> len(__import__("4-print_square").__doc__) > 10
+    True
+
+    ---- Check for the documentation of the function ----
+    >>> len(__import__("4-print_square").print_square.__doc__) > 10
+    True
+
+    ---- Check for pep8 style ----
+    >>> os.popen("pep8 4-print_square.py").read()
+    ''
+
+    ---- Check for a newline at the end of the file ----
+    >>> os.popen("cat -e 4-print_square.py | tail -1").read()[-1]
+    '\n'
+
+    ---- Check for the file has a shebang ----
+    >>> os.popen("cat 4-print_square.py | head -1").read()
+    '#!/usr/bin/python3\n'
+
+    ---- Check that the README file exists ----
+    >>> cwd = os.getcwd()
+    >>> check_readme = cwd + '/README.md'
+    >>> os.path.exists(check_readme)
+    True
+
+
+    #-------------------------- Tests from 0-main.py --------------------------#
+
+    ### Size >= 0
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    ### Size >= 0
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+    #------------------------- Not Correct INT and Types -------------------------#
+
+    ### Size is a negative number
+    >>> print_square(-3)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+
+    ### Size is a string
+    >>> print_square("hola")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+
+    ### Size is a float
+    >>> print_square(5.32)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
