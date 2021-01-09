@@ -6,19 +6,32 @@ max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
     def test_Empty(self):
-        x = max_integer()
-        self.assertIsNone(x)
+        result = max_integer()
+        self.assertIsNone(result)
 
     def test_endInteger(self):
-        endInteger = max_integer([1, 2, 3, 4])
-        self.assertEqual(4, endInteger)
+        result = max_integer([1, 2, 3, 4])
+        self.assertEqual(4, result)
 
     def test_firstInteger(self):
-        firstInteger = max_integer([4, 3, 2, 1])
-        self.assertEqual(4, firstInteger)
+        result = max_integer([4, 3, 2, 1])
+        self.assertEqual(4, result)
+
     def test_only_negative_Number(self):
-        my_list = max_integer([1, -4, 20, 10])
-        self.assertEqual(20, my_list)
+        result = max_integer([1, -4, 20, 10])
+        self.assertEqual(20, result)
+
+    def test_only_negative_numbers(self):
+        result = max_integer([-2, -1, -4, -8])
+        self.assertEqual(-1, result)
+
+    def test_one_element(self):
+        result = max_integer([2])
+        self.assertEqual(2, result)
+
+    def test_max_in_the_middle(self):
+        result = max_integer([1, 2, 8, 5, 3])
+        self.assertEqual(8, result)
 
 if __name__ == '__main__':
     unittest.main()
