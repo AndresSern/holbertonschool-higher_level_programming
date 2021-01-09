@@ -8,7 +8,14 @@ class TestMaxInteger(unittest.TestCase):
     def test_Empty(self):
         x = max_integer()
         self.assertIsNone(x)
-    def test_MaxIntenger(self):
-        maxIntenger = max_integer([1, 2, 3, 4])
-        self.assertEqual(4, maxIntenger)
 
+    def test_endInteger(self):
+        endInteger = max_integer([1, 2, 3, 4])
+        self.assertEqual(4, endInteger)
+
+    def test_firstInteger(self):
+        firstInteger = max_integer([4, 3, 2, 1])
+        self.assertEqual(4, firstInteger)
+
+if __name__ == '__main__':
+    unittest.main()
