@@ -3,22 +3,21 @@
 This is the function about  5-text_indentation.py
 """
 
-
 def text_indentation(text):
-    '''Function that a text with 2 new lines
-    after each of these characters: .,? and :
-    '''
+    """function that prints a text with 2 new lines
+    after each of these characters: ., ? and :
+    """
 
-    if type(text) is not str:
+    b = 0
+    if type(text) != str:
         raise TypeError("text must be a string")
 
-    i = 0
-    len_text = len(text)
-    while i < len_text:
-        if text[i] in ('.', '?', ':'):
-            print("{}\n".format(text[i]))
-            while i + 1 < len_text and text[i + 1] == " ":
-                i += 1
-        else:
-            print(text[i], end='')
-        i += 1
+    lenght = len(text)
+    while b < lenght:
+        print(text[b], end="")
+        if text[b] is '.' or text[b] is '?' or text[b] is ':':
+            print("\n")
+            if (b + 1) < lenght:
+                while text[b + 1] is " ":
+                    b += 1
+        b += 1
