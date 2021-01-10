@@ -15,7 +15,7 @@ def text_indentation(text):
     while i < len_text:
         if text[i] in ('.', '?', ':'):
             print("{}\n".format(text[i]))
-            while i + 1 < len_text && text[i + 1] == " ":
+            while i + 1 < len_text and text[i + 1] == " ":
                 i += 1
         else:
             print(text[i], end='')
