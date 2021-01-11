@@ -55,14 +55,14 @@ class Rectangle:
     def __str__(self):
         """ Print the rectangle with the character # """
         if self.__height == 0 or self.__width == 0:
-            return ("0")
+            return ("")
         return ("\n".join((str(self.print_symbol) *
                            self.__width for i in range(self.__height))))
 
     def __repr__(self):
         """ Return a string representation of the rectangle to be able to
             recreate a new instance by using eval()"""
-        return ("Rectangle({}, {})".format(self.__width, self.__height))
+        return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
 
     def __del__(self):
         """Print Bye rectangle... when an instance of Rectangle is deleted"""
