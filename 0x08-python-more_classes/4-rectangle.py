@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Write a class Rectangle that defines a rectangle by: (based on 2-rectangle.py)
+Write a class Rectangle that defines a rectangle by: (based on 3-rectangle.py)
 """
 
 
@@ -53,3 +53,8 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ("0")
         return ("\n".join(("#" * self.__width for i in range(self.__height))))
+
+    def __repr__(self):
+        """ Return a string representation of the rectangle to be able to
+            recreate a new instance by using eval()"""
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
