@@ -1,14 +1,17 @@
 #!/usr/bin/python3
 """
-Write a class Rectangle that defines a rectangle by: (based on 4-rectangle.py)
+Write a class Rectangle that defines a rectangle by: (based on 5-rectangle.py)
 """
 
 
 class Rectangle:
+
+    number_of_instances = 0  """Public Class Atribute"""
     """ Class To Define a Rectangle with withd and height"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -62,3 +65,4 @@ class Rectangle:
     def __del__(self):
         """Print Bye rectangle... when an instance of Rectangle is deleted"""
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
