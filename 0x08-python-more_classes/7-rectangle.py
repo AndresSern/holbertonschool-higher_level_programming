@@ -5,10 +5,10 @@ Write a class Rectangle that defines a rectangle by: (based on 6-rectangle.py)
 
 
 class Rectangle:
-
+    """ Class To Define a Rectangle with withd and height"""
     number_of_instances = 0
     print_symbol = "#"
-    """ Class To Define a Rectangle with withd and height"""
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
