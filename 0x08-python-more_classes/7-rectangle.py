@@ -7,6 +7,7 @@ Write a class Rectangle that defines a rectangle by: (based on 5-rectangle.py)
 class Rectangle:
 
     number_of_instances = 0
+    print_symbol = "#"
     """ Class To Define a Rectangle with withd and height"""
     def __init__(self, width=0, height=0):
         self.width = width
@@ -55,7 +56,8 @@ class Rectangle:
         """ Print the rectangle with the character # """
         if self.__height == 0 or self.__width == 0:
             return ("0")
-        return ("\n".join(("#" * self.__width for i in range(self.__height))))
+        return ("\n".join((str(self.print_symbol) *
+                           self.__width for i in range(self.__height))))
 
     def __repr__(self):
         """ Return a string representation of the rectangle to be able to
