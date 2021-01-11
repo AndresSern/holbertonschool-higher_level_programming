@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Write a class Rectangle that defines a rectangle by: (based on 6-rectangle.py)
+Write a class Rectangle that defines a rectangle by: (based on 8-rectangle.py)
 """
 
 
@@ -53,7 +53,8 @@ class Rectangle:
         return (2 * (self.__height + self.__width))
 
     def __str__(self):
-        """ Print the rectangle with the character # """
+        """ Print the rectangle with the string of the variable
+            print_symbol"""
         if self.__height == 0 or self.__width == 0:
             return ("0")
         return ("\n".join((str(self.print_symbol) *
