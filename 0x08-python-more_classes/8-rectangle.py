@@ -5,10 +5,10 @@ Write a class Rectangle that defines a rectangle by: (based on 8-rectangle.py)
 
 
 class Rectangle:
-
+    """ Class To Define a Rectangle with withd and height"""
     number_of_instances = 0
     print_symbol = "#"
-    """ Class To Define a Rectangle with withd and height"""
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -69,3 +69,16 @@ class Rectangle:
         """Print Bye rectangle... when an instance of Rectangle is deleted"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """ that returns the biggest rectangle based on the area
+            Returns rect_1 if both have the same area value"""
+        if type(rect_1) is not Rectangle:
+            print("rect_1 must be an instance of Rectangle")
+        if type(rect_2) is not Rectangle:
+            print("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else:
+            return rect_2
