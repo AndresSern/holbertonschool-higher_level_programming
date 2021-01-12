@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Write a class Rectangle that defines a rectangle by: (based on 7-rectangle.py)
+Write a class Rectangle that defines a rectangle by: (based on 8-rectangle.py)
 """
 
 
@@ -82,3 +82,9 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """ that returns a new Rectangle instance
+            with width == height == size"""
+        return cls(size, size)
