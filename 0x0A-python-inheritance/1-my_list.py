@@ -1,16 +1,4 @@
 #!/usr/bin/python3
-def __init__(self, birthType="Unknown")
-
-class Dog:
-    def __init__(self, name):
-        self.name = name
-        self.tricks = []    # creates a new empty list for each dog
-
-    def add_trick(self, trick):
-        self.tricks.append(trick)
-
-d = Dog('Fido')
-e = Dog('Buddy')
-d.add_trick('roll over')
-e.add_trick('play dead')
-
+class MyList(list):
+    def print_sorted(self):
+        print(sorted(self))
