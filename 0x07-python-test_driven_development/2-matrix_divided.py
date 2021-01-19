@@ -9,17 +9,18 @@ def matrix_divided(matrix, div):
     Function That Divides All Elementes of a Matrix
     """
     error = "matrix must be a matrix (list of lists) of integers/floats"
-    if div is 0:
-        raise TypeError("division by zero")
-    if type(div) not in [int, float]:
-        raise TypeError("div must be a number")
     if type(matrix) != list or len(matrix) < 1:
         raise TypeError(error)
-
+    if div is 0:
+        raise ZeroDivisionError("division by zero")
+    if type(div) not in [int, float]:
+        raise TypeError("div must be a number")
+    if type(matrix[0]) is not list:
+            raise TypeError(error)
     len_matrix = len(matrix[0])
     new_list = []
     for count, i in enumerate(matrix):
-        if type(i) is not list:
+        if type(i) is not list or len(i) < 1:
             raise TypeError(error)
 
         if len(i) != len_matrix:
