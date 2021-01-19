@@ -9,8 +9,9 @@ def matrix_divided(matrix, div):
     Function That Divides All Elementes of a Matrix
     """
     if div is 0:
-        raise TypeError("Divide by zero")
-    #if type(div) not in [int, float]
+        raise TypeError("division by zero")
+    if type(div) not in [int, float]:
+        raise TypeError("div must be a number")
 
     len_matrix = len(matrix[0])
     new_list = []
