@@ -14,10 +14,9 @@ class BaseGeometry:
     def integer_validator(self, name, value):
         """ Check if the value is a number positive integer"""
         if type(value) is not int:
-            raise TypeError(name + " must be an integer")
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError(name + " must be a greater than 0")
-
+            raise ValueError("{} must be greater than 0".format(name))
 
 class Rectangle(BaseGeometry):
     """This Class called Rectangle inherits from BaseGeometry"""
