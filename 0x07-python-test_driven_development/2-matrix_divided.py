@@ -17,7 +17,7 @@ def matrix_divided(matrix, div):
     new_list = []
     for count, i in enumerate(matrix):
         if type(i) is not list:
-            raise TypeError("matrix must be a matrix (list of lists)"
+            raise TypeError("matrix must be a matrix (list of lists) "
                             "of integers/floats")
 
         if len(i) != len_matrix:
@@ -25,7 +25,7 @@ def matrix_divided(matrix, div):
         new_list.append([])
         for j in i:
             if type(j) not in [int, float]:
-                raise TypeError("matrix must be a matrix (list of lists)"
+                raise TypeError("matrix must be a matrix (list of lists) "
                                 "of integers/floats")
             new_list[count].append(round(j / div, 2))
     return new_list

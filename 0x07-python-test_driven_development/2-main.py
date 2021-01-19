@@ -11,8 +11,8 @@ except Exception as e:
     print(e)
 
 try:
-    matrix = [[3, 9], [12, 3]]
-    print(matrix_divided(matrix, "2"))
+    matrix = [[3, "9"], [15, 3]]
+    print(matrix_divided(matrix, 3))
     print(matrix)
 except Exception as e:
     print(e)
