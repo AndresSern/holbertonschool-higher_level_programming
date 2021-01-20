@@ -9,6 +9,6 @@
 class MyInt(int):
     """This class invert the operators"""
     def __eq__(self, other):
-        return not self != other
+        return False
     def __ne__(self, other):
-        return self == other
+        return True
