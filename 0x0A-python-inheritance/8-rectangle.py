@@ -18,6 +18,7 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
     """This Class called Rectangle inherits from BaseGeometry"""
 
@@ -25,6 +26,6 @@ class Rectangle(BaseGeometry):
         """This is the Instantiation of a new Rectangle
         """
         self.integer_validator("width", width)
-        self.integer_validator("height", height)
         self.__width = width
+        self.integer_validator("height", height)
         self.__height = height
