@@ -6,6 +6,7 @@ Class Called BaseGeometry
 
 class BaseGeometry:
     """This is a class called BaseGeometry"""
+
     def area(self):
         """This Function Raise an Error"""
         raise Exception("area() is not implemented")
@@ -19,6 +20,7 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     """This Class called Rectangle inherits from BaseGeometry"""
+
     def __init__(self, width, height):
         """This is the Instantiation"""
         self.integer_validator("width", width)
@@ -37,6 +39,7 @@ class Rectangle(BaseGeometry):
 
 class Square(Rectangle):
     """This class is Square that inherits from Rectangle"""
+
     def __init__(self, size):
         """This is the instantiation"""
         self.integer_validator("size", size)
