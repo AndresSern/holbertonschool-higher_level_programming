@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" Write a function that returns an object /
-import json """"
+""" Write a function that returns an object /"""
+import json
 
 
 def from_json_string(my_str):
