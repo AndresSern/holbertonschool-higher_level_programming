@@ -36,11 +36,9 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
+    """This class is Square that inherits from Rectangle"""
     def __init__(self, size):
+        """This is the instantiation"""
         self.integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
-
-    def __str__(self):
-        """ This function return to a descripcion about this class"""
-        return ("[Rectangle] {}/{}".format(self.__size, self.__size))
-
