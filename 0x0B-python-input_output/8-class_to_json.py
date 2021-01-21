@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 '''Module for the class_to_json method'''
+import json
 
 
 def class_to_json(obj):
