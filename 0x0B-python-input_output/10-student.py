@@ -18,6 +18,6 @@ class Student:
             return self.__dict__
         my_dict = {}
         for i in attrs:
-            if i in self.__dict__:
+            if i in self.__dict__ and type(i) is str:
                 my_dict[i] = self.__dict__.get(i)
         return my_dict
