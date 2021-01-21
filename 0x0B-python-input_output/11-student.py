@@ -20,6 +20,10 @@ class Student:
         for i in attrs:
             if i in self.__dict__ and type(i) is str:
                 my_dict[i] = self.__dict__.get(i)
-
         return my_dict
 
+    def reload_from_json(self, json):
+        """ replaces all attributes of the Student instance """
+        for i in json:
+            if i in self.__dict__
+            self.__dict__[i] = json[i]
