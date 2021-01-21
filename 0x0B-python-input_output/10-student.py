@@ -16,9 +16,6 @@ class Student:
         Otherwise, all attributes must be retrieved"""
         if not attrs:
             return self.__dict__
-        for i in attrs:
-            if type(i) is not str:
-                return self.__dict__
         my_dict = {}
         for i in attrs:
             if i in self.__dict__:
