@@ -11,3 +11,4 @@ class Base:
             Base.__nb_objects += 1
             id = Base.__nb_objects
         self.id = id
+
