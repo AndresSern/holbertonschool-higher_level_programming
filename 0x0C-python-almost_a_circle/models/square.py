@@ -41,6 +41,5 @@ class Square(Rectangle):
                 self.__setattr__(k, v)
 
     def to_dictionary(self):
+        """Return a dictionary about the class"""
         return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
-
-

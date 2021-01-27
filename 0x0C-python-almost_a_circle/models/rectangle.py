@@ -97,5 +97,6 @@ class Rectangle(Base):
                 self.__setattr__(k, v)
 
     def to_dictionary(self):
+        """ Return To Diccionary About The Class """
         return {"id": self.id, "width": self.width, "height": self.height,
                 "x": self.x, "y": self.y}
