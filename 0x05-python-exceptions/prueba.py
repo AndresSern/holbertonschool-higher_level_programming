@@ -10,8 +10,4 @@
  """
 a = 10
 b = "2"
-
-try:
-    print("{:d}".format(b))
-except ZeroDivisionError:
     print("hola")

@@ -1,3 +1,5 @@
+
+
     >>> MyList = __import__('1-my_list').MyList
 
     ---- Check that the file is executable ----
@@ -71,7 +73,6 @@ True
     >>> print(my_list)
     [1, 4, 2, 3, 5, -5, 0]
 
-    #--------------------Nico cases(thanks bro)--------------------
     __import__('1-my_list').__doc__ != None
     True
 

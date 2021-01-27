@@ -13,4 +13,4 @@ def append_after(filename="", search_string="", new_string=""):
             if line.find(search_string) != -1:
                 new_file_lines.append(new_string)
     with open(filename, 'w') as f:
-        f.writelines(new_file_lines)
+            f.writelines(new_file_lines)

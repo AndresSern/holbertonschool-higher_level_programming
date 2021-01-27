@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+ii/usr/bin/python3
 """
 Write a class Square that defines a square by: (based on 5-square.py)
 """
@@ -24,7 +24,7 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(self, value):
+    def sizechange(self, value):
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
