@@ -68,7 +68,7 @@ class Rectangle(Base):
         if value <= 0 and (name == 'height' or name == 'width'):
             raise ValueError('{} must be > 0'.format(name))
         if value < 0 and (name == 'y' or name == 'x'):
-            raise ValueError('{} >= 0'.format(name))
+            raise ValueError('{} must be >= 0'.format(name))
 
     def display(self):
         """"Print the rectangle"""
