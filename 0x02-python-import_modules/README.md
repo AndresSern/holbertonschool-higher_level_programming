@@ -12,9 +12,9 @@ In this directory you will learn how import functions and global variables of th
 
 ## Read or watch:
 
-1.    Modules: **https://docs.python.org/3.4/tutorial/modules.html**
-2.    Command line arguments: **https://docs.python.org/3.4/tutorial/stdlib.html#command-line-arguments**
-3.    PEP 8 – Style Guide for Python Code: **https://www.python.org/dev/peps/pep-0008/** 
+1.    **[Modules:](https://docs.python.org/3.4/tutorial/modules.html)**
+2.    **[Command line arguments:](https://docs.python.org/3.4/tutorial/stdlib.html#command-line-arguments)**
+3.    **[PEP 8 – Style Guide for Python Code:](https://www.python.org/dev/peps/pep-0008/)** 
 
 ## Files:
 

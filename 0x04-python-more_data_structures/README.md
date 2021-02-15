@@ -18,9 +18,9 @@ In this directory you will see more documentacion about Data Structures: Set, an
 
 ## Read or watch:
 
-1.    Data structures: **https://docs.python.org/3.4/tutorial/datastructures.html**
-2.    Lambda, filter, reduce and map: **https://www.python-course.eu/python3_lambda.php**
-3.    Learn to Program 12 Lambda Map Filter Reduce: **https://www.youtube.com/watch?v=1GAC6KQUPeg** 
+1.    **[Data structures:](https://docs.python.org/3.4/tutorial/datastructures.html)**
+2.    **[Lambda, filter, reduce and map:](https://www.python-course.eu/python3_lambda.php)**
+3.    **[Learn to Program 12 Lambda Map Filter Reduce:](https://www.youtube.com/watch?v=1GAC6KQUPeg)** 
 
 
 ## Files:

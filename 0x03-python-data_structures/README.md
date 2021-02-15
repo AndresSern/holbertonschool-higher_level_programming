@@ -18,9 +18,9 @@ In this directory you will learn how to use Data Structures like lists, tuples.
 
 ## Read or watch:
 
-1.    3.1.3. Lists : **https://docs.python.org/3.4/tutorial/introduction.html#lists**
-2.    Data structures (until 5.3. Tuples and Sequences included): **https://docs.python.org/3.4/tutorial/datastructures.html**
-3.    Learn to Program 6 : Lists: **https://www.youtube.com/watch?v=A1HUzrvS-Pw** 
+1.    **[3.1.3. Lists :](https://docs.python.org/3.4/tutorial/introduction.html#lists)**
+2.    **[Data structures (until 5.3. Tuples and Sequences included):](https://docs.python.org/3.4/tutorial/datastructures.html)**
+3.    **[Learn to Program 6 : Lists:](**https://www.youtube.com/watch?v=A1HUzrvS-Pw)** 
 
 
 ## Files:

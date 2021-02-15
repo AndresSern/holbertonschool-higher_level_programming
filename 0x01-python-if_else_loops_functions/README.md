@@ -21,13 +21,13 @@ In this directory you will learn how to use conditional if, and the while and fo
 
 ## Read or watch:
 
-1.   More Control Flow Tools: **https://docs.python.org/3.4/tutorial/controlflow.html**
-2.   Myths about Indentation: **https://files.meetup.com/1544869/Python%20Indentation%20Myths.pdf**
-3.   IndentationError: **https://www.youtube.com/watch?v=1QXOd2ZQs-Q** 
-4.   How To Use String Formatters in Python 3: **https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3**
-5.   Learn to Program: **https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt **
-6.   Learn to Program 2 : Looping: **https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt**
-7.   PEP 8  Style Guide for Python Code: **https://www.python.org/dev/peps/pep-0008/**
+1.   **[More Control Flow Tools:](https://docs.python.org/3.4/tutorial/controlflow.html)**
+2.   **[Myths about Indentation:](https://files.meetup.com/1544869/Python%20Indentation%20Myths.pdf)**
+3.   **[IndentationError:](https://www.youtube.com/watch?v=1QXOd2ZQs-Q)** 
+4.   **[How To Use String Formatters in Python 3:](https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3)**
+5.   **[Learn to Program:](https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt)**
+6.   **[Learn to Program 2 : Looping:](https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt)**
+7.   **[PEP 8  Style Guide for Python Code:](https://www.python.org/dev/peps/pep-0008/)**
 
 ## Files:
 

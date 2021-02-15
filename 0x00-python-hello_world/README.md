@@ -16,13 +16,13 @@ In this directory you will learn how to use conditional if, and the while and fo
 
 ## Read or watch:
 
-1.   The Python tutorial (only the first three chapters below):  **https://docs.python.org/3.4/tutorial/index.html**
-     - Whetting Your Appetite: **https://docs.python.org/3.4/tutorial/appetite.html**
-     - Using the Python Interpreter: **https://docs.python.org/3.4/tutorial/interpreter.html**
-     - An Informal Introduction to Python: **https://docs.python.org/3.4/tutorial/introduction.html**
-2.   How To Use String Formatters in Python 3: **https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3**
-3.   Learn to Program: **https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt**
-4.   PEP 8 – Style Guide for Python Code: **https://www.python.org/dev/peps/pep-0008/**
+1.   **[The Python tutorial (only the first three chapters below):](https://docs.python.org/3.4/tutorial/index.html)**
+     - **[Whetting Your Appetite:](https://docs.python.org/3.4/tutorial/appetite.html)**
+     - **[Using the Python Interpreter:](https://docs.python.org/3.4/tutorial/interpreter.html)**
+     - **[An Informal Introduction to Python:](https://docs.python.org/3.4/tutorial/introduction.html)**
+2.   **[How To Use String Formatters in Python 3:](https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3)**
+3.   **[Learn to Program:](https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt)**
+4.   **[PEP 8 – Style Guide for Python Code:](https://www.python.org/dev/peps/pep-0008/)**
 
 
 ## Files:
@@ -93,13 +93,12 @@ guillaume@ubuntu:~/py/0x00$
 
 *Complete this source code in order to print the integer stored in the variable number, followed by Battery street, followed by a new line.*
 
-1.  You can find the source code here
-2.  The output of the script should be
+1.  The output of the script should be
      - the number, followed by Battery street,
      - followed by a new line
-3.  You are not allowed to cast the variable number into a string
-4.  Your code must be 3 lines long
-5.  You have to use the new print numbers tips (with .format(...))
+2.  You are not allowed to cast the variable number into a string
+3.  Your code must be 3 lines long
+4.  You have to use the new print numbers tips (with .format(...))
 
 ```
 guillaume@ubuntu:~/py/0x00$ ./3-print_number.py
@@ -112,12 +111,11 @@ guillaume@ubuntu:~/py/0x00$
 
 *Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.*
 
-1.  You can find the source code here
-2.  The output of the program should be:
+1.  The output of the program should be:
      - Float:, followed by the float with only 2 digits
      - followed by a new line
-3.  You are not allowed to cast number to string
-4.  You have to use the new print formatting tips (with .format(...))
+2.  You are not allowed to cast number to string
+3.  You have to use the new print formatting tips (with .format(...))
 
 ```
 guillaume@ubuntu:~/py/0x00$ ./4-print_float.py
@@ -129,14 +127,13 @@ guillaume@ubuntu:~/py/0x00$
 * File: **5-print\_numbers.c**
 *Complete this source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.*
 
-1.  You can find the source code here
-2.  The output of the program should be:
+1.  The output of the program should be:
      - 3 times the value of str
      - followed by a new line
      - followed by the 9 first characters of str
      - followed by a new line
-3.  You are not allowed to use any loops or conditional statement
-4.  Your program should be maximum 5 lines long
+2.  You are not allowed to use any loops or conditional statement
+3.  Your program should be maximum 5 lines long
 
 ```
 guillaume@ubuntu:~/py/0x00$ ./5-print_string.py 
@@ -150,10 +147,9 @@ guillaume@ubuntu:~/py/0x00$
 
 *Complete this source code to print Welcome to Holberton School!*
 
-1. You can find the source code here
-2. You are not allowed to use any loops or conditional statements.
-3. You have to use the variables str1 and str2 in your new line of code
-4. Your program should be exactly 5 lines long
+1. You are not allowed to use any loops or conditional statements.
+2. You have to use the variables str1 and str2 in your new line of code
+3. Your program should be exactly 5 lines long
 
 ```
 guillaume@ubuntu:~/py/0x00$ ./6-concat.py
@@ -169,12 +165,11 @@ guillaume@ubuntu:~/py/0x00$
 
 *Complete this source code*
 
-1.  You can find the source code here
-2.  You are not allowed to use any loops or conditional statements
-3.  Your program should be exactly 8 lines long
-4.  word_first_3 should contain the first 3 letters of the variable word
-5.  word_last_2 should contain the last 2 letters of the variable word
-6.  middle_word should contain the value of the variable word without the first and last letters
+1.  You are not allowed to use any loops or conditional statements
+2.  Your program should be exactly 8 lines long
+3.  word_first_3 should contain the first 3 letters of the variable word
+4.  word_last_2 should contain the last 2 letters of the variable word
+5.  middle_word should contain the value of the variable word without the first and last letters
 
 ```
 guillaume@ubuntu:~/py/0x00$ ./7-edges.py
@@ -183,7 +178,6 @@ Last 2 letters: on
 Middle word: olberto
 guillaume@ubuntu:~/py/0x00$ wc -l 7-edges.py
 8 7-edges.py
-guillaume@ubuntu:~/py/0x00$ 
 ```
 
 ### 8. Create a new sentence 
@@ -235,7 +229,6 @@ Although never is often better than *right* now.
 If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
-guillaume@ubuntu:~/py/0x00$
 ```
 
 ### 11. Hello, write 
@@ -257,5 +250,4 @@ guillaume@ubuntu:~/py/0x00$ echo $?
 guillaume@ubuntu:~/py/0x00$ ./100-write.py 2> q
 guillaume@ubuntu:~/py/0x00$ cat q
 and that piece of art is useful - Dora Korpar, 2015-10-19
-guillaume@ubuntu:~/py/0x00$ 
 ```
