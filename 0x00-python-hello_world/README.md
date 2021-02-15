@@ -58,7 +58,6 @@ print("Holberton School")
 guillaume@ubuntu:~/py/0x00$ export PYFILE=main.py
 guillaume@ubuntu:~/py/0x00$ ./0-run
 Holberton School
-guillaume@ubuntu:~/py/0x00$ 
 ```
 
 ### 1. Run inline
@@ -72,7 +71,6 @@ guillaume@ubuntu:~/py/0x00$
 guillaume@ubuntu:~/py/0x00$ export PYCODE='print("Holberton School: {}".format(88+10))'
 guillaume@ubuntu:~/py/0x00$ ./1-run_inline 
 Holberton School: 98
-guillaume@ubuntu:~/py/0x00$ 
 ```
 
 ###  2. Hello, print 
@@ -85,7 +83,6 @@ guillaume@ubuntu:~/py/0x00$
 ```
 guillaume@ubuntu:~/py/0x00$ ./2-print.py 
 "Programming is like building a multilingual puzzle
-guillaume@ubuntu:~/py/0x00$
 ```
 
 ###  3. Print integer 
@@ -159,7 +156,6 @@ guillaume@ubuntu:~/py/0x00$ wc -l 6-concat.py
 guillaume@ubuntu:~/py/0x00$ 
 ```
 
-
 ### 7. Copy - Cut - Paste 
 *   File: **7-edges.py**
 
@@ -185,18 +181,16 @@ guillaume@ubuntu:~/py/0x00$ wc -l 7-edges.py
 
 *Complete this source code to print object-oriented programming with Python, followed by a new line.*
 
-1.  You can find the source code here
-2.  You are not allowed to use any loops or conditional statements
-3.  Your program should be exactly 5 lines long
-4.  You are not allowed to create new variables
-5.  You are not allowed to use string literals
+1.  You are not allowed to use any loops or conditional statements
+2.  Your program should be exactly 5 lines long
+3.  You are not allowed to create new variables
+4.  You are not allowed to use string literals
 
 ```
 guillaume@ubuntu:~/py/0x00$ ./8-concat_edges.py
 object-oriented programming with Python
 guillaume@ubuntu:~/py/0x00$ wc -l 8-concat_edges.py
 5 8-concat_edges.py
-guillaume@ubuntu:~/py/0x00$ 
 ```
 
 ###  9. Easter Egg 
