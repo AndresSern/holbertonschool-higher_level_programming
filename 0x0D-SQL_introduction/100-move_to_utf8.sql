@@ -3,4 +3,4 @@
 --  Database hbtn_0c_0 Table first_table Field name in first_table
 ALTER DATABASE hbtn_0c_0 CHARACTER SET  utf8 COLLATE utf8_unicode_ci;
 ALTER table hbtn_0c_0.first_table CONVERT TO CHARACTER SET  utf8 COLLATE utf8_unicode_ci;
-ALTER TABLE hbtn_0c_0.first_table MODIFY COLUMN name VARCHAR(256) COLLATE utf8_unicode_ci DEFAULT NULL;
+ALTER TABLE hbtn_0c_0.first_table MODIFY COLUMN name VARCHAR(256) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL;
