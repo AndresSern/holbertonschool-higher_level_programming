@@ -4,6 +4,6 @@
 --	Results must be sorted in ascending order by the show title and genre name
 --	You can use only one SELECT statement
 SELECT tv_genres.name from tv_genres
-       WHERE tv_genres.id  NOT IN (SELECT tv_show_genres.genre_id FROM tv_show_genres
-       RIGHT JOIN tv_shows ON tv_show_genres.show_id = tv_shows.id 
-       WHERE tv_shows.title = "Dexter") ORDER BY tv_genres.name ASC;
+       WHERE tv_genres.id  NOT IN (SELECT genre_id FROM tv_show_genres
+       RIGHT JOIN tv_shows ON show_id = id 
+       WHERE title = "Dexter") ORDER BY tv_genres.name ASC;
