@@ -31,20 +31,20 @@ In this directory you will learn how to use conditional if, and the while and fo
 
 ## Files:
 
-1.  [0-positive_or_negative.py](#0-positive_or_negativepy)
-2.  [1-last_digit.py](#1-last_digitpy))
-3.  [2-print_alphabet.py](#2-print_alphabetpy)
-4.  [3-print_alphabt.py](#3-print_alphabtpy)
-5.  [4-print_hexa.py](#4-print_hexapy)
-6.  [5-print_comb2.py](#5-print_comb2py)
-7.  [6-print_comb3.py](#6-print_comb3py)
-8.  [7-islower.py](#7-islowerpy)
-9.  [8-uppercase.py](#8-uppercasepy)
-10.  [9-print_last_digit.py](#9-print_last_digitpy)
-11.  [10-add.py](#10-addpy)
-12.  [12-fizzbuzz.py](#12-fizzbuzzpy)
-13.  [100-print_tebahpla.py](#100-print_tebahplapy)
-14.  [101-remove_char_at.py](#101-remove_char_atpy)
+1.  [0-positive_or_negative.py:](#0-positive_or_negativepy)
+2.  [1-last_digit.py:](#1-last_digitpy)
+3.  [2-print_alphabet.py:](#2-print_alphabetpy)
+4.  [3-print_alphabt.py:](#3-print_alphabtpy)
+5.  [4-print_hexa.py:](#4-print_hexapy)
+6.  [5-print_comb2.py:](#5-print_comb2py)
+7.  [6-print_comb3.py:](#6-print_comb3py)
+8.  [7-islower.py:](#7-islowerpy)
+9.  [8-uppercase.py:](#8-uppercasepy)
+10.  [9-print_last_digit.py:](#9-print_last_digitpy)
+11.  [10-add.py:](#10-addpy)
+12.  [12-fizzbuzz.py:](#12-fizzbuzzpy)
+13.  [100-print_tebahpla.py:](#100-print_tebahplapy)
+14.  [101-remove_char_at.py:](#101-remove_char_atpy)
 
 ## Tasks
 
