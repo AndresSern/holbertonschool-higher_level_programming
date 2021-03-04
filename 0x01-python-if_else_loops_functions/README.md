@@ -31,7 +31,7 @@ In this directory you will learn how to use conditional if, and the while and fo
 
 ## Files:
 
-1.  **0-positive_or_negative.py**
+1.  [0-positive_or_negative.py](#0-positive_or_negative.py)
 2.  **1-last_digit.py**
 3.  **2-print_alphabet.py**
 4.  **3-print_alphabt.py**
@@ -48,8 +48,7 @@ In this directory you will learn how to use conditional if, and the while and fo
 
 ## Tasks
 
-### 0. Positive anything is better than negative nothing
-*   File: **0-positive_or_negative.py**
+### 0-positive_or_negative.py
 
 *This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print whether the number stored in the variable number is positive or negative.*
 
@@ -85,8 +84,7 @@ guillaume@ubuntu:~/0x01$ ./0-positive_or_negative.py
 5 is positive
 guillaume@ubuntu:~/0x01$ 
 ```
-### 1. The last digit 
-*   File: **1-last_digit.py**
+### 1-last_digit.py**
 
 *This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable number.*
 
@@ -128,8 +126,7 @@ Last digit of 5169 is 9 and is greater than 5
 guillaume@ubuntu:~/0x01$ 
 ```
 
-###  2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game 
-*   File: **2-print_alphabet.py**
+###  2-print_alphabet.py**
 
 *Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.*
 
@@ -143,8 +140,7 @@ guillaume@ubuntu:~/0x01$ ./2-print_alphabet.py
 abcdefghijklmnopqrstuvwxyzguillaume@ubuntu:~/0x01$
 ```
 
-###  3. When I was having that alphabet soup, I never thought that it would pay off
-*   File: **3-print_alphabt.py**
+###  3-print_alphabt.py**
 
 *Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.*
 
@@ -159,8 +155,7 @@ guillaume@ubuntu:~/0x01$ ./3-print_alphabt.py
 abcdfghijklmnoprstuvwxyzguillaume@ubuntu:~/0x01$
 ```
 
-###  4. Hexadecimal printing 
-*   File: **4-print_hexa.py**
+###  4-print_hexa.py**
 
 *Write a program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example)*
 
@@ -197,8 +192,8 @@ guillaume@ubuntu:~/0x01$ ./4-print_hexa.py
 guillaume@ubuntu:~/0x01$
 ```
 
-###   5. 00...99
-* File: **5-print_comb2.py**
+###   5-print_comb2.py
+
 *Write a program that prints numbers from 0 to 99.*
 
 1.  Numbers must be separated by ,, followed by a space
@@ -215,8 +210,7 @@ guillaume@ubuntu:~/0x01$ ./5-print_comb2.py
 guillaume@ubuntu:~/0x01$ 
 ```
 
-### 6. Inventing is a combination of brains and materials. The more brains you use, the less material you need 
-*   File: **6-print_comb3.py**
+### 6-print_comb3.py
 
 *Write a program that prints all possible different combinations of two digits.*
 
@@ -237,8 +231,7 @@ guillaume@ubuntu:~/0x01$ ./6-print_comb3.py
 ```
 
 
-### 7. islower
-*   File: **7-islower.py** 
+### 7-islower.py** 
 
 *Write a function that checks for lowercase character.*
 
@@ -269,8 +262,7 @@ g is lower
 guillaume@ubuntu:~/0x01$ 
 ```
 
-### 8. To uppercase 
-*   File: **8-uppercase.py**
+### 8-uppercase.py**
 
 *Write a function that prints a string in uppercase followed by a new line.*
 
@@ -295,8 +287,7 @@ HOLBERTON SCHOOL 98 BATTERY STREET
 guillaume@ubuntu:~/0x01$ 
 ```
 
-###  9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important 
-*   File: **9-print_last_digit.py**
+###  9-print_last_digit.py**
 
 *Write a function that prints the last digit of a number.*
 
@@ -319,8 +310,7 @@ guillaume@ubuntu:~/0x01$ ./9-main.py
 guillaume@ubuntu:~/0x01$ 
 ```
 
-### 10. a + b 
-*   File: **10-add.py**
+### 10-add.py**
 
 *Write a function that adds two integers and returns the result.* 
 
@@ -344,8 +334,7 @@ guillaume@ubuntu:~/0x01$ ./10-main.py
 guillaume@ubuntu:~/0x01$ 
 ```
 
-### 11. a ^ b 
-*   File: **11-pow.py**
+### 11-pow.py
 
 *Write a function that computes a to the power of b and return the value.* 
  
@@ -373,12 +362,11 @@ guillaume@ubuntu:~/0x01$ ./11-main.py
 guillaume@ubuntu:~/0x01$ 
 ```
 
-### 12. Fizz Buzz 
-*   File: **12-fizzbuzz.py**
+### 12-fizzbuzz.py*
 
 *Write a function that prints the numbers from 1 to 100 separated by a space.* 
 
-1.    For multiples of three print Fizz instead of the number and for multiples of five print 6.    Buzz.
+1.    For multiples of three print Fizz instead of the number and for multiples of five print 6.
 2.    For numbers which are multiples of both three and five print FizzBuzz.
 3.    Prototype: def fizzbuzz():
 4.    Each element should be followed by a space
@@ -397,8 +385,7 @@ guillaume@ubuntu:~/0x01$ ./12-main.py | cat -e
 guillaume@ubuntu:~/0x01$ 
 ```
 
-### 14. Smile in the mirror 
-*   File: **100-print_tebahpla.py**
+### 100-print_tebahpla.py
 
 *Write a program that prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (z in lowercase and Y in uppercase) , not followed by a new line.* 
 
