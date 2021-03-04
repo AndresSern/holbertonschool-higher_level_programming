@@ -31,20 +31,20 @@ In this directory you will learn how to use conditional if, and the while and fo
 
 ## Files:
 
-1.  [0-positive_or_negative.py](#0-positive_or_negativepy)
-2.  [1-last_digit.py](#1-last_digitpy))
-3.  [2-print_alphabet.py](#2-print_alphabetpy)
-4.  [3-print_alphabt.py](#3-print_alphabtpy)
-5.  [4-print_hexa.py](#4-print_hexapy)
-6.  [5-print_comb2.py](#5-print_comb2py)
-7.  [6-print_comb3.py](#6-print_comb3py)
-8.  [7-islower.py](#7-islowerpy)
-9.  [8-uppercase.py](#8-uppercasepy)
-10.  [9-print_last_digit.py](#9-print_last_digitpy)
-11.  [10-add.py](#10-addpy)
-12.  [12-fizzbuzz.py](#12-fizzbuzzpy)
-13.  [100-print_tebahpla.py](#100-print_tebahplapy)
-14.  [101-remove_char_at.py](#101-remove_char_atpy)
+1.  [0-positive_or_negative.py:](#0-positive_or_negativepy) This program will assign a random signed number to the variable number each time it is executed, followed if is negative, positive or zero.
+2.  [1-last_digit.py:](#1-last_digitpy)) The output is the Last digit of a number random, followed if the last number is negative, positive or zero.
+3.  [2-print_alphabet.py:](#2-print_alphabetpy) Program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+4.  [3-print_alphabt.py:](#3-print_alphabtpy) Program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+5.  [4-print_hexa.py:](#4-print_hexapy) Program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example) 
+6.  [5-print_comb2.py:](#5-print_comb2py) Program that prints numbers from 0 to 99.
+7.  [6-print_comb3.py:](#6-print_comb3py) Program that prints all possible different combinations of two digits.
+8.  [7-islower.py:](#7-islowerpy) Function that checks for lowercase character.
+9.  [8-uppercase.py:](#8-uppercasepy) Function that prints a string in uppercase followed by a new line.
+10.  [9-print_last_digit.py:](#9-print_last_digitpy) Function that prints the last digit of a number.
+11.  [10-add.py:](#10-addpy) Function that adds two integers and returns the result.
+12.  [12-fizzbuzz.py:](#12-fizzbuzzpy)  Function that prints the numbers from 1 to 100 separated by a space.
+13.  [100-print_tebahpla.py:](#100-print_tebahplapy) Program that prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (z in lowercase and Y in uppercase) , not followed by a new line
+14.  [101-remove_char_at.py:](#101-remove_char_atpy)
 
 ## Tasks
 
@@ -227,7 +227,7 @@ guillaume@ubuntu:~/0x01$ ./6-print_comb3.py
 
 ### 7-islower.py 
 
-*Write a function that checks for lowercase character.*
+*Function that checks for lowercase character.*
 
 1.  Prototype: def islower(c):
 2.  Returns True if c is lowercase
@@ -258,7 +258,7 @@ guillaume@ubuntu:~/0x01$
 
 ### 8-uppercase.py
 
-*Write a function that prints a string in uppercase followed by a new line.*
+*Function that prints a string in uppercase followed by a new line.*
 
 1.    Prototype: def uppercase(str):
 2.    Only use no more than 2 print functions with string format
@@ -283,7 +283,7 @@ guillaume@ubuntu:~/0x01$
 
 ###  9-print_last_digit.py
 
-*Write a function that prints the last digit of a number.*
+*Function that prints the last digit of a number.*
 
 1.  Prototype: def print_last_digit(number):
 2.  Returns the value of the last digit
@@ -306,7 +306,7 @@ guillaume@ubuntu:~/0x01$
 
 ### 10-add.py
 
-*Write a function that adds two integers and returns the result.* 
+*Function that adds two integers and returns the result.* 
 
 1.   Prototype: def add(a, b):
 2.   Returns the value of a + b
@@ -330,7 +330,7 @@ guillaume@ubuntu:~/0x01$
 
 ### 11-pow.py
 
-*Write a function that computes a to the power of b and return the value.* 
+*Function that computes a to the power of b and return the value.* 
  
 1.   Prototype: def pow(a, b):
 2.   Returns the value of a ^ b
@@ -358,7 +358,7 @@ guillaume@ubuntu:~/0x01$
 
 ### 12-fizzbuzz.py*
 
-*Write a function that prints the numbers from 1 to 100 separated by a space.* 
+*Function that prints the numbers from 1 to 100 separated by a space.* 
 
 1.    For multiples of three print Fizz instead of the number and for multiples of five print 6.
 2.    For numbers which are multiples of both three and five print FizzBuzz.
