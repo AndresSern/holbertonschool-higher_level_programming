@@ -257,7 +257,7 @@ guillaume@ubuntu:~/$
 
 ### 9-full_creation.sql
 
-*TWrite a script that creates a table second_table in the database hbtn_0c_0 in your MySQL server and add multiples rows.*
+*Write a script that creates a table second_table in the database hbtn_0c_0 in your MySQL server and add multiples rows.*
 
 1.  second_table description:
     - id INT
@@ -318,7 +318,6 @@ guillaume@ubuntu:~/$
 
 
 ### 12-no_cheating.sql
-*TEXT HERE *
 
 *Write a script that updates the score of Bob to 10 in the table second_table.*
 
@@ -470,7 +469,7 @@ Sunnyvale   73.2353
 guillaume@ubuntu:~/$ 
 ```
 
-### T103-max_state.sql
+### 103-max_state.sql
 
 *Import in hbtn_0c_0 database this table dump: download (same as Temperatures #0) Write a script that displays the max temperature of each state (ordered by State name)*
   
