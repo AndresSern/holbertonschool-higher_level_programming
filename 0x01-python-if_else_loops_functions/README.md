@@ -31,7 +31,7 @@ In this directory you will learn how to use conditional if, and the while and fo
 
 ## Files:
 
-1.  [0-positive_or_negative.py](#0-positive_or_negative.py)
+1.  [0-positive_or_negative.py](#0-positive_or_negativepy)
 2.  **1-last_digit.py**
 3.  **2-print_alphabet.py**
 4.  **3-print_alphabt.py**
