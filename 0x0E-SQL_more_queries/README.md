@@ -453,7 +453,7 @@ guillaume@ubuntu:~/$
 
 ### 102-top_city.sql
 
-*Write a script that displays the top 3 of cities temperature during July and August ordered by temperature (descending)
+*Write a script that displays the top 3 of cities temperature during July and August ordered by temperature (descending)*
 
 1.    
 2.    
@@ -472,9 +472,7 @@ guillaume@ubuntu:~/$
 
 ### T103-max_state.sql
 
-*Import in hbtn_0c_0 database this table dump: download (same as Temperatures #0)
-
-Write a script that displays the max temperature of each state (ordered by State name)*
+*Import in hbtn_0c_0 database this table dump: download (same as Temperatures #0) Write a script that displays the max temperature of each state (ordered by State name)*
   
 ```
 guillaume@ubuntu:~/$ cat 103-max_state.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
