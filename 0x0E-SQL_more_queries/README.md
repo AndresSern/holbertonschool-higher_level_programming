@@ -49,7 +49,7 @@ $ mysql -hlocalhost -uroot -p
 
 ## Introduction To The Files:
 
-1.  [0-list_databases.sql:](#0-list_databases.sql) TWrite a script that lists all databases of your MySQL server.
+1.  [0-list_databases.sql:](#0-list_databasessql) TWrite a script that lists all databases of your MySQL server.
 2.  [:](#0-positive_or_negativepy) Text Here
 3.  [:](#0-positive_or_negativepy) Text Here
 4.  [:](#0-positive_or_negativepy) Text Here
