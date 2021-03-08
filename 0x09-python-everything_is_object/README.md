@@ -31,18 +31,11 @@
 
 
 <ol>
-	<li> [0-read_file.py:](#0-read_filepy) Write a function that reads a text file (</li>
-
-
-	<li> [1-write_file.py:](#1-write_filepy) Write a function that writes a string to a text file (</li>
-
-
-	<li> [2-append_write.py:](#2-append_writepy) Write a function that appends a string at the end of a text file (</li>
-
-
-	<li> [3-to_json_string.py:](#3-to_json_stringpy) Write a function that returns the JSON representation of an object (string):</li>
-
-
+	<li>[0-read_file.py:](#0-read_filepy) Write a function that reads a text file</li>
+	<li>[1-write_file.py:](#1-write_filepy) Write a function that writes a string to a text file</li>
+	<li>[2-append_write.py:](#2-append_writepy) Write a function that appends a string at the end of a text file</li>
+	<li>[3-to_json_string.py:](#3-to_json_stringpy) Write a function that returns the JSON representation of an object (string):</li>
+	1.  [0-list_databases.sql:](#0-list_databasessql) TWrite a script that lists all databases of your MySQL server.
 </ol>
 ## FILES:
 
