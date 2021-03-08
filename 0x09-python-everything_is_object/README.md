@@ -17,25 +17,32 @@
 
 ## RESOURCES:
 
- <ul>
-<li><a href="/rltoken/c5ypFfQwcM-SZ-7tr3WuxA" title="7.2. Reading and Writing Files" target="_blank">7.2. Reading and Writing Files</a> </li>
-<li><a href="/rltoken/1wqMFejKqBva-Lxws0lftw" title="8.7. Predefined Clean-up Actions" target="_blank">8.7. Predefined Clean-up Actions</a> </li>
-<li><a href="/rltoken/8aSPOpBZj9B1DB6GfoEWfg" title="Dive Into Python 3: Chapter 11. Files" target="_blank">Dive Into Python 3: Chapter 11. Files</a> (<em>until “11.4 Binary Files” (included)</em>)</li>
-<li><a href="/rltoken/XBqM3BrA_rUBw6DXw4X98Q" title="JSON encoder and decoder" target="_blank">JSON encoder and decoder</a> </li>
-<li><a href="/rltoken/derf9VLFVDnSgX2n-drwnw" title="Learn to Program 8 : Reading / Writing Files" target="_blank">Learn to Program 8 : Reading / Writing Files</a> </li>
-<li><a href="/rltoken/Y77h8aeRoljlN643yKfdTg" title="Automate the Boring Stuff with Python" target="_blank">Automate the Boring Stuff with Python</a> (<em>ch. 8 p 180-183 and ch. 14 p 326-333</em>)</li>
-</ul>:
+ <ol>
+	<li><a href="/rltoken/c5ypFfQwcM-SZ-7tr3WuxA" title="7.2. Reading and Writing Files" target="_blank">7.2. Reading and Writing Files</a> </li>
+	<li><a href="/rltoken/1wqMFejKqBva-Lxws0lftw" title="8.7. Predefined Clean-up Actions" target="_blank">8.7. Predefined Clean-up Actions</a> </li>
+	<li><a href="/rltoken/8aSPOpBZj9B1DB6GfoEWfg" title="Dive Into Python 3: Chapter 11. Files" target="_blank">Dive Into Python 3: Chapter 11. Files</a> (<em>until “11.4 Binary Files” (included)</em>)</li>
+	<li><a href="/rltoken/XBqM3BrA_rUBw6DXw4X98Q" title="JSON encoder and decoder" target="_blank">JSON encoder and decoder</a> </li>
+	<li><a href="/rltoken/derf9VLFVDnSgX2n-drwnw" title="Learn to Program 8 : Reading / Writing Files" target="_blank">Learn to Program 8 : Reading / Writing Files</a> </li>
+	<li><a href="/rltoken/Y77h8aeRoljlN643yKfdTg" title="Automate the Boring Stuff with Python" target="_blank">Automate the Boring Stuff with Python</a> (<em>ch. 8 p 180-183 and ch. 14 p 326-333</em>)</li>
+</ol>
 
 
 ## INTRODUCTION TO FILES:
 
 
 <ol>
-	<li>[0-read_file.py:](#0-read_filepy) Write a function that reads a text file</li>
-	<li>[1-write_file.py:](#1-write_filepy) Write a function that writes a string to a text file</li>
-	<li>[2-append_write.py:](#2-append_writepy) Write a function that appends a string at the end of a text file</li>
-	<li>[3-to_json_string.py:](#3-to_json_stringpy) Write a function that returns the JSON representation of an object (string):</li>
-	1.  [0-list_databases.sql:](#0-list_databasessql) TWrite a script that lists all databases of your MySQL server.
+	<li> [0-read_file.py:](#0-read_filepy) Write a function that reads a text file (</li>
+
+
+	<li> [1-write_file.py:](#1-write_filepy) Write a function that writes a string to a text file (</li>
+
+
+	<li> [2-append_write.py:](#2-append_writepy) Write a function that appends a string at the end of a text file (</li>
+
+
+	<li> [3-to_json_string.py:](#3-to_json_stringpy) Write a function that returns the JSON representation of an object (string):</li>
+
+
 </ol>
 ## FILES:
 
