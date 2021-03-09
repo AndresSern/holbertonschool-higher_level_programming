@@ -41,7 +41,7 @@
 7.	[**7-edges.py**:](#7-edgespy) Complete this 
 8.	[**8-concat_edges.py**:](#8-concat_edgespy) Complete this 
 9.	[**9-easter_egg.py**:](#9-easter_eggpy) Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
-10.	[**10-check_cycle.c**:](#10-check_cyclec) Technical interview preparation
+10.	[**10-check_cycle.c, lists.h**:](#10-check_cyclec, listsh) : 
 11.	[**100-write.py**:](#100-writepy) Write a Python script that prints exactly 
 12.	[**101-compile**:](#101-compile) Write a script that compiles a Python script file.
 13.	[**102-magic_calculation.py**:](#102-magic_calculationpy) Write the Python function 
@@ -49,7 +49,7 @@
 
 ### 0-run
 
-*<p>Write a Shell script that runs a Python script.</p><p>The Python file name will be saved in the environment variable <code>$PYFILE</code></p>*
+*<p>Shell script that runs a Python script.</p><p>The Python file name will be saved in the environment variable <code>$PYFILE</code></p>*
 
 <pre><code>guillaume@ubuntu:~/py/0x00$ cat main.py 
 #!/usr/bin/python3
@@ -63,7 +63,7 @@ guillaume@ubuntu:~/py/0x00$
 
 ### 1-run_inline
 
-*<p>Write a Shell script that runs Python code.</p><p>The Python code will be saved in the environment variable <code>$PYCODE</code></p>*
+*<p>Shell script that runs Python code.</p><p>The Python code will be saved in the environment variable <code>$PYCODE</code></p>*
 
 <pre><code>guillaume@ubuntu:~/py/0x00$ export PYCODE='print("Holberton School: {}".format(88+10))'
 guillaume@ubuntu:~/py/0x00$ ./1-run_inline 
@@ -73,7 +73,7 @@ guillaume@ubuntu:~/py/0x00$
 
 ### 2-print.py
 
-*<p>Write a Python script that prints exactly <code>"Programming is like building a multilingual puzzle</code>, followed by a new line.</p>*
+*<p>Python script that prints exactly <code>"Programming is like building a multilingual puzzle</code>, followed by a new line.</p>*
 
 <ul>
 	<li>Use the function <code>print</code></li>
@@ -96,8 +96,8 @@ guillaume@ubuntu:~/py/0x00$
 	<li>the number, followed by <code>Battery street</code>,</li>
 	<li>followed by a new line</li>
 </ul></li>
-	<li>You are not allowed to cast the variable <code>number</code> into a string</li>
-	<li>Your code must be 3 lines long</li>
+	<li>It is not allowed to cast the variable <code>number</code> into a string</li>
+	<li>code must be 3 lines long</li>
 	<li>You have to use the new print numbers <a href="/rltoken/k33L_JH5NMcE3c4LsUkVlA" title="tips" target="_blank">tips</a> (with <code>.format(...)</code>)</li>
 </ul>
 
@@ -118,7 +118,7 @@ guillaume@ubuntu:~/py/0x00$
 	<li><code>Float:</code>, followed by the float with only 2 digits</li>
 	<li>followed by a new line</li>
 </ul></li>
-	<li>You are not allowed to cast <code>number</code> to string</li>
+	<li>It is not allowed to cast <code>number</code> to string</li>
 	<li>You have to use the new print formatting <a href="/rltoken/CLkyFheLlanPlBS4ySOg7A" title="tips" target="_blank">tips</a>  (with <code>.format(...)</code>)</li>
 </ul>
 
@@ -141,8 +141,8 @@ guillaume@ubuntu:~/py/0x00$
 	<li>followed by the 9 first characters of <code>str</code></li>
 	<li>followed by a new line</li>
 </ul></li>
-	<li>You are not allowed to use any loops or conditional statement</li>
-	<li>Your program should be maximum 5 lines long</li>
+	<li>It is not allowed to use any loops or conditional statement</li>
+	<li>program should be maximum 5 lines long</li>
 </ul>
 
 <pre><code>guillaume@ubuntu:~/py/0x00$ ./5-print_string.py 
@@ -157,9 +157,9 @@ guillaume@ubuntu:~/py/0x00$
 
 <ul>
 	<li>You can find the source code <a href="https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py" title="here" target="_blank">here</a></li>
-	<li>You are not allowed to use any loops or conditional statements.</li>
+	<li>It is not allowed to use any loops or conditional statements.</li>
 	<li>You have to use the variables <code>str1</code> and <code>str2</code> in your new line of code</li>
-	<li>Your program should be exactly 5 lines long</li>
+	<li>program should be exactly 5 lines long</li>
 </ul>
 
 <pre><code>guillaume@ubuntu:~/py/0x00$ ./6-concat.py
@@ -175,8 +175,8 @@ guillaume@ubuntu:~/py/0x00$
 
 <ul>
 	<li>You can find the source code <a href="https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py" title="here" target="_blank">here</a></li>
-	<li>You are not allowed to use any loops or conditional statements</li>
-	<li>Your program should be exactly 8 lines long</li>
+	<li>It is not allowed to use any loops or conditional statements</li>
+	<li>program should be exactly 8 lines long</li>
 	<li><code>word_first_3</code> should contain the first 3 letters of the variable <code>word</code></li>
 	<li><code>word_last_2</code> should contain the last 2 letters of the variable <code>word</code></li>
 	<li><code>middle_word</code> should contain the value of the variable <code>word</code> without the first and last letters</li>
@@ -197,10 +197,10 @@ guillaume@ubuntu:~/py/0x00$
 
 <ul>
 	<li>You can find the source code <a href="https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py" title="here" target="_blank">here</a></li>
-	<li>You are not allowed to use any loops or conditional statements</li>
-	<li>Your program should be exactly 5 lines long</li>
-	<li>You are not allowed to create new variables</li>
-	<li>You are not allowed to use string literals</li>
+	<li>It is not allowed to use any loops or conditional statements</li>
+	<li>program should be exactly 5 lines long</li>
+	<li>It is not allowed to create new variables</li>
+	<li>It is not allowed to use string literals</li>
 </ul>
 
 <pre><code>guillaume@ubuntu:~/py/0x00$ ./8-concat_edges.py
@@ -212,10 +212,10 @@ guillaume@ubuntu:~/py/0x00$
 
 ### 9-easter_egg.py
 
-*<p>Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.</p>*
+*<p>Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.</p>*
 
 <ul>
-	<li>Your script should be maximum 98 characters long (please check with <code>wc -m 9-easter_egg.py</code>)</li>
+	<li>script should be maximum 98 characters long (please check with <code>wc -m 9-easter_egg.py</code>)</li>
 </ul>
 
 <pre><code>guillaume@ubuntu:~/py/0x00$ ./9-easter_egg.py
@@ -243,12 +243,12 @@ Namespaces are one honking great idea -- let's do more of those!
 guillaume@ubuntu:~/py/0x00$
 </code></pre>
 
-### 10-check_cycle.c
+### 10-check_cycle.c, lists.h
 
 *<p><strong>Technical interview preparation</strong>: </p><p>Function in C that checks if a singly linked list has a cycle in it.</p><p>Requirements:</p>*
 
 <ul>
-	<li>You are not allowed to google anything</li>
+	<li>It is not allowed to google anything</li>
 	<li>Whiteboard first</li>
 	<li>This task and all future technical interview prep tasks will include checks for the efficiency of your solution, i.e. is your solution’s runtime fast enough, does your solution require extra memory usage / mallocs, etc.</li>
 </ul>
@@ -290,13 +290,13 @@ int check_cycle(listint_t *list);
 
 ### 100-write.py
 
-*<p>Write a Python script that prints exactly <code>and that piece of art is useful - Dora Korpar, 2015-10-19</code>, followed by a new line.</p>*
+*<p>Python script that prints exactly <code>and that piece of art is useful - Dora Korpar, 2015-10-19</code>, followed by a new line.</p>*
 
 <ul>
 	<li>Use the function <code>write</code> from the <code>sys</code> module</li>
-	<li>You are not allowed to use <code>print</code></li>
-	<li>Your script should print to <code>stderr</code></li>
-	<li>Your script should exit with the status code <code>1</code></li>
+	<li>It is not allowed to use <code>print</code></li>
+	<li>script should print to <code>stderr</code></li>
+	<li>script should exit with the status code <code>1</code></li>
 	<li>(Dora Korpar was a Holberton student in Cohort 0 of San Francisco)</li>
 </ul>
 
@@ -312,7 +312,7 @@ guillaume@ubuntu:~/py/0x00$
 
 ### 101-compile
 
-*<p>Write a script that compiles a Python script file.</p><p>The Python file name will be stored in the environment variable <code>$PYFILE</code></p><p>The output filename has to be <code>$PYFILEc</code> (ex: <code>export PYFILE=my_main.py</code> =&gt; output filename: <code>my_main.pyc</code>)</p>*
+*<p>script that compiles a Python script file.</p><p>The Python file name will be stored in the environment variable <code>$PYFILE</code></p><p>The output filename has to be <code>$PYFILEc</code> (ex: <code>export PYFILE=my_main.py</code> =&gt; output filename: <code>my_main.pyc</code>)</p>*
 
 <pre><code>guillaume@ubuntu:~/py/0x00$ cat main.py 
 #!/usr/bin/python3
