@@ -1,392 +1,309 @@
-# 0x00. Python - Hello, World
-In this directory you will learn how to use conditional if, and the while and for loop and differentiate each one
+# 0x01. C - Variables, if, else, while
+
+*In this directory you will learn how to use conditional if, and the while and for loop and differentiate each one*
 
 ## GENERAL:
-1.  Why Python programming is awesome 
-2.  Why indentation is so important in Python
-3.  How to use the if, if ... else statements
-4.  How to use comments
-5.  How to affect values to variables
-6.  How to use the while and for loops
-7.  How is Pythons for different from Cs?
-8.  How to use the break and continues statements
-9.  How to use else clauses on loops
-10.  What does the pass statement do, and when to use it
-11.  How to use range
-12.  What is a function and how do you use functions
-13.  What does return a function that does not use any return statement
-14.  Scope of variables
-15.  Whats a traceback
-16.  What are the arithmetic operators and how to use them
 
-## RESOURSES:
+ <ol>
+	<li>What are the arithmetic operators and how to use them</li>
+	<li>What are the logical operators (sometimes called boolean operators) and how to use them</li>
+	<li>What the the relational operators and how to use them</li>
+	<li>What values are considered TRUE and FALSE in C</li>
+	<li>What are the boolean operators and how to use them</li>
+	<li>How to use the <code>if</code>, <code>if ... else</code> statements</li>
+	<li>How to use comments</li>
+	<li>How to declare variables of types <code>char</code>, <code>int</code>, <code>unsigned int</code></li>
+	<li>How to assign values to variables</li>
+	<li>How to print the values of variables of type <code>char</code>, <code>int</code>, <code>unsigned int</code> with <code>printf</code></li>
+	<li>How to use the <code>while</code> loop</li>
+	<li>How to use variables with the <code>while</code> loop</li>
+	<li>How to print variables using <code>printf</code></li>
+	<li>What is the <code>ASCII</code> character set</li>
+	<li>What are the purpose of the <code>gcc</code> flags <code>-m32</code> and <code>-m64</code></li>
+</ol>
 
-1.   **[More Control Flow Tools:](https://docs.python.org/3.4/tutorial/controlflow.html)**
-2.   **[Myths about Indentation:](https://files.meetup.com/1544869/Python%20Indentation%20Myths.pdf)**
-3.   **[IndentationError:](https://www.youtube.com/watch?v=1QXOd2ZQs-Q)** 
-4.   **[How To Use String Formatters in Python 3:](https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3)**
-5.   **[Learn to Program:](https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt)**
-6.   **[Learn to Program 2 : Looping:](https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt)**
-7.   **[PEP 8  Style Guide for Python Code:](https://www.python.org/dev/peps/pep-0008/)**
+## RESOURCES:
 
-## Files:
+ <ol>
+	<li><a href="/rltoken/GB1UNodFfec0AXUfmSxsLA" title="Everything you need to know to start with C.pdf" target="_blank">Everything you need to know to start with C.pdf</a> (<em>You do not have to learn everything in there yet, but make sure you read it entirely first and make sure you understand the slides: “comments”, “Data types | Integer types”, “Declaration”, “Characters”, “Arithmetic operators”, “Variables assignments”, “Comparisons”, “Logical operators”, “if, if…else”, “while loops”.</em>)</li>
+	<li><a href="/rltoken/ckqC9BrBcMmv-DLmBauaWQ" title="Keywords and identifiers" target="_blank">Keywords and identifiers</a> </li>
+	<li><a href="/rltoken/Oau_6LT7-3IIt5ew_3Ac6g" title="integers" target="_blank">integers</a> </li>
+	<li><a href="/rltoken/r4hrHzg2X9JjnKj8sP_SAw" title="Arithmetic Operators in C" target="_blank">Arithmetic Operators in C</a> </li>
+	<li><a href="/rltoken/W93uajwXtW3WOxOaeBtF-A" title="If statements in C" target="_blank">If statements in C</a> </li>
+	<li><a href="/rltoken/PMD6eKdkj2RmIpagtABihw" title="if...else statement" target="_blank">if…else statement</a> </li>
+	<li><a href="/rltoken/dCy4644-X_WJMYxRZwCfFQ" title="Relational operators" target="_blank">Relational operators</a> </li>
+	<li><a href="/rltoken/gJzJXQoEdEN1Oxcutp_76Q" title="Logical operators" target="_blank">Logical operators</a> </li>
+	<li><a href="/rltoken/Qhq1p5UcR72-VXFJ_iAqWQ" title="while loop in C" target="_blank">while loop in C</a> </li>
+	<li><a href="/rltoken/RY9a1EDxRKNNHhxbJ6Pn_g" title="While loop" target="_blank">While loop</a> </li>
+</ol>
 
-1.  [0-positive_or_negative.py:](#0-positive_or_negativepy) This program will assign a random signed number to the variable number each time it is executed, followed if is negative, positive or zero.
-2.  [1-last_digit.py:](#1-last_digitpy)) The output is the Last digit of a number random, followed if the last number is negative, positive or zero.
-3.  [2-print_alphabet.py:](#2-print_alphabetpy) Program that prints the ASCII alphabet, in lowercase, not followed by a new line.
-4.  [3-print_alphabt.py:](#3-print_alphabtpy) Program that prints the ASCII alphabet, in lowercase, not followed by a new line.
-5.  [4-print_hexa.py:](#4-print_hexapy) Program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example) 
-6.  [5-print_comb2.py:](#5-print_comb2py) Program that prints numbers from 0 to 99.
-7.  [6-print_comb3.py:](#6-print_comb3py) Program that prints all possible different combinations of two digits.
-8.  [7-islower.py:](#7-islowerpy) Function that checks for lowercase character.
-9.  [8-uppercase.py:](#8-uppercasepy) Function that prints a string in uppercase followed by a new line.
-10.  [9-print_last_digit.py:](#9-print_last_digitpy) Function that prints the last digit of a number.
-11.  [10-add.py:](#10-addpy) Function that adds two integers and returns the result.
-12.  [12-fizzbuzz.py:](#12-fizzbuzzpy)  Function that prints the numbers from 1 to 100 separated by a space.
-13.  [100-print_tebahpla.py:](#100-print_tebahplapy) Program that prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (z in lowercase and Y in uppercase) , not followed by a new line
-14.  [101-remove_char_at.py:](#101-remove_char_atpy)
+## INTRODUCTION TO FILES:
 
-## Tasks
+0.	[**0-positive_or_negative.c**:](#0-positive_or_negativec) This program will assign a random number to the variable 
+1.	[**1-last_digit.c**:](#1-last_digitc) This program will assign a random number to the variable 
+2.	[**3-print_alphabets.c**:](#3-print_alphabetsc) Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
+3.	[**4-print_alphabt.c**:](#4-print_alphabtc) Write a program that prints the alphabet in lowercase, followed by a new line.
+4.	[**5-print_numbers.c**:](#5-print_numbersc) Write a program that prints all single digit numbers of base 10 starting from 
+5.	[**6-print_numberz.c**:](#6-print_numberzc) Write a program that prints all single digit numbers of base 10 starting from 
+6.	[**7-print_tebahpla.c**:](#7-print_tebahplac) Write a program that prints the lowercase alphabet in reverse, followed by a new line.
+7.	[**8-print_base16.c**:](#8-print_base16c) Write a program that prints all the numbers of base 16 in lowercase, followed by a new line.
+8.	[**9-print_comb.c**:](#9-print_combc) Write a program that prints all possible combinations of single-digit numbers.
+9.	[**100-print_comb3.c**:](#100-print_comb3c) Write a program that prints all possible different combinations of two digits.
+10.	[**102-print_comb5.c**:](#102-print_comb5c) Write a program that prints all possible combinations of two two-digit numbers.
+## FILES:
 
-### 0-positive_or_negative.py
+### 0-positive_or_negative.c
 
-*This program will assign a random signed number to the variable number each time it is executed.*
-1.     RETURN 
-      -  The number, followed by
-            - if the number is greater than 0: is positive
-            - if the number is 0: is zero
-            - if the number is less than 0: is negative
-      - followed by a new line 
+*<p>This program will assign a random number to the variable <code>n</code> each time it is executed. Complete the source code in order to print whether the number stored in the variable <code>n</code> is positive or negative.</p>*
 
-Example:
+<ul>
+	<li>You can find the source code <a href="/rltoken/7UBSgP4-dX9UI_R-fz7yYQ" title="here" target="_blank">here</a></li>
+	<li>The variable <code>n</code> will store a different value every time you will run this program</li>
+	<li>You don’t have to understand what <code>rand</code>, <code>srand</code>, <code>RAND_MAX</code> do. Please do not touch this code</li>
+	<li>The output of the program should be:
 
-```
-guillaume@ubuntu:~/0x01$ ./0-positive_or_negative.py 
--4 is negative
-guillaume@ubuntu:~/0x01$ ./0-positive_or_negative.py 
+<ul>
+	<li>The number, followed by
+
+<ul>
+	<li>if the number is greater than 0: <code>is positive</code></li>
+	<li>if the number is 0: <code>is zero</code></li>
+	<li>if the number is less than 0: <code>is negative</code></li>
+</ul></li>
+	<li>followed by a new line</li>
+</ul></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra 0-positive_or_negative.c -o 0-positive_or_negative
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+-520693284 is negative
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+-973398895 is negative
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+-199220452 is negative
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+561319348 is positive
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+561319348 is positive
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+266853958 is positive
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+-48147767 is negative
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
 0 is zero
-guillaume@ubuntu:~/0x01$ ./0-positive_or_negative.py 
--3 is negative
-guillaume@ubuntu:~/0x01$ ./0-positive_or_negative.py 
--10 is negative
-guillaume@ubuntu:~/0x01$ ./0-positive_or_negative.py 
-10 is positive
-guillaume@ubuntu:~/0x01$ ./0-positive_or_negative.py 
--5 is negative
-guillaume@ubuntu:~/0x01$ ./0-positive_or_negative.py 
-6 is positive
-guillaume@ubuntu:~/0x01$ ./0-positive_or_negative.py 
-7 is positive
-guillaume@ubuntu:~/0x01$ ./0-positive_or_negative.py 
-5 is positive
-guillaume@ubuntu:~/0x01$ 
-```
-### 1-last_digit.py
+julien@ubuntu:~/0x01$ 
+</code></pre>
 
-*This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable number.*
+### 1-last_digit.c
 
-1.    The variable number will store a different value every time you will run this program
-2.    You don’t have to understand what import, random.randint do. Please do not touch this code. This line should not change: number = random.randint(-10000, 10000)
+*<p>This program will assign a random number to the variable <code>n</code> each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable <code>n</code>.</p>*
 
-3.    The output of the program should be:
-      -  The string Last digit of, followed by
-      -  the number, followed by
-      -  the string is, followed by the last digit of number, followed by
-            - if the last digit is greater than 5: the string and is greater than 5
-            - f the last digit is 0: the string and is 0
-            - if the last digit is less than 6 and not 0: the string and is less than 6 and not 0
-      - followed by a new line 
+<ul>
+	<li>You can find the source code <a href="/rltoken/oFiQttJDmwMElxNT6fqSiA" title="here" target="_blank">here</a></li>
+	<li>The variable <code>n</code> will store a different value every time you run this program</li>
+	<li>You don’t have to understand what <code>rand</code>, <code>srand</code>, and <code>RAND_MAX</code> do. Please do not touch this code</li>
+	<li>The output of the program should be:
 
-```
-guillaume@ubuntu:~/0x01$ ./1-last_digit.py
-Last digit of 4205 is 5 and is less than 6 and not 0
-guillaume@ubuntu:~/0x01$ ./1-last_digit.py
-Last digit of -626 is -6 and is less than 6 and not 0
-guillaume@ubuntu:~/0x01$ ./1-last_digit.py
-Last digit of 1144 is 4 and is less than 6 and not 0
-guillaume@ubuntu:~/0x01$ ./1-last_digit.py
-Last digit of -9200 is 0 and is 0
-guillaume@ubuntu:~/0x01$ ./1-last_digit.py
-Last digit of 5247 is 7 and is greater than 5
-guillaume@ubuntu:~/0x01$ ./1-last_digit.py
-Last digit of -9318 is -8 and is less than 6 and not 0
-guillaume@ubuntu:~/0x01$ ./1-last_digit.py
-Last digit of 3369 is 9 and is greater than 5
-guillaume@ubuntu:~/0x01$ ./1-last_digit.py
-Last digit of -5224 is -4 and is less than 6 and not 0
-guillaume@ubuntu:~/0x01$ ./1-last_digit.py
-Last digit of -4485 is -5 and is less than 6 and not 0
-guillaume@ubuntu:~/0x01$ ./1-last_digit.py
-Last digit of 3850 is 0 and is 0
-guillaume@ubuntu:~/0x01$ ./1-last_digit.py
-Last digit of 5169 is 9 and is greater than 5
-guillaume@ubuntu:~/0x01$ 
-```
+<ul>
+	<li>The string <code>Last digit of</code>, followed by</li>
+	<li><code>n</code>, followed by</li>
+	<li>the string <code>is</code>, followed by
 
-###  2-print_alphabet.py
+<ul>
+	<li>if the last digit of <code>n</code> is greater than 5: the string <code>and is greater than 5</code></li>
+	<li>if the last digit of <code>n</code> is 0: the string <code>and is 0</code></li>
+	<li>if the last digit of <code>n</code> is less than 6 and not 0: the string <code>and is less than 6 and not 0</code></li>
+</ul></li>
+	<li>followed by a new line</li>
+</ul></li>
+</ul>
 
-*Program that prints the ASCII alphabet, in lowercase, not followed by a new line.*
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra 1-last_digit.c -o 1-last_digit
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 629438752 is 2 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -748255693 is -3 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -1052791662 is -2 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -284805734 is -4 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -284805734 is -4 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 491506926 is 6 and is greater than 5
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 954249937 is 7 and is greater than 5
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 652334952 is 2 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -729688197 is -7 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -729688197 is -7 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 45528266 is 6 and is greater than 5
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 45528266 is 6 and is greater than 5
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 809065140 is 0 and is 0
+julien@ubuntu:~/0x01$
+</code></pre>
 
-1.    Only use one print function with string format
-2.    Only use one loop in your code
-3.    It is not allowed to store characters in a variable
-  
-```
-guillaume@ubuntu:~/0x01$ ./2-print_alphabet.py
-abcdefghijklmnopqrstuvwxyzguillaume@ubuntu:~/0x01$
-```
+### 3-print_alphabets.c
 
-###  3-print_alphabt.py
+*<p>Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.</p>*
 
-*Program that prints the ASCII alphabet, in lowercase, not followed by a new line.*
+<ul>
+	<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+	<li>All your code should be in the <code>main</code> function</li>
+	<li>You can only use <code>putchar</code> three times in your code</li>
+</ul>
 
-1.  Print all the letters except q and e
-2.  Only use one print function with string format
-3.  Only use one loop in your code
-4.  It is not allowed to store characters in a variable
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra 3-print_alphabets.c -o 3-print_alphabets
+julien@ubuntu:~/0x01$ ./3-print_alphabets | cat -e
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$
+julien@ubuntu:~/0x01$ 
+</code></pre>
 
+### 4-print_alphabt.c
 
-```
-guillaume@ubuntu:~/0x01$ ./3-print_alphabt.py
-abcdfghijklmnoprstuvwxyzguillaume@ubuntu:~/0x01$
-```
+*<p>Write a program that prints the alphabet in lowercase, followed by a new line.</p>*
 
-###  4-print_hexa.py
+<ul>
+	<li>Print all the letters except <code>q</code> and <code>e</code></li>
+	<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+	<li>All your code should be in the <code>main</code> function</li>
+	<li>You can only use <code>putchar</code> twice in your code</li>
+</ul>
 
-*Program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example)*
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra 4-print_alphabt.c -o 4-print_alphabt
+julien@ubuntu:~/0x01$ ./4-print_alphabt 
+abcdfghijklmnoprstuvwxyz
+julien@ubuntu:~/0x01$ ./4-print_alphabt | grep [eq]
+julien@ubuntu:~/0x01$ 
+</code></pre>
 
-1.  Only use one print function with string format
-2.  Only use one loop in your code
-3.  It is not allowed to store numbers or strings in a variable
+### 5-print_numbers.c
 
+*<p>Write a program that prints all single digit numbers of base 10 starting from <code>0</code>, followed by a new line.</p>*
 
-```
-guillaume@ubuntu:~/0x01$ ./4-print_hexa.py
-0 = 0x0
-1 = 0x1
-2 = 0x2
-3 = 0x3
-4 = 0x4
-5 = 0x5
-6 = 0x6
-7 = 0x7
-8 = 0x8
-9 = 0x9
-10 = 0xa
-11 = 0xb
-12 = 0xc
-13 = 0xd
-14 = 0xe
-15 = 0xf
-16 = 0x10
-17 = 0x11
-18 = 0x12
-...
-96 = 0x60
-97 = 0x61
-98 = 0x62
-guillaume@ubuntu:~/0x01$
-```
+<ul>
+	<li>All your code should be in the <code>main</code> function</li>
+</ul>
 
-###   5-print_comb2.py
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra 5-print_numbers.c -o 5-print_numbers
+julien@ubuntu:~/0x01$ ./5-print_numbers 
+0123456789
+julien@ubuntu:~/0x01$ 
+</code></pre>
 
-*Program that prints numbers from 0 to 99.*
+### 6-print_numberz.c
 
-1.  Numbers must be separated by ,, followed by a space
-2.  Numbers should be printed in ascending order, with two digits
-3.  The last number should be followed by a new line
-4.  Only use no more than 2 print functions with string format
-5.  Only use one loop in your code
-6.  It is not allowed to store numbers or strings in a variable
+*<p>Write a program that prints all single digit numbers of base 10 starting from <code>0</code>, followed by a new line.</p>*
 
-```
-guillaume@ubuntu:~/0x01$ ./5-print_comb2.py
-00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99
-guillaume@ubuntu:~/0x01$ 
-```
+<ul>
+	<li>You are not allowed to use any variable of type <code>char</code></li>
+	<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+	<li>You can only use <code>putchar</code> twice in your code</li>
+	<li>All your code should be in the <code>main</code> function</li>
+</ul>
 
-### 6-print_comb3.py
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra 6-print_numberz.c -o 6-print_numberz
+julien@ubuntu:~/0x01$ ./6-print_numberz 
+0123456789
+julien@ubuntu:~/0x01$ 
+</code></pre>
 
-*Program that prints all possible different combinations of two digits.*
+### 7-print_tebahpla.c
 
-1.  Numbers must be separated by ,, followed by a space
-2.  The two digits must be different
-3.  01 and 10 are considered the same combination of the two digits 0 and 1
-4.  Print only the smallest combination of two digits
-5.  Numbers should be printed in ascending order, with two digits
-6.  The last number should be followed by a new line
-7.  Only use no more than 3 print functions with string format
-8.  Only use no more than 2 loops in your code
-9.  It is not allowed to store numbers or strings in a variable
+*<p>Write a program that prints the lowercase alphabet in reverse, followed by a new line.</p>*
 
-```
-guillaume@ubuntu:~/0x01$ ./6-print_comb3.py
+<ul>
+	<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+	<li>All your code should be in the <code>main</code> function</li>
+	<li>You can only use <code>putchar</code> twice in your code</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra 7-print_tebahpla.c -o 7-print_tebahpla
+julien@ubuntu:~/0x01$ ./7-print_tebahpla
+zyxwvutsrqponmlkjihgfedcba
+julien@ubuntu:~/0x01$
+</code></pre>
+
+### 8-print_base16.c
+
+*<p>Write a program that prints all the numbers of base 16 in lowercase, followed by a new line.</p>*
+
+<ul>
+	<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+	<li>All your code should be in the <code>main</code> function</li>
+	<li>You can only use <code>putchar</code> three times in your code</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra 8-print_base16.c -o 8-print_base16
+julien@ubuntu:~/0x01$ ./8-print_base16
+0123456789abcdef
+julien@ubuntu:~/0x01$
+</code></pre>
+
+### 9-print_comb.c
+
+*<p>Write a program that prints all possible combinations of single-digit numbers.</p>*
+
+<ul>
+	<li>Numbers must be separated by <code>,</code>, followed by a space</li>
+	<li>Numbers should be printed in ascending order</li>
+	<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+	<li>All your code should be in the <code>main</code> function</li>
+	<li>You can only use <code>putchar</code> four times maximum in your code</li>
+	<li>You are not allowed to use any variable of type <code>char</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra 9-print_comb.c -o 9-print_comb
+julien@ubuntu:~/0x01$ ./9-print_comb | cat -e
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9$
+julien@ubuntu:~/0x01$ 
+</code></pre>
+
+### 100-print_comb3.c
+
+*<p>Write a program that prints all possible different combinations of two digits.</p>*
+
+<ul>
+	<li>Numbers must be separated by <code>,</code>, followed by a space</li>
+	<li>The two digits must be different</li>
+	<li><code>01</code> and <code>10</code> are considered the same combination of the two digits <code>0</code> and <code>1</code></li>
+	<li>Print only the smallest combination of two digits</li>
+	<li>Numbers should be printed in ascending order, with two digits</li>
+	<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+	<li>You can only use <code>putchar</code> five times maximum in your code</li>
+	<li>You are not allowed to use any variable of type <code>char</code></li>
+	<li>All your code should be in the <code>main</code> function</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra 100-print_comb3.c -o 100-print_comb3
+julien@ubuntu:~/0x01$ ./100-print_comb3
 01, 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48, 49, 56, 57, 58, 59, 67, 68, 69, 78, 79, 89
-```
+julien@ubuntu:~/0x01$ 
+</code></pre>
 
+### 102-print_comb5.c
 
-### 7-islower.py 
+*<p>Write a program that prints all possible combinations of two two-digit numbers.</p>*
 
-*Function that checks for lowercase character.*
+<ul>
+	<li>The numbers should range from <code>0</code> to <code>99</code></li>
+	<li>The two numbers should be separated by a space</li>
+	<li>All numbers should be printed with two digits. <code>1</code> should be printed as <code>01</code></li>
+	<li>The combination of numbers must be separated by comma, followed by a space</li>
+	<li>The combinations of numbers should be printed in ascending order</li>
+	<li><code>00 01</code> and <code>01 00</code> are considered as the same combination of the numbers <code>0</code> and <code>1</code></li>
+	<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+	<li>You can only use <code>putchar</code> eight times maximum in your code</li>
+	<li>You are not allowed to use any variable of type <code>char</code></li>
+	<li>All your code should be in the <code>main</code> function</li>
+</ul>
 
-1.  Prototype: def islower(c):
-2.  Returns True if c is lowercase
-3.  Returns False otherwise
-4.  It is not allowed to import any module
-5.  It is not allowed to use str.upper() and str.isupper()
-6.  Tips: ord()
-
-```
-guillaume@ubuntu:~/0x01$ cat 7-main.py
-#!/usr/bin/env python3
-islower = __import__('7-islower').islower
-
-print("a is {}".format("lower" if islower("a") else "upper"))
-print("H is {}".format("lower" if islower("H") else "upper"))
-print("A is {}".format("lower" if islower("A") else "upper"))
-print("3 is {}".format("lower" if islower("3") else "upper"))
-print("g is {}".format("lower" if islower("g") else "upper"))
-
-guillaume@ubuntu:~/0x01$ ./7-main.py
-a is lower
-H is upper
-A is upper
-3 is upper
-g is lower
-guillaume@ubuntu:~/0x01$ 
-```
-
-### 8-uppercase.py
-
-*Function that prints a string in uppercase followed by a new line.*
-
-1.    Prototype: def uppercase(str):
-2.    Only use no more than 2 print functions with string format
-3.    Only use one loop in your code
-4.    It is not allowed to import any module
-5.    It is not allowed to use str.upper() and str.isupper()
-6.    Tips: ord()
-  
-```
-guillaume@ubuntu:~/0x01$ cat 8-main.py
-#!/usr/bin/env python3
-uppercase = __import__('8-uppercase').uppercase
-
-uppercase("holberton")
-uppercase("Holberton School 98 Battery street")
-
-guillaume@ubuntu:~/0x01$ ./8-main.py
-HOLBERTON
-HOLBERTON SCHOOL 98 BATTERY STREET
-guillaume@ubuntu:~/0x01$ 
-```
-
-###  9-print_last_digit.py
-
-*Function that prints the last digit of a number.*
-
-1.  Prototype: def print_last_digit(number):
-2.  Returns the value of the last digit
-
-  
-```
-guillaume@ubuntu:~/0x01$ cat 9-main.py
-#!/usr/bin/env python3
-print_last_digit = __import__('9-print_last_digit').print_last_digit
-
-print_last_digit(98)
-print_last_digit(0)
-r = print_last_digit(-1024)
-print(r)
-
-guillaume@ubuntu:~/0x01$ ./9-main.py
-8044
-guillaume@ubuntu:~/0x01$ 
-```
-
-### 10-add.py
-
-*Function that adds two integers and returns the result.* 
-
-1.   Prototype: def add(a, b):
-2.   Returns the value of a + b
-
-
-```
-guillaume@ubuntu:~/0x01$ cat 10-main.py
-#!/usr/bin/env python3
-add = __import__('10-add').add
-
-print(add(1, 2))
-print(add(98, 0))
-print(add(100, -2))
-
-guillaume@ubuntu:~/0x01$ ./10-main.py
-3
-98
-98
-guillaume@ubuntu:~/0x01$ 
-```
-
-### 11-pow.py
-
-*Function that computes a to the power of b and return the value.* 
- 
-1.   Prototype: def pow(a, b):
-2.   Returns the value of a ^ b
-
-
-```
-guillaume@ubuntu:~/0x01$ cat 11-main.py
-#!/usr/bin/env python3
-pow = __import__('11-pow').pow
-
-print(pow(2, 2))
-print(pow(98, 2))
-print(pow(98, 0))
-print(pow(100, -2))
-print(pow(-4, 5))
-
-guillaume@ubuntu:~/0x01$ ./11-main.py
-4
-9604
-1
-0.0001
--1024
-guillaume@ubuntu:~/0x01$ 
-```
-
-### 12-fizzbuzz.py*
-
-*Function that prints the numbers from 1 to 100 separated by a space.* 
-
-1.    For multiples of three print Fizz instead of the number and for multiples of five print 6.
-2.    For numbers which are multiples of both three and five print FizzBuzz.
-3.    Prototype: def fizzbuzz():
-4.    Each element should be followed by a space
-
-```
-guillaume@ubuntu:~/0x01$ cat 12-main.py
-#!/usr/bin/env python3
-fizzbuzz = __import__('12-fizzbuzz').fizzbuzz
-
-fizzbuzz()
-print("")
-
-guillaume@ubuntu:~/0x01$ ./12-main.py | cat -e
-1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz 31 32 Fizz 34 Buzz Fizz 37 38 Fizz Buzz 41 Fizz 43 44 FizzBuzz 46 47 Fizz 49 Buzz Fizz 52 53 Fizz Buzz 56 Fizz 58 59 FizzBuzz 61 62 Fizz 64 Buzz Fizz 67 68 Fizz Buzz 71 Fizz 73 74 FizzBuzz 76 77 Fizz 79 Buzz Fizz 82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz 91 92 Fizz 94 Buzz Fizz 97 98 Fizz Buzz $
-guillaume@ubuntu:~/0x01$ 
-```
-
-### 100-print_tebahpla.py
-
-*Program that prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (z in lowercase and Y in uppercase) , not followed by a new line.* 
-
-1.    Only use one print function with string format
-2.    Only use one loop in your code
-3.    It is not allowed to store characters in a variable
-
-```
-guillaume@ubuntu:~/0x01$ ./100-print_tebahpla.py
-zYxWvUtSrQpOnMlKjIhGfEdCbAguillaume@ubuntu:~/0x01$
-```
+<pre><code>julien@ubuntu:~/c/curriculum_by_julien/holbertonschool-low_level_programming/0x01$ gcc -Wall -pedantic -Werror -Wextra 102-print_comb5.c -o 102-print_comb5
+julien@ubuntu:~/c/curriculum_by_julien/holbertonschool-low_level_programming/0x01$ ./102-print_comb5
+00 01, 00 02, 00 03, 00 04, 00 05, 00 06, 00 07, 00 08, 00 09, 00 10, 00 11, [...] 40 91, 40 92, 40 93, 40 94, 40 95, 40 96, 40 97, 40 98, 40 99, 41 42, 41 43, 41 44, 41 45, 41 46, 41 47, 41 48, 41 49, 41 50, 41 51, 41 52, 41 53 [...] 93 95, 93 96, 93 97, 93 98, 93 99, 94 95, 94 96, 94 97, 94 98, 94 99, 95 96, 95 97, 95 98, 95 99, 96 97, 96 98, 96 99, 97 98, 97 99, 98 99
+</code></pre>
