@@ -1,247 +1,343 @@
-# 0x00. Python - Hello, World
-In this directory you will learn how to use conditional if, and the while and for loop and differentiate each one
+# 0x00. C - Hello, World
 
 ## GENERAL:
 
-1.  Why Python programming is awesome
-2.  Who created Python
-3.  Who is Guido van Rossum
-4.  Where does the name ‘Python’ come from
-5.  What is the Zen of Python
-6.  How to use the Python interpreter
-7.  How to print text and variables using print
-8.  How to use strings
-9.  What are indexing and slicing in Python
-10.  What is the official Holberton Python coding style and how to check your code with PEP 8
+ <ol>
+	<li>Why C programming is awesome </li>
+	<li>Who invented C</li>
+	<li>Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds</li>
+	<li>What happens when you type <code>gcc main.c</code></li>
+	<li>What is an entry point</li>
+	<li>What is <code>main</code></li>
+	<li>How to print text using <code>printf</code>, <code>puts</code> and <code>putchar</code></li>
+	<li>How to get the size of a specific type using the unary operator <code>sizeof</code></li>
+	<li>How to compile using <code>gcc</code></li>
+	<li>What is the default program name when compiling with <code>gcc</code></li>
+	<li>What is the official Holberton C coding style and how to check your code with <code>betty-style</code></li>
+	<li>How to find the right header to include in your source code when using a standard library function</li>
+	<li>How does the <code>main</code> function influence the return value of the program</li>
+</ol>
 
-## Read or watch:
+## RESOURCES:
 
-1.   **[The Python tutorial (only the first three chapters below):](https://docs.python.org/3.4/tutorial/index.html)**
-     - **[Whetting Your Appetite:](https://docs.python.org/3.4/tutorial/appetite.html)**
-     - **[Using the Python Interpreter:](https://docs.python.org/3.4/tutorial/interpreter.html)**
-     - **[An Informal Introduction to Python:](https://docs.python.org/3.4/tutorial/introduction.html)**
-2.   **[How To Use String Formatters in Python 3:](https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3)**
-3.   **[Learn to Program:](https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt)**
-4.   **[PEP 8 – Style Guide for Python Code:](https://www.python.org/dev/peps/pep-0008/)**
+ <ol>
+	<li><a href="/rltoken/d6TBbj0HA4EvnmpqvEz68Q" title="Everything you need to know to start with C.pdf" target="_blank">Everything you need to know to start with C.pdf</a> (<em>You do not have to learn everything in there yet, but make sure you read it entirely first</em>)</li>
+	<li><a href="/rltoken/vY9KI1Ai38BUuydEfadtaA" title="Dennis Ritchie" target="_blank">Dennis Ritchie</a> </li>
+	<li><a href="/rltoken/f5nVwIVoNRrnddbX-5h5rw" title='"C" Programming Language: Brian Kernighan' target="_blank">“C” Programming Language: Brian Kernighan</a> </li>
+	<li><a href="/rltoken/J7yAaPGVuPoJI4iP1DuIPw" title="Why C Programming Is Awesome" target="_blank">Why C Programming Is Awesome</a> </li>
+	<li><a href="/rltoken/AicyjqLinWdA9qxKsXBKjg" title="Learning to program in C part 1" target="_blank">Learning to program in C part 1</a> </li>
+	<li><a href="/rltoken/1qtDStnOrOjrVseFa3jngA" title="Learning to program in C part 2" target="_blank">Learning to program in C part 2</a> </li>
+	<li><a href="/rltoken/qM-SOqtf8ZnGxVtVWchAfg" title="Understanding C program Compilation Process" target="_blank">Understanding C program Compilation Process</a> </li>
+	<li><a href="/rltoken/8c-wkUvvmuA_d5s4ktmnEw" title="Holberton's Betty Coding Style" target="_blank">Holberton’s Betty Coding Style</a> </li>
+	<li><a href="/rltoken/7oODGrfLgAJJzoCbfBap3Q" title="Hash-bang under the hood" target="_blank">Hash-bang under the hood</a> (<em>Look at only after you finish consuming the other resources</em>)</li>
+	<li><a href="/rltoken/8rYFkn82I0QlSygvC0u2Jw" title="Linus Torvalds on C vs. C++" target="_blank">Linus Torvalds on C vs. C++</a> (<em>Look at only after you finish consuming the other resources</em>)</li>
+</ol>
+
+## INTRODUCTION TO FILES:
+
+0.	[**0-preprocessor**:](#0-preprocessor) Write a script that runs a C file through the preprocessor and save the result into another file.
+1.	[**1-compiler**:](#1-compiler) Write a script that compiles a C file but does not link.
+2.	[**2-assembler**:](#2-assembler) Write a script that generates the assembly code of a C code and save it in an output file.
+3.	[**3-name**:](#3-name) Write a script that compiles a C file and creates an executable named 
+4.	[**4-puts.c**:](#4-putsc) Write a C program that prints exactly 
+5.	[**5-printf.c**:](#5-printfc) Write a C program that prints exactly 
+6.	[**6-size.c**:](#6-sizec) Write a C program that prints the size of various types on the computer it is compiled and run on.
+7.	[**100-intel**:](#100-intel) Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
+8.	[**101-quote.c**:](#101-quotec) Write a C program that prints exactly 
+## FILES:
+
+### 0-preprocessor
+
+*<p>Write a script that runs a C file through the preprocessor and save the result into another file.</p>*
+
+<ul>
+	<li>The C file name will be saved in the variable <code>$CFILE</code></li>
+	<li>The output should be saved in the file <code>c</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/c/0x00$ cat main.c 
+#include &lt;stdio.h&gt;
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    return (0);
+}
+julien@ubuntu:~/c/0x00$ export CFILE=main.c
+julien@ubuntu:~/c/0x00$ ./0-preprocessor 
+julien@ubuntu:~/c/0x00$ tail c
+# 942 "/usr/include/stdio.h" 3 4
+
+# 2 "main.c" 2
 
 
-## Files:
+# 3 "main.c"
+int main(void)
+{
+ return (0);
+}
+julien@ubuntu:~/c/0x00$ 
+</code></pre>
 
-1.  **0-run**: Write a Shell script that runs a Python script.
-2.  **1-run_inline** : Write a Shell script that runs Python code.
-3.  **2-print.py** : Write a Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
-4.  **3-print_number.py** : Complete this source code in order to print the integer stored in the variable number, followed by Battery street, followed by a new line.
-5.  **4-print_float.py** : Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.
-6.  **5-print_string.py** : Complete this source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.
-7.  **6-concat.py** : Complete this source code to print Welcome to Holberton School!
-8.  **7-edges.py** : Complete this source code
-9.  **8-concat_edges.py** : Complete this source code to print object-oriented programming with Python, followed by a new line.
-10.  **9-easter_egg.py** : Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
-11.  **100-write.py** : Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.
+### 1-compiler
 
+*<p>Write a script that compiles a C file but does not link.</p>*
 
-## Tasks
+<ul>
+	<li>The C file name will be saved in the variable <code>$CFILE</code></li>
+	<li>The output file should be named the same as the C file, but with the extension <code>.o</code> instead of <code>.c</code>.
 
-### 0\. 0. Run Python file
-*   File: **0-run**
+<ul>
+	<li>Example: if the C file is <code>main.c</code>, the output file should be <code>main.o</code></li>
+</ul></li>
+</ul>
 
-*Write a Shell script that runs a Python script.*
+<pre><code>julien@ubuntu:~/c/0x00$ export CFILE=main.c
+julien@ubuntu:~/c/0x00$ cat main.c
+#include &lt;stdio.h&gt;
 
-1.  The Python file name will be saved in the environment variable $PYFILE
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    return (0);
+}
+julien@ubuntu:~/c/0x00$ ./1-compiler 
+julien@ubuntu:~/c/0x00$ ls
+0-preprocessor  1-compiler   c            main.o
+Makefile               100-intel      main.c  main.s
+julien@ubuntu:~/c/0x00$ cat -v main.o | head
+^?ELF^B^A^A^@^@^@^@^@^@^@^@^@^A^@&gt;^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^P^B^@^@^@^@^@^@^@^@^@^@@^@^@^@^@^@@^@^K^@^H^@UHM-^IM-eM-8^@^@^@^@]M-C^@GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609^@^T^@^@^@^@^@^@^@^AzR^@^Ax^P^A^[^L^G^HM-^P^A^@^@^\^@^@^@^\^@^@^@^@^@^@^@^K^@^@^@^@A^N^PM-^F^BC^M^FF^L^G^H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^D^@M-qM-^?^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^B^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^E^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^F^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^D^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^H^@^@^@^R^@^A^@^@^@^@^@^@^@^@^@^K^@^@^@^@^@^@^@^@main.c^@main^@^@^@^@ ^@^@^@^@^@^@^@^B^@^@^@^B^@^@^@^@^@^@^@^@^@^@^@^@.symtab^@.strtab^@.shstrtab^@.text^@.data^@.bss^@.comment^@.note.GNU-stack^@.rela.eh_frame^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^[^@^@^@^A^@^@^@^F^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@^@^@^@^@^@^@^@^K^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@!^@^@^@^A^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@K^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@'^@^@^@^H^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@K^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@,^@^@^@^A^@^@^@0^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@K^@^@^@^@^@^@^@5^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@5^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@J^@^@^@^A^@^@^@^B^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-^@^@^@^@^@^@^@^@8^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@E^@^@^@^D^@^@^@@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M- ^A^@^@^@^@^@^@^X^@^@^@^@^@^@^@    ^@^@^@^F^@^@^@^H^@^@^@^@^@^@^@^X^@^@^@^@^@^@^@^Q^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-8^A^@^@^@^@^@^@T^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^B^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-8^@^@^@^@^@^@^@M-X^@^@^@^@^@^@^@
+^@^@^@^H^@^@^@^H^@^@^@^@^@^@^@^X^@^@^@^@^@^@^@  ^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-^P^A^@^@^@^@^@^@^M^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@julien@ubuntu:~/c/0x00$ 
+</code></pre>
 
-Example:
-```
-guillaume@ubuntu:~/py/0x00$ cat main.py 
-#!/usr/bin/python3
-print("Holberton School")
+### 2-assembler
 
-guillaume@ubuntu:~/py/0x00$ export PYFILE=main.py
-guillaume@ubuntu:~/py/0x00$ ./0-run
-Holberton School
-```
+*<p>Write a script that generates the assembly code of a C code and save it in an output file.</p>*
 
-### 1. Run inline
-*   File: **1-run_inline**
+<ul>
+	<li>The C file name will be saved in the variable <code>$CFILE</code></li>
+	<li>The output file should be named the same as the C file, but with the extension <code>.s</code> instead of <code>.c</code>.
 
-*Write a Shell script that runs Python code.*
+<ul>
+	<li>Example: if the C file is <code>main.c</code>, the output file should be <code>main.s</code></li>
+</ul></li>
+</ul>
 
-1.  The Python code will be saved in the environment variable $PYCODE
+<pre><code>julien@ubuntu:~/c/0x00$ export CFILE=main.c
+julien@ubuntu:~/c/0x00$ cat main.c
+#include &lt;stdio.h&gt;
 
-```
-guillaume@ubuntu:~/py/0x00$ export PYCODE='print("Holberton School: {}".format(88+10))'
-guillaume@ubuntu:~/py/0x00$ ./1-run_inline 
-Holberton School: 98
-```
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    return (0);
+}
+julien@ubuntu:~/c/0x00$ ./2-assembler
+julien@ubuntu:~/c/0x00$ ls
+0-preprocessor  1-compiler  2-assembler c  main.c  main.s  Makefile
+julien@ubuntu:~/c/0x00$ cat main.s
+    .file   "main.c"
+    .text
+    .globl  main
+    .type   main, @function
+main:
+.LFB0:
+    .cfi_startproc
+    pushq   %rbp
+    .cfi_def_cfa_offset 16
+    .cfi_offset 6, -16
+    movq    %rsp, %rbp
+    .cfi_def_cfa_register 6
+    movl    $0, %eax
+    popq    %rbp
+    .cfi_def_cfa 7, 8
+    ret
+    .cfi_endproc
+.LFE0:
+    .size   main, .-main
+    .ident  "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609"
+    .section    .note.GNU-stack,"",@progbits
+julien@ubuntu:~/c/0x00$ 
+</code></pre>
 
-###  2. Hello, print 
-*   File: ** 2-print.py**
+### 3-name
 
-*Write a Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.*
+*<p>Write a script that compiles a C file and creates an executable named <code>cisfun</code>.</p>*
 
-1.  Use the function print
+<ul>
+	<li>The C file name will be saved in the variable <code>$CFILE</code></li>
+</ul>
 
-```
-guillaume@ubuntu:~/py/0x00$ ./2-print.py 
+<pre><code>julien@ubuntu:~/c/0x00$ export CFILE=main.c
+julien@ubuntu:~/c/0x00$ cat main.c
+#include &lt;stdio.h&gt;
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    return (0);
+}
+julien@ubuntu:~/c/0x00$ ./3-name 
+julien@ubuntu:~/c/0x00$ ls
+0-preprocessor  1-compiler   3-name  cisfun  main.o  Makefile
+100-intel       2-assembler  c       main.c  main.s
+julien@ubuntu:~/c/0x00$ 
+</code></pre>
+
+### 4-puts.c
+
+*<p>Write a C program that prints exactly <code>"Programming is like building a multilingual puzzle</code>, followed by a new line.</p>*
+
+<ul>
+	<li>Use the function <code>puts</code></li>
+	<li>You are not allowed to use <code>printf</code></li>
+	<li>Your program should end with the value <code>0</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/c/0x00$ gcc 4-puts.c &amp;&amp; ./a.out
 "Programming is like building a multilingual puzzle
-```
+julien@ubuntu:~/c/0x00$ echo $?
+0
+julien@ubuntu:~/c/0x00$ 
+</code></pre>
 
-###  3. Print integer 
-*   File: **3-print_number.py**
+### 5-printf.c
 
-*Complete this source code in order to print the integer stored in the variable number, followed by Battery street, followed by a new line.*
+*<p>Write a C program that prints exactly <code>with proper grammar, but the outcome is a piece of art,</code>, followed by a new line.</p>*
 
-1.  The output of the script should be
-     - the number, followed by Battery street,
-     - followed by a new line
-2.  You are not allowed to cast the variable number into a string
-3.  Your code must be 3 lines long
-4.  You have to use the new print numbers tips (with .format(...))
+<ul>
+	<li>Use the function <code>printf</code></li>
+	<li>You are not allowed to use the function <code>puts</code></li>
+	<li>Your program should return <code>0</code></li>
+	<li>Your program should compile without warning when using the <code>-Wall</code> <code>gcc</code> option</li>
+</ul>
 
-```
-guillaume@ubuntu:~/py/0x00$ ./3-print_number.py
-98 Battery street
-guillaume@ubuntu:~/py/0x00$ 
-```
+<pre><code>julien@ubuntu:~/c/0x00$ gcc -Wall 5-printf.c
+julien@ubuntu:~/c/0x00$ ./a.out 
+with proper grammar, but the outcome is a piece of art,
+julien@ubuntu:~/c/0x00$ echo $?
+0
+julien@ubuntu:~/c/0x00$ 
+</code></pre>
 
-###  4. Print float 
-*   File: **4-print_float.py**
+### 6-size.c
 
-*Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.*
+*<p>Write a C program that prints the size of various types on the computer it is compiled and run on.</p>*
 
-1.  The output of the program should be:
-     - Float:, followed by the float with only 2 digits
-     - followed by a new line
-2.  You are not allowed to cast number to string
-3.  You have to use the new print formatting tips (with .format(...))
+<ul>
+	<li>You should produce the exact same output as in the example</li>
+	<li>Warnings are allowed</li>
+	<li>Your program should return <code>0</code></li>
+	<li>You might have to install the package  <code>libc6-dev-i386</code> on your Linux (Vagrant) to test the <code>-m32</code> <code>gcc</code> option</li>
+</ul>
 
-```
-guillaume@ubuntu:~/py/0x00$ ./4-print_float.py
-Float: 3.14
-guillaume@ubuntu:~/py/0x00$ 
-```
+<pre><code>julien@ubuntu:~/c/0x00$ gcc 6-size.c -m32 -o size32 2&gt; /tmp/32
+julien@ubuntu:~/c/0x00$ gcc 6-size.c -m64 -o size64 2&gt; /tmp/64
+julien@ubuntu:~/c/0x00$ ./size32
+Size of a char: 1 byte(s)
+Size of an int: 4 byte(s)
+Size of a long int: 4 byte(s)
+Size of a long long int: 8 byte(s)
+Size of a float: 4 byte(s)
+julien@ubuntu:~/c/0x00$ ./size64
+Size of a char: 1 byte(s)
+Size of an int: 4 byte(s)
+Size of a long int: 8 byte(s)
+Size of a long long int: 8 byte(s)
+Size of a float: 4 byte(s)
+julien@ubuntu:~/c/0x00$ echo $?
+0
+julien@ubuntu:~/c/0x00$ 
+</code></pre>
 
-###   5. Print string 
-* File: **5-print\_numbers.c**
-*Complete this source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.*
+### 100-intel
 
-1.  The output of the program should be:
-     - 3 times the value of str
-     - followed by a new line
-     - followed by the 9 first characters of str
-     - followed by a new line
-2.  You are not allowed to use any loops or conditional statement
-3.  Your program should be maximum 5 lines long
+*<p>Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file.</p>*
 
-```
-guillaume@ubuntu:~/py/0x00$ ./5-print_string.py 
-Holberton SchoolHolberton SchoolHolberton School
-Holberton
-guillaume@ubuntu:~/py/0x00$  
-```
+<ul>
+	<li>The C file name will be saved in the variable <code>$CFILE</code>.</li>
+	<li>The output file should be named the same as the C file, but with the extension <code>.s</code> instead of <code>.c</code>.
 
-### 6. Play with strings
-*   File: **6-print\_numberz.c**
+<ul>
+	<li>Example: if the C file is <code>main.c</code>, the output file should be <code>main.s</code></li>
+</ul></li>
+</ul>
 
-*Complete this source code to print Welcome to Holberton School!*
+<pre><code>julien@ubuntu:~/c/0x00$ export CFILE=main.c
+julien@ubuntu:~/c/0x00$ cat main.c
+#include &lt;stdio.h&gt;
 
-1. You are not allowed to use any loops or conditional statements.
-2. You have to use the variables str1 and str2 in your new line of code
-3. Your program should be exactly 5 lines long
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    return (0);
+}
+julien@ubuntu:~/c/0x00$ ./100-intel 
+julien@ubuntu:~/c/0x00$ cat main.s
+    .file   "main.c"
+    .intel_syntax noprefix
+    .text
+    .globl  main
+    .type   main, @function
+main:
+.LFB0:
+    .cfi_startproc
+    push    rbp
+    .cfi_def_cfa_offset 16
+    .cfi_offset 6, -16
+    mov rbp, rsp
+    .cfi_def_cfa_register 6
+    mov eax, 0
+    pop rbp
+    .cfi_def_cfa 7, 8
+    ret
+    .cfi_endproc
+.LFE0:
+    .size   main, .-main
+    .ident  "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609"
+    .section    .note.GNU-stack,"",@progbits
+julien@ubuntu:~/c/0x00$ 
+</code></pre>
 
-```
-guillaume@ubuntu:~/py/0x00$ ./6-concat.py
-Welcome to Holberton School!
-guillaume@ubuntu:~/py/0x00$ wc -l 6-concat.py
-5 6-concat.py
-guillaume@ubuntu:~/py/0x00$ 
-```
+### 101-quote.c
 
-### 7. Copy - Cut - Paste 
-*   File: **7-edges.py**
+*<p>Write a C program that prints exactly <code>and that piece of art is useful" - Dora Korpar, 2015-10-19</code>, followed by a new line, to the standard error.</p>*
 
-*Complete this source code*
+<ul>
+	<li>You are not allowed to use any functions listed in the NAME section of the man (3) <code>printf</code> or man (3) <code>puts</code></li>
+	<li>Your program should return 1</li>
+	<li>Your program should compile without any warnings when using the <code>-Wall</code> <code>gcc</code> option</li>
+</ul>
 
-1.  You are not allowed to use any loops or conditional statements
-2.  Your program should be exactly 8 lines long
-3.  word_first_3 should contain the first 3 letters of the variable word
-4.  word_last_2 should contain the last 2 letters of the variable word
-5.  middle_word should contain the value of the variable word without the first and last letters
-
-```
-guillaume@ubuntu:~/py/0x00$ ./7-edges.py
-First 3 letters: Hol
-Last 2 letters: on
-Middle word: olberto
-guillaume@ubuntu:~/py/0x00$ wc -l 7-edges.py
-8 7-edges.py
-```
-
-### 8. Create a new sentence 
-*   File: **8-concat_edges.py**
-
-*Complete this source code to print object-oriented programming with Python, followed by a new line.*
-
-1.  You are not allowed to use any loops or conditional statements
-2.  Your program should be exactly 5 lines long
-3.  You are not allowed to create new variables
-4.  You are not allowed to use string literals
-
-```
-guillaume@ubuntu:~/py/0x00$ ./8-concat_edges.py
-object-oriented programming with Python
-guillaume@ubuntu:~/py/0x00$ wc -l 8-concat_edges.py
-5 8-concat_edges.py
-```
-
-###  9. Easter Egg 
-*   File: **9-easter_egg.py**
-
-*Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.*
-
-1.   Your script should be maximum 98 characters long (please check with wc -m 9-easter_egg.py)
-
-```
-guillaume@ubuntu:~/py/0x00$ ./9-easter_egg.py
-The Zen of Python, by Tim Peters
-
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
-```
-
-### 11. Hello, write 
-*   File: **10-print\_comb2.c**
-
-*Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.*
-
-1.   Use the function write from the sys module
-2.   You are not allowed to use print
-3.   Your script should print to stderr
-4.   Your script should exit with the status code 1
-5.   (Dora Korpar was a Holberton student in Cohort 0 of San Francisco)
-
-```
-guillaume@ubuntu:~/py/0x00$ ./100-write.py
-and that piece of art is useful - Dora Korpar, 2015-10-19
-guillaume@ubuntu:~/py/0x00$ echo $?
+<pre><code>julien@ubuntu:~/c/0x00$ gcc -Wall -o quote 101-quote.c
+julien@ubuntu:~/c/0x00$ ./quote
+and that piece of art is useful" - Dora Korpar, 2015-10-19
+julien@ubuntu:~/c/0x00$ echo $?
 1
-guillaume@ubuntu:~/py/0x00$ ./100-write.py 2> q
-guillaume@ubuntu:~/py/0x00$ cat q
-and that piece of art is useful - Dora Korpar, 2015-10-19
-```
+julien@ubuntu:~/c/0x00$ ./quote 2&gt; q
+julien@ubuntu:~/c/0x00$ cat q
+and that piece of art is useful" - Dora Korpar, 2015-10-19
+julien@ubuntu:~/c/0x00$ grep printf &lt; 101-quote.c
+julien@ubuntu:~/c/0x00$ grep put &lt; 101-quote.c
+julien@ubuntu:~/c/0x00$ 
+</code></pre>
