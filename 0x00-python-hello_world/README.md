@@ -41,7 +41,7 @@
 7.	[**7-edges.py**:](#7-edgespy) Complete this 
 8.	[**8-concat_edges.py**:](#8-concat_edgespy) Complete this 
 9.	[**9-easter_egg.py**:](#9-easter_eggpy) Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
-10.	[**10-check_cycle.c, lists.h**:](#10-check_cyclec, listsh) : 
+10.	[**10-check_cycle.c**:](#10-check_cyclec) Technical interview preparation --- Function in C that checks if a singly linked list has a cycle in it.
 11.	[**100-write.py**:](#100-writepy) Write a Python script that prints exactly 
 12.	[**101-compile**:](#101-compile) Write a script that compiles a Python script file.
 13.	[**102-magic_calculation.py**:](#102-magic_calculationpy) Write the Python function 
@@ -243,7 +243,7 @@ Namespaces are one honking great idea -- let's do more of those!
 guillaume@ubuntu:~/py/0x00$
 </code></pre>
 
-### 10-check_cycle.c, lists.h
+### 10-check_cycle.c
 
 *<p><strong>Technical interview preparation</strong>: </p><p>Function in C that checks if a singly linked list has a cycle in it.</p><p>Requirements:</p>*
 
