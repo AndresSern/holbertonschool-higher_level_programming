@@ -46,7 +46,7 @@ Also, adding type/value validation in the setter will centralize the logic, sinc
 
 ### 0-square.py
 
-*<p>Write an empty class <code>Square</code> that defines a square:</p>*
+*<p>An empty class <code>Square</code> that defines a square:</p>*
 
 <ul>
 </ul>
