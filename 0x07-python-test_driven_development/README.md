@@ -28,7 +28,7 @@
 2.	[**3-say_my_name.py**:](#3-say_my_namepy)  function that prints <code>My name is &lt;first name&gt; &lt;last name&gt;</code>Note: you might have a different number of tests than in the above example. As usual, your tests should cover all possible cases.
 3.	[**4-print_square.py**:](#4-print_squarepy)  function that prints a square with the character <code>#</code>.
 4.	[**5-text_indentation.py**:](#5-text_indentationpy)  function that prints a text with 2 new lines after each of these characters: <code>.</code>, <code>?</code> and <code>:</code>
-5.	[**tests/6-max_integer_test.py**:](#tests/6-max_integer_testpy) Since the beginning you have been creating “Interactive tests”. For this exercise, you will add Unittests.In this task, you will write unittests for the function <code>def max_integer(list=[]):</code>.
+5.	[**tests/6-max_integer_test.py**:](#tests6-max_integer_testpy) Since the beginning you have been creating “Interactive tests”. For this exercise, you will add Unittests.In this task, you will write unittests for the function <code>def max_integer(list=[]):</code>.
 
 ## FILES:
 
