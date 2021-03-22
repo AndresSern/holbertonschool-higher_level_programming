@@ -1,20 +1,19 @@
 #!/usr/bin/node
-/* Script that computes and prints a factorial */
+/* Script that searches the second biggest integer in the list of arguments.  */
 function numberBigger (myArray) {
-  let indexArray = myArray.indexOf(Math.max(...myArray));
-  return myArray.splice(indexArray,1)[0];
+  const indexArray = myArray.indexOf(Math.max(...myArray));
+  return myArray.splice(indexArray, 1)[0];
 }
 
-let length  = process.argv.length;
+const length = process.argv.length;
 let myArray = process.argv.splice(2, length);
 if (length === 2 || length === 3) {
   console.log('0');
-}
-else {
+} else {
   myArray = myArray.map(item => parseInt(item));
-  let temp = numberBigger(myArray);
+  const temp = numberBigger(myArray);
   let compare = temp;
-  while (compare  === temp){
+  while (compare === temp) {
     compare = numberBigger(myArray);
   }
   console.log(compare);
