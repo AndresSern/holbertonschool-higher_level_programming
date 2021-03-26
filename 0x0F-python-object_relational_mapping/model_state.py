@@ -1,18 +1,11 @@
 #!/usr/bin/python3
-import sqlalchemy
-#from  import Table, Column, Integer, String, MetaData
-meta = MetaData()
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
 
-Base = Table(
-   'Base', meta,
-   Column('id', Integer, primary_key = True),
-   Column('name', String),
-   Column('lastname', String),
-)
+Base = declarative_base()
 
-State = Table(
-   'states', meta,
-   Column('id', Integer, primary_key = True),
-   Column('name', String),
-   Column('lastname', String),
-)
+class State(Base):
+    """ Defining class tates """
+    __tablename__ = 'states'
+    id = Column(Integer, primary_key=True, nullable=False)
+    name =  Column(String(128), nullable=False)
