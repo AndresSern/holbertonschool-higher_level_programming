@@ -6,14 +6,14 @@ import MySQLdb
 from sys import argv
 
 db = MySQLdb.connect(host="localhost",  # your host
-                     user= argv[1],       # username
-                     passwd= argv[2],     # password
-                     db= argv[3],
+                     user=argv[1],       # username
+                     passwd=argv[2],     # password
+                     db=argv[3],
                      port=3306)   # name of the database
 cur = db.cursor()
 
 cur.execute("""SELECT * FROM states
-               WHERE name = %s ORDER BY id ASC""", (argv[4],));
+               WHERE name = %s ORDER BY id ASC""", (argv[4],))
 
 for row in cur.fetchall():
     print(row)
