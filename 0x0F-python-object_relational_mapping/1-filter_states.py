@@ -6,6 +6,7 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
+    """ Scrip that list all states with a name starting with 'N' """
     db = MySQLdb.connect(host="localhost",  # your host
                          user=argv[1],       # username
                          passwd=argv[2],     # password
