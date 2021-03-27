@@ -4,12 +4,14 @@
 
 import MySQLdb
 from sys import argv
+
 if __name__ == "__main__":
+    """ Script that liss all states from the database"""
     db = MySQLdb.connect(host="localhost",  # your host
-                        user=argv[1],       # username
-                        passwd=argv[2],     # password
-                        db=argv[3],
-                        port=3306)   # name of the database
+                         user=argv[1],       # username
+                         passwd=argv[2],     # password
+                         db=argv[3],
+                         port=3306)   # name of the database
     cur = db.cursor()
 
     cur.execute("SELECT * FROM states ORDER BY id ASC;")
@@ -18,3 +20,4 @@ if __name__ == "__main__":
         print(row)
 
     cur.close()
+    db.close()
