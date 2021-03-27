@@ -3,15 +3,18 @@
      Results is showed in ascending order by states.id """
 
 import MySQLdb
+from sys import argv
+if __name__ == "__main__":
+    db = MySQLdb.connect(host="localhost",  # your host
+                        user=argv[1],       # username
+                        passwd=argv[2],     # password
+                        db=argv[3],
+                        port=3306)   # name of the database
+    cur = db.cursor()
 
-db = MySQLdb.connect(host="localhost",  # your host
-                     user="root",       # username
-                     passwd="nochetriste11021",     # password
-                     db="hbtn_0e_0_usa",
-                     port=3306)   # name of the database
-cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC;")
 
-cur.execute("SELECT * FROM states ORDER BY id ASC;")
+    for row in cur.fetchall():
+        print(row)
 
-for row in cur.fetchall():
-    print(row)
+    cur.close()

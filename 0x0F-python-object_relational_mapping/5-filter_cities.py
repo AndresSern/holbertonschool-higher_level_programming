@@ -3,14 +3,12 @@
     table of 'hbtn_0e_0_usa' where name matches the argument. """
 
 import MySQLdb
-import sys
-
-argv = sys.argv
+from sys import argv
 
 db = MySQLdb.connect(host="localhost",  # your host
-                     user="root",       # username
-                     passwd="nochetriste11021",     # password
-                     db="hbtn_0e_4_usa",
+                     user=argv[1],       # username
+                     passwd=argv[2],     # password
+                     db=argv[3],
                      port=3306)   # name of the database
 cur = db.cursor()
 
@@ -18,9 +16,10 @@ cur.execute("""SELECT cities.name
                FROM cities INNER JOIN states
                ON cities.state_id = states.id
                WHERE states.name = %s
-               ORDER BY cities.id ASC;""", (argv[1],));
+               ORDER BY cities.id ASC;""", (argv[4],));
 
 cities = cur.fetchall();
 print(", ".join(row[0] for row in cities))
+
 cur.close()
 

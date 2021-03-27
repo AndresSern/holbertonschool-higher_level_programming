@@ -3,19 +3,19 @@
     table of 'hbtn_0e_0_usa' where name matches the argument. """
 
 import MySQLdb
-import sys
-
-argv = sys.argv
+from sys import argv
 
 db = MySQLdb.connect(host="localhost",  # your host
-                     user="root",       # username
-                     passwd="nochetriste11021",     # password
-                     db="hbtn_0e_0_usa",
+                     user= argv[1],       # username
+                     passwd= argv[2],     # password
+                     db= argv[3],
                      port=3306)   # name of the database
 cur = db.cursor()
 
-cur.execute("SELECT * FROM states WHERE name = %s ORDER BY id ASC", (argv[1],));
-#cur.execute("SELECT * FROM states WHERE name = 'Arizona' ORDER BY id ASC;")
+cur.execute("""SELECT * FROM states
+               WHERE name = %s ORDER BY id ASC""", (argv[4],));
 
 for row in cur.fetchall():
     print(row)
+
+cur.close()
