@@ -1,16 +1,21 @@
 # 0x0B. Python - Input/Output
 
-## GENERAL:
+## GENERAL :open_book::open_book::open_book::
 
  <ol>
-	<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
-	<li>All your files will be interpreted/compiled on Ubuntu 14.04 LTS using <code>python3</code> (version 3.4.3)</li>
-	<li>All your files should end with a new line</li>
-	<li>The first line of all your files should be exactly <code>#!/usr/bin/python3</code></li>
-	<li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
-	<li>Your code should use the <code>PEP 8</code> style (version 1.7.*)</li>
-	<li>All your files must be executable</li>
-	<li>The length of your files will be tested using <code>wc</code></li>
+	<li>Why Python programming is awesome</li>
+	<li>How to open a file</li>
+	<li>How to write text in a file</li>
+	<li>How to read the full content of a file </li>
+	<li>How to read a file line by line</li>
+	<li>How to move the cursor in a file</li>
+	<li>How to make sure a file is closed after using it</li>
+	<li>What is and how to use the <code>with</code> statement</li>
+	<li>What is <code>JSON</code></li>
+	<li>What is serialization</li>
+	<li>What is deserialization</li>
+	<li>How to convert a Python data structure to a JSON string </li>
+	<li>How to convert a JSON string to a Python data structure</li>
 </ol>
 
 ## RESOURCES:
@@ -24,32 +29,27 @@
 	<li><a href="/rltoken/Y77h8aeRoljlN643yKfdTg" title="Automate the Boring Stuff with Python" target="_blank">Automate the Boring Stuff with Python</a> (<em>ch. 8 p 180-183 and ch. 14 p 326-333</em>)</li>
 </ol>
 
-## INTRODUCTION TO FILES:
+## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
 
-0.	[**0-read_file.py**:](#0-read_filepy)  function that reads a text file (<code>UTF8</code>) and prints it to stdout:<strong>No test cases needed</strong>
-1.	[**1-write_file.py**:](#1-write_filepy)  function that writes a string to a text file (<code>UTF8</code>) and returns the number of characters written:<strong>No test cases needed</strong>
-2.	[**2-append_write.py**:](#2-append_writepy)  function that appends a string at the end of a text file (<code>UTF8</code>) and returns the number of characters added:<strong>No test cases needed</strong>
-3.	[**3-to_json_string.py**:](#3-to_json_stringpy)  function that returns the JSON representation of an object (string):<strong>No test cases needed</strong>
-4.	[**4-from_json_string.py**:](#4-from_json_stringpy)  function that returns an object (Python data structure) represented by a JSON string:<strong>No test cases needed</strong>
-5.	[**5-save_to_json_file.py**:](#5-save_to_json_filepy)  function that writes an Object to a text file, using a JSON representation:<strong>No test cases needed</strong>
-6.	[**6-load_from_json_file.py**:](#6-load_from_json_filepy)  function that creates an Object from a “JSON file”:<strong>No test cases needed</strong>
-7.	[**7-add_item.py**:](#7-add_itempy)  script that adds all arguments to a Python list, and then save them to a file:<strong>No test cases needed</strong>
-8.	[**8-class_to_json.py**:](#8-class_to_jsonpy)  function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object:<strong>No test cases needed</strong>
-9.	[**9-student.py**:](#9-studentpy)  class <code>Student</code> that defines a student by:<strong>No test cases needed</strong>
-10.	[**10-student.py**:](#10-studentpy)  class <code>Student</code> that defines a student by: (based on <code>9-student.py</code>)<strong>No test cases needed</strong>
-11.	[**11-student.py**:](#11-studentpy)  class <code>Student</code> that defines a student by: (based on <code>10-student.py</code>)Now, you have a simple implementation of a serialization and deserialization mechanism (concept of representation of an object to another format, without losing any information and allow us to rebuild an object based on this representation)<strong>No test cases needed</strong>
-12.	[**100-append_after.py**:](#100-append_afterpy)  function that inserts a line of text to a file, after each line containing a specific string (see example):<strong>No test cases needed</strong>
-## FILES:
+0.	[**0-read_file.py**:](#0-read_filepy) Function that reads a text file (<code>UTF8</code>) and prints it to stdout
+1.	[**1-write_file.py**:](#1-write_filepy) Function that writes a string to a text file (<code>UTF8</code>) and returns the number of characters written
+2.	[**2-append_write.py**:](#2-append_writepy) Function that appends a string at the end of a text file (<code>UTF8</code>) and returns the number of characters added
+3.	[**3-to_json_string.py**:](#3-to_json_stringpy) Function that returns the JSON representation of an object (string)
+4.	[**4-from_json_string.py**:](#4-from_json_stringpy) Function that returns an object (Python data structure) represented by a JSON string
+5.	[**5-save_to_json_file.py**:](#5-save_to_json_filepy) Function that writes an Object to a text file, using a JSON representation
+6.	[**6-load_from_json_file.py**:](#6-load_from_json_filepy) Function that creates an Object from a “JSON file”
+7.	[**7-add_item.py**:](#7-add_itempy) Script that adds all arguments to a Python list, and then save them to a file
+8.	[**8-class_to_json.py**:](#8-class_to_jsonpy) Function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object
+9.	[**9-student.py**:](#9-studentpy) Class <code>Student</code> that defines a student by
+10.	[**10-student.py**:](#10-studentpy) Class <code>Student</code> that defines a student by (based on <code>9-student.py</code>)
+11.	[**11-student.py**:](#11-studentpy) Class <code>Student</code> that defines a student by (based on <code>10-student.py</code>)Now, you have a simple implementation of a serialization and deserialization mechanism (concept of representation of an object to another format, without losing any information and allow us to rebuild an object based on this representation)
+12.	[**100-append_after.py**:](#100-append_afterpy) Function that inserts a line of text to a file, after each line containing a specific string (see example)
+
+## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::
 
 ### 0-read_file.py
 
-*<p>Function that reads a text file (<code>UTF8</code>) and prints it to stdout:</p><p><strong>No test cases needed</strong></p>*
-
-<ul>
-	<li>Prototype: <code>def read_file(filename=""):</code></li>
-	<li>Must the <code>with</code> statement</li>
-	<li>You don’t need to manage <code>file permission</code> or <code>file doesn't exist</code> exceptions.</li>
-</ul>
+**<p>Function that reads a text file (<code>UTF8</code>) and prints it to stdout</p><p></p>**
 
 <pre><code>guillaume@ubuntu:~/0x0B$ cat 0-main.py
 #!/usr/bin/python3
@@ -72,15 +72,7 @@ guillaume@ubuntu:~/0x0B$
 
 ### 1-write_file.py
 
-*<p>Function that writes a string to a text file (<code>UTF8</code>) and returns the number of characters written:</p><p><strong>No test cases needed</strong></p>*
-
-<ul>
-	<li>Prototype: <code>def write_file(filename="", text=""):</code></li>
-	<li>Must the <code>with</code> statement</li>
-	<li>You don’t need to manage file permission exceptions.</li>
-	<li>function should create the file if doesn’t exist.</li>
-	<li>function should overwrite the content of the file if it already exists.</li>
-</ul>
+**<p>Function that writes a string to a text file (<code>UTF8</code>) and returns the number of characters written</p><p></p>**
 
 <pre><code>guillaume@ubuntu:~/0x0B$ cat 1-main.py
 #!/usr/bin/python3
@@ -98,14 +90,7 @@ guillaume@ubuntu:~/0x0B$
 
 ### 2-append_write.py
 
-*<p>Function that appends a string at the end of a text file (<code>UTF8</code>) and returns the number of characters added:</p><p><strong>No test cases needed</strong></p>*
-
-<ul>
-	<li>Prototype: <code>def append_write(filename="", text=""):</code></li>
-	<li>If the file doesn’t exist, it should be created</li>
-	<li>Must the <code>with</code> statement</li>
-	<li>You don’t need to manage <code>file permission</code> or <code>file doesn't exist</code> exceptions.</li>
-</ul>
+**<p>Function that appends a string at the end of a text file (<code>UTF8</code>) and returns the number of characters added</p><p></p>**
 
 <pre><code>guillaume@ubuntu:~/0x0B$ cat 2-main.py
 #!/usr/bin/python3
@@ -130,12 +115,7 @@ guillaume@ubuntu:~/0x0B$
 
 ### 3-to_json_string.py
 
-*<p>Function that returns the JSON representation of an object (string):</p><p><strong>No test cases needed</strong></p>*
-
-<ul>
-	<li>Prototype: <code>def to_json_string(my_obj):</code></li>
-	<li>You don’t need to manage exceptions if the object can’t be serialized.</li>
-</ul>
+**<p>Function that returns the JSON representation of an object (string)</p><p></p>**
 
 <pre><code>guillaume@ubuntu:~/0x0B$ cat 3-main.py
 #!/usr/bin/python3
@@ -179,12 +159,7 @@ guillaume@ubuntu:~/0x0B$
 
 ### 4-from_json_string.py
 
-*<p>Function that returns an object (Python data structure) represented by a JSON string:</p><p><strong>No test cases needed</strong></p>*
-
-<ul>
-	<li>Prototype: <code>def from_json_string(my_str):</code></li>
-	<li>You don’t need to manage exceptions if the JSON string doesn’t represent an object.</li>
-</ul>
+**<p>Function that returns an object (Python data structure) represented by a JSON string</p><p></p>**
 
 <pre><code>guillaume@ubuntu:~/0x0B$ cat 4-main.py
 #!/usr/bin/python3
@@ -224,14 +199,7 @@ guillaume@ubuntu:~/0x0B$
 
 ### 5-save_to_json_file.py
 
-*<p>Function that writes an Object to a text file, using a JSON representation:</p><p><strong>No test cases needed</strong></p>*
-
-<ul>
-	<li>Prototype: <code>def save_to_json_file(my_obj, filename):</code></li>
-	<li>Must the <code>with</code> statement</li>
-	<li>You don’t need to manage exceptions if the object can’t be serialized.</li>
-	<li>You don’t need to manage file permission exceptions.</li>
-</ul>
+**<p>Function that writes an Object to a text file, using a JSON representation</p><p></p>**
 
 <pre><code>guillaume@ubuntu:~/0x0B$ cat 5-main.py
 #!/usr/bin/python3
@@ -274,14 +242,7 @@ guillaume@ubuntu:~/0x0B$
 
 ### 6-load_from_json_file.py
 
-*<p>Function that creates an Object from a “JSON file”:</p><p><strong>No test cases needed</strong></p>*
-
-<ul>
-	<li>Prototype: <code>def load_from_json_file(filename):</code></li>
-	<li>Must the <code>with</code> statement</li>
-	<li>You don’t need to manage exceptions if the JSON string doesn’t represent an object.</li>
-	<li>You don’t need to manage file permissions / exceptions.</li>
-</ul>
+**<p>Function that creates an Object from a “JSON file”</p><p></p>**
 
 <pre><code>guillaume@ubuntu:~/0x0B$ cat my_fake.json
 {"is_active": true, 12 }
@@ -333,15 +294,7 @@ guillaume@ubuntu:~/0x0B$
 
 ### 7-add_item.py
 
-*<p>script that adds all arguments to a Python list, and then save them to a file:</p><p><strong>No test cases needed</strong></p>*
-
-<ul>
-	<li>Must your function <code>save_to_json_file</code> from <code>5-save_to_json_file.py</code></li>
-	<li>Must your function <code>load_from_json_file</code> from <code>6-load_from_json_file.py</code></li>
-	<li>The list must be saved as a JSON representation in a file named <code>add_item.json</code></li>
-	<li>If the file doesn’t exist, it should be created</li>
-	<li>You don’t need to manage file permissions / exceptions.</li>
-</ul>
+**<p>Script that adds all arguments to a Python list, and then save them to a file</p><p></p>**
 
 <pre><code>guillaume@ubuntu:~/0x0B$ cat add_item.json
 cat: add_item.json: No such file or directory
@@ -359,13 +312,7 @@ guillaume@ubuntu:~/0x0B$
 
 ### 8-class_to_json.py
 
-*<p>Function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object:</p><p><strong>No test cases needed</strong></p>*
-
-<ul>
-	<li>Prototype: <code>def class_to_json(obj):</code></li>
-	<li><code>obj</code> is an instance of a Class</li>
-	<li>All attributes of the <code>obj</code> Class are serializable: list, dictionary, string, integer and boolean</li>
-</ul>
+**<p>Function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object</p><p></p>**
 
 <pre><code>guillaume@ubuntu:~/0x0B$ cat 8-my_class.py 
 #!/usr/bin/python3
@@ -452,19 +399,7 @@ guillaume@ubuntu:~/0x0B$
 
 ### 9-student.py
 
-*<p>class <code>Student</code> that defines a student by:</p><p><strong>No test cases needed</strong></p>*
-
-<ul>
-	<li>Public instance attributes: 
-
-<ul>
-	<li><code>first_name</code></li>
-	<li><code>last_name</code></li>
-	<li><code>age</code></li>
-</ul></li>
-	<li>Instantiation with <code>first_name</code>, <code>last_name</code> and <code>age</code>: <code>def __init__(self, first_name, last_name, age):</code></li>
-	<li>Public method <code>def to_json(self):</code> that retrieves a dictionary representation of a <code>Student</code> instance (same as <code>8-class_to_json.py</code>)</li>
-</ul>
+**<p>Class <code>Student</code> that defines a student by</p><p></p>**
 
 <pre><code>guillaume@ubuntu:~/0x0B$ cat 9-main.py 
 #!/usr/bin/python3
@@ -496,24 +431,7 @@ guillaume@ubuntu:~/0x0B$
 
 ### 10-student.py
 
-*<p>class <code>Student</code> that defines a student by: (based on <code>9-student.py</code>)</p><p><strong>No test cases needed</strong></p>*
-
-<ul>
-	<li>Public instance attributes: 
-
-<ul>
-	<li><code>first_name</code></li>
-	<li><code>last_name</code></li>
-	<li><code>age</code></li>
-</ul></li>
-	<li>Instantiation with <code>first_name</code>, <code>last_name</code> and <code>age</code>: <code>def __init__(self, first_name, last_name, age):</code></li>
-	<li>Public method <code>def to_json(self, attrs=None):</code> that retrieves a dictionary representation of a <code>Student</code> instance (same as <code>8-class_to_json.py</code>):
-
-<ul>
-	<li>If <code>attrs</code> is a list of strings, only attribute names contained in this list must be retrieved. </li>
-	<li>Otherwise, all attributes must be retrieved</li>
-</ul></li>
-</ul>
+**<p>Class <code>Student</code> that defines a student by (based on <code>9-student.py</code>)</p><p></p>**
 
 <pre><code>guillaume@ubuntu:~/0x0B$ cat 10-main.py 
 #!/usr/bin/python3
@@ -539,31 +457,7 @@ guillaume@ubuntu:~/0x0B$
 
 ### 11-student.py
 
-*<p>class <code>Student</code> that defines a student by: (based on <code>10-student.py</code>)</p><p>Now, you have a simple implementation of a serialization and deserialization mechanism (concept of representation of an object to another format, without losing any information and allow us to rebuild an object based on this representation)</p><p><strong>No test cases needed</strong></p>*
-
-<ul>
-	<li>Public instance attributes: 
-
-<ul>
-	<li><code>first_name</code></li>
-	<li><code>last_name</code></li>
-	<li><code>age</code></li>
-</ul></li>
-	<li>Instantiation with <code>first_name</code>, <code>last_name</code> and <code>age</code>: <code>def __init__(self, first_name, last_name, age):</code></li>
-	<li>Public method <code>def to_json(self, attrs=None):</code> that retrieves a dictionary representation of a <code>Student</code> instance (same as <code>8-class_to_json.py</code>):
-
-<ul>
-	<li>If <code>attrs</code> is a list of strings, only attributes name contain in this list must be retrieved. </li>
-	<li>Otherwise, all attributes must be retrieved</li>
-</ul></li>
-	<li>Public method <code>def reload_from_json(self, json):</code> that replaces all attributes of the <code>Student</code> instance:
-
-<ul>
-	<li>You can assume <code>json</code> will always be a dictionary</li>
-	<li>A dictionary key will be the public attribute name</li>
-	<li>A dictionary value will be the value of the public attribute</li>
-</ul></li>
-</ul>
+**<p>Class <code>Student</code> that defines a student by (based on <code>10-student.py</code>)</p><p>Now, you have a simple implementation of a serialization and deserialization mechanism (concept of representation of an object to another format, without losing any information and allow us to rebuild an object based on this representation)</p><p></p>**
 
 <pre><code>guillaume@ubuntu:~/0x0B$ cat 11-main.py 
 #!/usr/bin/python3
@@ -632,13 +526,7 @@ guillaume@ubuntu:~/0x0B$
 
 ### 100-append_after.py
 
-*<p>Function that inserts a line of text to a file, after each line containing a specific string (see example):</p><p><strong>No test cases needed</strong></p>*
-
-<ul>
-	<li>Prototype: <code>def append_after(filename="", search_string="", new_string=""):</code></li>
-	<li>Must the <code>with</code> statement</li>
-	<li>You don’t need to manage <code>file permission</code> or <code>file doesn't exist</code> exceptions.</li>
-</ul>
+**<p>Function that inserts a line of text to a file, after each line containing a specific string (see example)</p><p></p>**
 
 <pre><code>guillaume@ubuntu:~/0x0B$ cat 100-main.py
 #!/usr/bin/python3
@@ -674,3 +562,4 @@ But it can be very hard if:
 - You don't have strong C knowledge.
 guillaume@ubuntu:~/0x0B$ 
 </code></pre>
+

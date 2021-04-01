@@ -1,61 +1,54 @@
 # 0x03. Python - Data Structures: Lists, Tuples
-In this directory you will learn how to use Data Structures like lists, tuples.
 
-## GENERAL:
-1.  Why Python programming is awesome
-2.  What are lists and how to use them
-3.  What are the differences and similarities between strings and lists
-4.  What are the most common methods of lists and how to use them
-5.  How to use lists as stacks and queues
-6.  What are list comprehensions and how to use them
-7.  What are tuples and how to use them
-8.  When to use tuples versus lists
-9.  What is a sequence
-10.  What is tuple packing
-11.  What is sequence unpacking
-12.  What is the **del** statement and how to use it
+## GENERAL :open_book::open_book::open_book::
 
+ <ol>
+	<li>Why Python programming is awesome</li>
+	<li>What are lists and how to use them</li>
+	<li>What are the differences and similarities between strings and lists</li>
+	<li>What are the most common methods of lists and how to use them</li>
+	<li>How to use lists as stacks and queues</li>
+	<li>What are list comprehensions and how to use them</li>
+	<li>What are tuples and how to use them</li>
+	<li>When to use tuples versus lists</li>
+	<li>What is a sequence</li>
+	<li>What is tuple packing</li>
+	<li>What is sequence unpacking</li>
+	<li>What is the <code>del</code> statement and how to use it</li>
+</ol>
 
-## Read or watch:
+## RESOURCES:
 
-1.    **[3.1.3. Lists :](https://docs.python.org/3.4/tutorial/introduction.html#lists)**
-2.    **[Data structures (until 5.3. Tuples and Sequences included):](https://docs.python.org/3.4/tutorial/datastructures.html)**
-3.    **[Learn to Program 6 : Lists:](**https://www.youtube.com/watch?v=A1HUzrvS-Pw)** 
+ <ol>
+	<li><a href="/rltoken/zIxzk5ChUX6KzhJIxJjf9Q" title="3.1.3. Lists" target="_blank">3.1.3. Lists</a> </li>
+	<li><a href="/rltoken/ugotLwGPHgU1raKqco8TFg" title="Data structures" target="_blank">Data structures</a> (<em>until <code>5.3. Tuples and Sequences</code> included</em>)</li>
+	<li><a href="/rltoken/smot10KJXMP-a84UxJ7WrQ" title="Learn to Program 6 : Lists" target="_blank">Learn to Program 6 : Lists</a> </li>
+</ol>
 
+## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
 
-## Files:
+0.	[**0-print_list_integer.py**:](#0-print_list_integerpy) Function that prints all integers of a list.
+1.	[**1-element_at.py**:](#1-element_atpy) Function that retrieves an element from a list like in C.
+2.	[**2-replace_in_list.py**:](#2-replace_in_listpy) Function that replaces an element of a list at a specific position (like in C).
+3.	[**3-print_reversed_list_integer.py**:](#3-print_reversed_list_integerpy) Function that prints all integers of a list, in reverse order.
+4.	[**4-new_in_list.py**:](#4-new_in_listpy) Function that replaces an element in a list at a specific position without modifying the original list (like in C).
+5.	[**5-no_c.py**:](#5-no_cpy) Function that removes all characters <code>c</code> and <code>C</code> from a string.
+6.	[**6-print_matrix_integer.py**:](#6-print_matrix_integerpy) Function that prints a matrix of integers.
+7.	[**7-add_tuple.py**:](#7-add_tuplepy) Function that adds 2 tuples.
+8.	[**8-multiple_returns.py**:](#8-multiple_returnspy) Function that returns a tuple with the length of a string and its first character.
+9.	[**9-max_integer.py**:](#9-max_integerpy) Function that finds the biggest integer of a list. 
+10.	[**10-divisible_by_2.py**:](#10-divisible_by_2py) Function that finds all multiples of 2 in a list.
+11.	[**11-delete_at.py**:](#11-delete_atpy) Function that deletes the item at a specific position in a list.
+12.	[**12-switch.py**:](#12-switchpy) Complete the source code in order to switch value of <code>a</code> and <code>b</code>
+13.	[**13-is_palindrome.c, lists.h**:](#13-is_palindromec-listsh) <strong>Technical interview preparation</strong> Function in C that checks if a singly linked list is a palindrome.
 
-1.  **0-print_list_integer.py**
-2.  **1-element_at.py**
-3.  **2-replace_in_list.py**
-4.  **3-print_reversed_list_integer.py**
-5.  **4-new_in_list.py**
-6.  **5-no_c.py**
-7.  **6-print_matrix_integer.py**
-8.  **7-add_tuple.py**
-9.  **8-multiple_returns.py**
-10. **9-max_integer.py**
-11. **10-divisible_by_2.py**
-12. **11-delete_at.pyy**
+## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::
 
-## Tasks
+### 0-print_list_integer.py
 
-### 0. Print a list of integers 
-*   File: **0-positive_or_negative.py**
+**<p>Function that prints all integers of a list.</p>**
 
-*Write a function that prints all integers of a list.*
-
-1.  Prototype: def print_list_integer(my_list=[]):
-2.  Format: one integer per line. See example
-3.  You are not allowed to import any module
-4.  You can assume that the list only contains integers
-5.  You are not allowed to cast integers into strings
-6.  You have to use str.format() to print integers
-
-Example:
-
-```
-guillaume@ubuntu:~/0x03$ cat 0-main.py
+<pre><code>guillaume@ubuntu:~/0x03$ cat 0-main.py
 #!/usr/bin/python3
 print_list_integer = __import__('0-print_list_integer').print_list_integer
 
@@ -69,21 +62,13 @@ guillaume@ubuntu:~/0x03$ ./0-main.py
 4
 5
 guillaume@ubuntu:~/0x03$ 
-```
+</code></pre>
 
-### 1. Secure access to an element in a list
-*   File: **1-element_at.py**
+### 1-element_at.py
 
-*Write a function that retrieves an element from a list like in C.*
+**<p>Function that retrieves an element from a list like in C.</p>**
 
-1.  Prototype: def element_at(my_list, idx):
-2.  If idx is negative, the function should return None
-3.  If idx is out of range (> of number of element in my_list), the function should return None
-4.  You are not allowed to import any module
-5.  You are not allowed to use try/except
-
-```
-guillaume@ubuntu:~/0x03$ cat 1-main.py
+<pre><code>guillaume@ubuntu:~/0x03$ cat 1-main.py
 #!/usr/bin/python3
 element_at = __import__('1-element_at').element_at
 
@@ -94,22 +79,13 @@ print("Element at index {:d} is {}".format(idx, element_at(my_list, idx)))
 guillaume@ubuntu:~/0x03$ ./1-main.py
 Element at index 3 is 4
 guillaume@ubuntu:~/0x03$ 
+</code></pre>
 
-```
+### 2-replace_in_list.py
 
-###  2. Replace element 
-*   File: **2-replace_in_list.py**
+**<p>Function that replaces an element of a list at a specific position (like in C).</p>**
 
-*Write a function that replaces an element of a list at a specific position (like in C).*
-
-1.  Prototype: def replace_in_list(my_list, idx, element):
-2.  If idx is negative, the function should not modify anything, and returns the original list
-3.  If idx is out of range (> of number of element in my_list), the function should not modify anything, and returns the original list
-4.  You are not allowed to import any module
-5.  You are not allowed to use try/except
-
-```
-guillaume@ubuntu:~/0x03$ cat 2-main.py
+<pre><code>guillaume@ubuntu:~/0x03$ cat 2-main.py
 #!/usr/bin/python3
 replace_in_list = __import__('2-replace_in_list').replace_in_list
 
@@ -125,22 +101,13 @@ guillaume@ubuntu:~/0x03$ ./2-main.py
 [1, 2, 3, 9, 5]
 [1, 2, 3, 9, 5]
 guillaume@ubuntu:~/0x03$ 
-```
+</code></pre>
 
-###  3. Print a list of integers... in reverse!
-*   File: **3-print_reversed_list_integer.py**
+### 3-print_reversed_list_integer.py
 
-*Write a function that prints all integers of a list, in reverse order.*
+**<p>Function that prints all integers of a list, in reverse order.</p>**
 
-1.  Prototype: def print_reversed_list_integer(my_list=[]):
-2.  Format: one integer per line. See example
-3.  You are not allowed to import any module
-4.  You can assume that the list only contains integers
-5.  You are not allowed to cast integers into strings
-6.  You have to use str.format() to print integers
-
-```
-guillaume@ubuntu:~/0x03$ cat 3-main.py
+<pre><code>guillaume@ubuntu:~/0x03$ cat 3-main.py
 #!/usr/bin/python3
 print_reversed_list_integer = __import__('3-print_reversed_list_integer').print_reversed_list_integer
 
@@ -154,22 +121,13 @@ guillaume@ubuntu:~/0x03$ ./3-main.py
 2
 1
 guillaume@ubuntu:~/0x03$ 
+</code></pre>
 
-```
+### 4-new_in_list.py
 
-###  4. Replace in a copy
-*   File: **4-new_in_list.py**
+**<p>Function that replaces an element in a list at a specific position without modifying the original list (like in C).</p>**
 
-*Write a function that replaces an element in a list at a specific position without modifying the original list (like in C).*
-
-1.  Prototype: def new_in_list(my_list, idx, element):
-2.  If idx is negative, the function should return a copy of the original list
-3.  If idx is out of range (> of number of element in my_list), the function should return a copy of the original list
-4.  You are not allowed to import any module
-5.  You are not allowed to use try/except
-
-```
-guillaume@ubuntu:~/0x03$ cat 4-main.py
+<pre><code>guillaume@ubuntu:~/0x03$ cat 4-main.py
 #!/usr/bin/python3
 new_in_list = __import__('4-new_in_list').new_in_list
 
@@ -185,20 +143,13 @@ guillaume@ubuntu:~/0x03$ ./4-main.py
 [1, 2, 3, 9, 5]
 [1, 2, 3, 4, 5]
 guillaume@ubuntu:~/0x03$ 
-```
+</code></pre>
 
-###   5. Can you C me now?  
-* File: **5-no_c.py**
+### 5-no_c.py
 
-*Write a function that removes all characters c and C from a string.*
+**<p>Function that removes all characters <code>c</code> and <code>C</code> from a string.</p>**
 
-1.  Prototype: def no_c(my_string):
-2.  The function should return the new string
-3.  You are not allowed to import any module
-4.  You are not allowed to use str.replace()
-
-```
-guillaume@ubuntu:~/0x03$ cat 5-main.py
+<pre><code>guillaume@ubuntu:~/0x03$ cat 5-main.py
 #!/usr/bin/env python3
 no_c = __import__('5-no_c').no_c
 
@@ -211,22 +162,13 @@ Holberton Shool
 hiago
  is fun!
 guillaume@ubuntu:~/0x03$ 
-```
+</code></pre>
 
-### 6. Lists of lists = Matrix 
-*   File: **6-print_matrix_integer.py**
+### 6-print_matrix_integer.py
 
-*Write a function that prints a matrix of integers.*
+**<p>Function that prints a matrix of integers.</p>**
 
-1.  Prototype: def print_matrix_integer(matrix=[[]]):
-2.  Format: see example
-3.  You are not allowed to import any module
-4.  You can assume that the list only contains integers
-5.  You are not allowed to cast integers into strings
-6.  You have to use str.format() to print integers
-
-```
-guillaume@ubuntu:~/0x03$ cat 6-main.py
+<pre><code>guillaume@ubuntu:~/0x03$ cat 6-main.py
 #!/usr/bin/python3
 print_matrix_integer = __import__('6-print_matrix_integer').print_matrix_integer
 
@@ -247,26 +189,13 @@ guillaume@ubuntu:~/0x03$ ./6-main.py | cat -e
 --$
 $
 guillaume@ubuntu:~/0x03$ 
+</code></pre>
 
-```
+### 7-add_tuple.py
 
+**<p>Function that adds 2 tuples.</p>**
 
-### 7. Tuples addition7. 
-*   File: **** 
-
-*Write a function that adds 2 tuples.*
-
-1.  Prototype: def add_tuple(tuple_a=(), tuple_b=()):
-2.  Returns a tuple with 2 integers:
-    - The first element should be the addition of the first element of each argument
-    -The second element should be the addition of the second element of each argument
-3.  You are not allowed to import any module
-4.  You can assume that the two tuples will only contain integers
-5.  If a tuple is smaller than 2, use the value 0 for each missing integer
-6.  If a tuple is bigger than 2, use only the first 2 integers
-
-```
-guillaume@ubuntu:~/0x03$ cat 7-main.py
+<pre><code>guillaume@ubuntu:~/0x03$ cat 7-main.py
 #!/usr/bin/python3
 add_tuple = __import__('7-add_tuple').add_tuple
 
@@ -283,19 +212,13 @@ guillaume@ubuntu:~/0x03$ ./7-main.py
 (2, 89)
 (1, 89)
 guillaume@ubuntu:~/0x03$ 
-```
+</code></pre>
 
-### 8. More returns!
-*   File: **8-multiple_returns.py**
+### 8-multiple_returns.py
 
-*Write a function that returns a tuple with the length of a string and its first character.*
+**<p>Function that returns a tuple with the length of a string and its first character.</p>**
 
-1.  Prototype: def multiple_returns(sentence):
-2.  If the sentence is empty, the first character should be equal to None
-3.  You are not allowed to import any module    
-
-```
-guillaume@ubuntu:~/0x03$ cat 8-main.py
+<pre><code>guillaume@ubuntu:~/0x03$ cat 8-main.py
 #!/usr/bin/python3
 multiple_returns = __import__('8-multiple_returns').multiple_returns
 
@@ -306,21 +229,13 @@ print("Length: {:d} - First character: {}".format(length, first))
 guillaume@ubuntu:~/0x03$ ./8-main.py
 Length: 32 - First character: A
 guillaume@ubuntu:~/0x03$ 
-```
+</code></pre>
 
-###  9. Find the max 
-*   File: **9-max_integer.py**
+### 9-max_integer.py
 
-*Write a function that finds the biggest integer of a list.*
+**<p>Function that finds the biggest integer of a list. </p>**
 
-1.  Prototype: def max_integer(my_list=[]):
-2.  If the list is empty, return None
-3.  You can assume that the list only contains integers
-4.  You are not allowed to import any module
-5.  You are not allowed to use the builtin max()
-
-```
-guillaume@ubuntu:~/0x03$ cat 9-main.py
+<pre><code>guillaume@ubuntu:~/0x03$ cat 9-main.py
 #!/usr/bin/python3
 max_integer = __import__('9-max_integer').max_integer
 
@@ -331,21 +246,13 @@ print("Max: {}".format(max_value))
 guillaume@ubuntu:~/0x03$ ./9-main.py
 Max: 90
 guillaume@ubuntu:~/0x03$ 
-```
+</code></pre>
 
-### 10. Only by 2
+### 10-divisible_by_2.py
 
-*   File: **10-divisible_by_2.py**
+**<p>Function that finds all multiples of 2 in a list.</p>**
 
-*Write a function that finds all multiples of 2 in a list.* 
-
-1.  Prototype: def divisible_by_2(my_list=[]):
-2.  Return a new list with True or False, depending on whether the integer at the same position in the original list is a multiple of 2
-3.  The new list should have the same size as the original list
-4.  You are not allowed to import any module
-
-```
-guillaume@ubuntu:~/0x03$ cat 10-main.py
+<pre><code>guillaume@ubuntu:~/0x03$ cat 10-main.py
 #!/usr/bin/python3
 divisible_by_2 = __import__('10-divisible_by_2').divisible_by_2
 
@@ -353,7 +260,7 @@ my_list = [0, 1, 2, 3, 4, 5, 6]
 list_result = divisible_by_2(my_list)
 
 i = 0
-while i < len(list_result):
+while i &lt; len(list_result):
     print("{:d} {:s} divisible by 2".format(my_list[i], "is" if list_result[i] else "is not"))
     i += 1
 
@@ -366,22 +273,13 @@ guillaume@ubuntu:~/0x03$ ./10-main.py
 5 is not divisible by 2
 6 is divisible by 2
 guillaume@ubuntu:~/0x03$ 
-```
+</code></pre>
 
+### 11-delete_at.py
 
-### 11. Delete at
+**<p>Function that deletes the item at a specific position in a list.</p>**
 
-*   File: **11-delete_at.py**
-
-*Write a function that deletes the item at a specific position in a list.* 
-
-1.  Prototype: def delete_at(my_list=[], idx=0):
-2.  If idx is negative or out of range, nothing change (returns the same list)
-3.  You are not allowed to use pop()
-4.  You are not allowed to import any module
-
-```
-guillaume@ubuntu:~/0x03$ cat 11-main.py
+<pre><code>guillaume@ubuntu:~/0x03$ cat 11-main.py
 #!/usr/bin/python3
 delete_at = __import__('11-delete_at').delete_at
 
@@ -395,24 +293,48 @@ guillaume@ubuntu:~/0x03$ ./11-main.py
 [1, 2, 3, 5]
 [1, 2, 3, 5]
 guillaume@ubuntu:~/0x03$ 
-```
+</code></pre>
 
+### 12-switch.py
 
-### 12. Switch 
+**<p>Complete the source code in order to switch value of <code>a</code> and <code>b</code></p>**
 
-*   File: **12-switch.py**
-
-*Complete the source code in order to switch value of a and b* 
-
-1.  You can find the source code here
-2.  Your code should be inserted where the comment is (line 4)
-3.  Your program should be exactly 5 lines long
-
-```
-guillaume@ubuntu:~/py/0x03$ ./12-switch.py
+<pre><code>guillaume@ubuntu:~/py/0x03$ ./12-switch.py
 a=10 - b=89
 guillaume@ubuntu:~/py/0x03$ wc -l 12-switch.py
 5 12-switch.py
 guillaume@ubuntu:~/py/0x03$ 
-```
+</code></pre>
+
+### 13-is_palindrome.c, lists.h
+
+**<p><strong>Technical interview preparation</strong> </p><p>Function in C that checks if a singly linked list is a palindrome.</p>**
+
+<pre><code>carrie@ubuntu:0x03$ cat lists.h 
+#ifndef LISTS_H
+#define LISTS_H
+
+/**
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ * for Holberton project
+ */
+typedef struct listint_s
+{
+    int n;
+    struct listint_s *next;
+} listint_t;
+
+size_t print_listint(const listint_t *h);
+listint_t *add_nodeint_end(listint_t **head, const int n);
+void free_listint(listint_t *head);
+
+int is_palindrome(listint_t **head);
+
+#endif /* LISTS_H */
+carrie@ubuntu:0x03$
+</code></pre>
 

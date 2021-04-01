@@ -1,485 +1,474 @@
-# SQL - Introduction
-In this directory you will learn how to use conditional if, and the while and for loop and differentiate each one
+	# 0x0E. SQL - More queries 
 
-## GENERAL:
+## GENERAL :open_book::open_book::open_book::
 
-1.  What’s a database
-2.  What’s a relational database
-3.  What does SQL stand for
-4.  What’s MySQL
-5.  How to create a database in MySQL
-6.  What does DDL and DML stand for
-7.  How to CREATE or ALTER a table
-8.  How to SELECT data from a table
-9.  How to INSERT, UPDATE or DELETE data
-10.  What are subqueries
-11.  How to use MySQL functions
+ <ol>
+	<li>How to create a new MySQL user</li>
+	<li>How to manage privileges for a user to a database or table</li>
+	<li>What’s a <code>PRIMARY KEY</code></li>
+	<li>What’s a <code>FOREIGN KEY</code></li>
+	<li>How to use <code>NOT NULL</code> and <code>UNIQUE</code> constraints</li>
+	<li>How to retrieve datas from multiple tables in one request</li>
+	<li>What are subqueries</li>
+	<li>What are <code>JOIN</code> and <code>UNION</code></li>
+</ol>
 
-## RESOURSES:
+## RESOURCES:
 
-1.   **[What is Database & SQL?](https://www.youtube.com/watch?v=FR4QIeZaPeM)**
-2.   **[A Basic MySQL Tutorial](https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial)**
-3.   **[Basic SQL statements: DDL and DML](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/ddldml.php)**
-4.   **[Basic queries: SQL and RA](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/queries.php)**
-5.   **[SQL technique: functions](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/functions.php)**
-6.   **[SQL technique: subqueries](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/subqueries.php)**
-7.   **[What makes the big difference between a backtick and an apostrophe?](https://stackoverflow.com/questions/29402361/what-makes-the-big-difference-between-a-backtick-and-an-apostrophe/29402458)**
-8.   **[MySQL Cheat Sheet](https://intellipaat.com/mediaFiles/2019/02/SQL-Commands-Cheat-Sheet.pdf)**
-9.   **[MySQL 5.7 SQL Statement Syntax](https://dev.mysql.com/doc/refman/5.7/en/sql-statements.html)**
+ <ol>
+	<li><a href="/rltoken/u4h2MXcCQfadszlRMQy-gw" title="How To Create a New User and Grant Permissions in MySQL" target="_blank">How To Create a New User and Grant Permissions in MySQL</a> </li>
+	<li><a href="/rltoken/ztrEKQexfEDtZ-8EUsG70Q" title="How To Use MySQL GRANT Statement To Grant Privileges To a User" target="_blank">How To Use MySQL GRANT Statement To Grant Privileges To a User</a> </li>
+	<li><a href="/rltoken/LBrFqCMm9N9woTX7sS7e0g" title="MySQL constraints" target="_blank">MySQL constraints</a> </li>
+	<li><a href="/rltoken/YYpPtkqFeKSCsAU4Y_y3Og" title="SQL technique: subqueries" target="_blank">SQL technique: subqueries</a> </li>
+	<li><a href="/rltoken/npLCp3WasK0SUSUQqCF25A" title="Basic query operation: the join" target="_blank">Basic query operation: the join</a> </li>
+	<li><a href="/rltoken/GmRLMhkY-pPvjcpzyDvmRg" title="SQL technique: multiple joins and the distinct keyword" target="_blank">SQL technique: multiple joins and the distinct keyword</a> </li>
+	<li><a href="/rltoken/ryjyRRN7696rJV0maP03Xw" title="SQL technique: join types" target="_blank">SQL technique: join types</a> </li>
+	<li><a href="/rltoken/L7Fi5w8GZG5MSdQZ19e88g" title="SQL technique: union and minus" target="_blank">SQL technique: union and minus</a> </li>
+	<li><a href="/rltoken/V9vpLbtkFwV4EZYoiz2NBA" title="MySQL Cheat Sheet" target="_blank">MySQL Cheat Sheet</a> </li>
+	<li><a href="/rltoken/ySKSdhFeMDddea07XrDzeQ" title="The Seven Types of SQL Joins" target="_blank">The Seven Types of SQL Joins</a> </li>
+	<li><a href="/rltoken/-uqP0a89xUl3SsmV_ZtxRA" title="MySQL Tutorial" target="_blank">MySQL Tutorial</a> </li>
+	<li><a href="/rltoken/jn4SHgwVtOJF0LQYPEIs-g" title="SQL Style Guide" target="_blank">SQL Style Guide</a> </li>
+	<li><a href="/rltoken/YjNAE7DcadDbT_a7iI0sYw" title="MySQL 5.7 SQL Statement Syntax" target="_blank">MySQL 5.7 SQL Statement Syntax</a> </li>
+	<li><a href="/rltoken/9ppVdXqFMn-v1eKuxsOvaQ" title="Design" target="_blank">Design</a></li>
+	<li><a href="/rltoken/zo6dqYxsXby3S3uON5JfOg" title="Normalization" target="_blank">Normalization</a></li>
+	<li><a href="/rltoken/ZaMMezT-GdpgHB9pmM78iw" title="ER Modeling" target="_blank">ER Modeling</a></li>
+</ol>
 
+## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
 
-## Install MySQL 5.7 on Ubuntu 14.04 LTS
+0.	[**0-privileges.sql**:](#0-privilegessql) Script that lists all privileges of the MySQL users <code>user_0d_1</code> and <code>user_0d_2</code> on your server (in <code>localhost</code>).
+1.	[**1-create_user.sql**:](#1-create_usersql) Script that creates the MySQL server user <code>user_0d_1</code>. 
+2.	[**2-create_read_user.sql**:](#2-create_read_usersql) Script that creates the database <code>hbtn_0d_2</code> and the user <code>user_0d_2</code>. 
+3.	[**3-force_name.sql**:](#3-force_namesql) Script that creates the table <code>force_name</code> on your MySQL server.
+4.	[**4-never_empty.sql**:](#4-never_emptysql) Script that creates the table <code>id_not_null</code> on your MySQL server.
+5.	[**5-unique_id.sql**:](#5-unique_idsql) Script that creates the table <code>unique_id</code> on your MySQL server.
+6.	[**6-states.sql**:](#6-statessql) Script that creates the database <code>hbtn_0d_usa</code> and the table <code>states</code> (in the database <code>hbtn_0d_usa</code>) on your MySQL server.
+7.	[**7-cities.sql**:](#7-citiessql) Script that creates the database <code>hbtn_0d_usa</code> and the table <code>cities</code> (in the database <code>hbtn_0d_usa</code>) on your MySQL server.
+8.	[**8-cities_of_california_subquery.sql**:](#8-cities_of_california_subquerysql) Script that lists all the cities of California that can be found in the database <code>hbtn_0d_usa</code>.
+9.	[**9-cities_by_state_join.sql**:](#9-cities_by_state_joinsql) Script that lists all cities contained in the database <code>hbtn_0d_usa</code>.
+10.	[**10-genre_id_by_show.sql**:](#10-genre_id_by_showsql) Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a>script that lists all shows contained in <code>hbtn_0d_tvshows</code> that have at least one genre linked.
+11.	[**11-genre_id_all_shows.sql**:](#11-genre_id_all_showssql) Import the database dump of <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>10-genre_id_by_show.sql</code>)script that lists all shows contained in the database <code>hbtn_0d_tvshows</code>.
+12.	[**12-no_genre.sql**:](#12-no_genresql) Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>11-genre_id_all_shows.sql</code>)script that lists all shows contained in <code>hbtn_0d_tvshows</code> without a genre linked. 
+13.	[**13-count_shows_by_genre.sql**:](#13-count_shows_by_genresql) Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>12-no_genre.sql</code>)script that lists all genres from <code>hbtn_0d_tvshows</code> and displays the number of shows linked to each.
+14.	[**14-my_genres.sql**:](#14-my_genressql) Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>13-count_shows_by_genre.sql</code>)script that uses the <code>hbtn_0d_tvshows</code> database to lists all genres of the show <code>Dexter</code>.
+15.	[**15-comedy_only.sql**:](#15-comedy_onlysql) Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>14-my_genres.sql</code>)script that lists all Comedy shows in the database <code>hbtn_0d_tvshows</code>.
+16.	[**16-shows_by_genre.sql**:](#16-shows_by_genresql) Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>15-comedy_only.sql</code>)script that lists all shows, and all genres linked to that show, from the database <code>hbtn_0d_tvshows</code>.
+17.	[**100-not_my_genres.sql**:](#100-not_my_genressql) Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>16-shows_by_genre.sql</code>)script that uses the <code>hbtn_0d_tvshows</code> database to list all genres not linked to the show <code>Dexter</code>
+18.	[**101-not_a_comedy.sql**:](#101-not_a_comedysql) Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>100-not_my_genres.sql</code>)script that lists all shows without the genre <code>Comedy</code> in the database <code>hbtn_0d_tvshows</code>.
+19.	[**102-rating_shows.sql**:](#102-rating_showssql) Import the database <code>hbtn_0d_tvshows_rate</code> dump to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows_rate.sql" title="download" target="_blank">download</a>script that lists all shows from <code>hbtn_0d_tvshows_rate</code> by their rating.
 
-* You need to downloand MYSQL to test the files of this directory with the following commands
+## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::
 
-```
-$ echo 'deb http://repo.mysql.com/apt/ubuntu/ trusty mysql-5.7-dmr' | sudo tee -a /etc/apt/sources.list
-$ sudo apt-get update
-$ sudo apt-get install mysql-server-5.7
-...
-$ mysql --version
-mysql  Ver 14.14 Distrib 5.7.8-rc, for Linux (x86_64) using  EditLine wrapper
-$
-```
-* Check if you can to enter to my MySQL server with the followin command
+### 0-privileges.sql
 
-```
-$ mysql -hlocalhost -uroot -p
-```
+**<p>Script that lists all privileges of the MySQL users <code>user_0d_1</code> and <code>user_0d_2</code> on your server (in <code>localhost</code>).</p>**
 
-## Introduction To The Files:
-
-1.  [0-list_databases.sql:](#0-list_databasessql) TWrite a script that lists all databases of your MySQL server.
-2.  [:](#0-positive_or_negativepy) Text Here
-3.  [:](#0-positive_or_negativepy) Text Here
-4.  [:](#0-positive_or_negativepy) Text Here
-5.  [:](#0-positive_or_negativepy) Text Here
-6.  [:](#0-positive_or_negativepy) Text Here
-7.  [:](#0-positive_or_negativepy) Text Here
-8.  [:](#0-positive_or_negativepy) Text Here
-9.  [:](#0-positive_or_negativepy) Text Here
-10.  [:](#0-positive_or_negativepy) Text Here
-11.  [:](#0-positive_or_negativepy) Text Here
-12.  [:](#0-positive_or_negativepy) Text Here
-13.  [:](#0-positive_or_negativepy) Text Here 
-14.  [:](#0-positive_or_negativepy) Text Here
-
-## Files
-
-### 0-list_databases.sql
-
-*Write a script that lists all databases of your MySQL server.*
-
-Example:
-
-```
-guillaume@ubuntu:~/$ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
+<pre><code>guillaume@ubuntu:~/$ cat 0-privileges.sql | mysql -hlocalhost -uroot -p
 Enter password: 
-Database
-information_schema
-mysql
-performance_schema
+ERROR 1141 (42000) at line 4: There is no such grant defined for user 'user_0d_1' on host 'localhost'
 guillaume@ubuntu:~/$ 
-
-```
-### 1-create_database_if_missing.sql
-
-*Write a script that creates the database hbtn_0c_0 in your MySQL server.*
-
-1.  If the database hbtn_0c_0 already exists, your script should not fail
-2.  You are not allowed to use the SELECT or SHOW statements
-
-```
-guillaume@ubuntu:~/$ cat 1-create_database_if_missing.sql | mysql -hlocalhost -uroot -p
+guillaume@ubuntu:~/$ echo "CREATE USER 'user_0d_1'@'localhost';" |  mysql -hlocalhost -uroot -p
 Enter password: 
-guillaume@ubuntu:~/$ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
+guillaume@ubuntu:~/$ echo "GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';" |  mysql -hlocalhost -uroot -p
 Enter password: 
-Database
-information_schema
-hbtn_0c_0
-mysql
-performance_schema
-guillaume@ubuntu:~/$ cat 1-create_database_if_missing.sql | mysql -hlocalhost -uroot -p
+guillaume@ubuntu:~/$ cat 0-privileges.sql | mysql -hlocalhost -uroot -p
 Enter password: 
+Grants for user_0d_1@localhost
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost'
+ERROR 1141 (42000) at line 4: There is no such grant defined for user 'user_0d_2' on host 'localhost'
 guillaume@ubuntu:~/$ 
-```
+</code></pre>
 
-### 2-remove_database.sql
+### 1-create_user.sql
 
-*Write a script that deletes the database hbtn_0c_0 in your MySQL server.*
+**<p>Script that creates the MySQL server user <code>user_0d_1</code>. </p>**
 
-1.  If the database hbtn_0c_0 doesn’t exist, your script should not fail
-2.  You are not allowed to use the SELECT or SHOW statements
-  
-```
-guillaume@ubuntu:~/$ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
+<pre><code>guillaume@ubuntu:~/$ cat 1-create_user.sql | mysql -hlocalhost -uroot -p
 Enter password: 
-Database
-information_schema
-hbtn_0c_0
-mysql
-performance_schema
-guillaume@ubuntu:~/$ cat 2-remove_database.sql | mysql -hlocalhost -uroot -p
+guillaume@ubuntu:~/$ cat 0-privileges.sql | mysql -hlocalhost -uroot -p
 Enter password: 
-guillaume@ubuntu:~/$ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
-Enter password: 
-Database
-information_schema
-mysql
-performance_schema
+Grants for user_0d_1@localhost
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost'
+ERROR 1141 (42000) at line 4: There is no such grant defined for user 'user_0d_2' on host 'localhost'
 guillaume@ubuntu:~/$ 
-```
-### 3-list_tables.sql
+</code></pre>
 
-*TWrite a script that lists all the tables of a database in your MySQL server.*
+### 2-create_read_user.sql
 
-1. The database name will be passed as argument of mysql command (in the following example: mysql is the name of the database)  
+**<p>Script that creates the database <code>hbtn_0d_2</code> and the user <code>user_0d_2</code>. </p>**
 
-```
-guillaume@ubuntu:~/$ cat 3-list_tables.sql | mysql -hlocalhost -uroot -p mysql
+<pre><code>guillaume@ubuntu:~/$ cat 2-create_read_user.sql | mysql -hlocalhost -uroot -p
 Enter password: 
-Tables_in_mysql
-columns_priv
-db
-event
-func
-general_log
-help_category
-help_keyword
-help_relation
-help_topic
-host
-ndb_binlog_index
-plugin
-proc
-procs_priv
-proxies_priv
-servers
-slow_log
-tables_priv
-time_zone
-time_zone_leap_second
-time_zone_name
-time_zone_transition
-time_zone_transition_type
-user
+guillaume@ubuntu:~/$ cat 0-privileges.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+Grants for user_0d_1@localhost
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost'
+Grants for user_0d_2@localhost
+GRANT USAGE ON *.* TO 'user_0d_2'@'localhost'
+GRANT SELECT ON `hbtn_0d_2`.* TO 'user_0d_2'@'localhost'
 guillaume@ubuntu:~/$ 
-```
+</code></pre>
 
-### 4-first_table.sql
+### 3-force_name.sql
 
-*Write a script that creates a table called first_table in the current database in your MySQL server.*
-1. first_table description: 
-    - id INT 
-    - name VARCHAR(256)
-2. The database name will be passed as an argument of the mysql command
-3. If the table first_table already exists, your script should not fail1.  
-  
-  
-```
-guillaume@ubuntu:~/$ cat 4-first_table.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+**<p>Script that creates the table <code>force_name</code> on your MySQL server.</p>**
+
+<pre><code>guillaume@ubuntu:~/$ cat 3-force_name.sql | mysql -hlocalhost -uroot -p hbtn_0d_2
 Enter password: 
-guillaume@ubuntu:~/$ cat 3-list_tables.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+guillaume@ubuntu:~/$ echo 'INSERT INTO force_name (id, name) VALUES (89, "Holberton School");' | mysql -hlocalhost -uroot -p hbtn_0d_2
 Enter password: 
-Tables_in_hbtn_0c_0
-first_table
-guillaume@ubuntu:~/$ 
-```
-
-### 5-full_table.sql
-
-*Write a script that prints the full description of the table first_table from the database hbtn_0c_0 in your MySQL server.*
-
-1.  The database name will be passed as an argument of the mysql command
-2.  You are not allowed to use the DESCRIBE or EXPLAIN statements
-
-```
-guillaume@ubuntu:~/$ cat 5-full_table.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
-Enter password: 
-Table   Create Table
-first_table CREATE TABLE `first_table` (\n  `id` int(11) DEFAULT NULL,\n  `name` varchar(256) DEFAULT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=latin1
-guillaume@ubuntu:~/$ 
-```
-
-### 6-list_values.sql
-
-*Write a script that lists all rows of the table first_table from the database hbtn_0c_0 in your MySQL server.*
-
-1.  All fields should be printed
-2.  The database name will be passed as an argument of the mysql command
-
-```
-guillaume@ubuntu:~/$ cat 6-list_values.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
-Enter password: 
-guillaume@ubuntu:~/$ 
-```
-
-### 7-insert_value.sql
-
-*Write a script that inserts a new row in the table first_table (database hbtn_0c_0) in your MySQL server.
-
-1.  New row:
-     - id = 89
-     - name = Holberton School
-2.  The database name will be passed as an argument of the mysql command
-
-```
-guillaume@ubuntu:~/$ cat 7-insert_value.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
-Enter password: 
-guillaume@ubuntu:~/$ cat 6-list_values.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+guillaume@ubuntu:~/$ echo 'SELECT * FROM force_name;' | mysql -hlocalhost -uroot -p hbtn_0d_2
 Enter password: 
 id  name
 89  Holberton School
-guillaume@ubuntu:~/$ cat 7-insert_value.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+guillaume@ubuntu:~/$ echo 'INSERT INTO force_name (id) VALUES (333);' | mysql -hlocalhost -uroot -p hbtn_0d_2
 Enter password: 
-guillaume@ubuntu:~/$ cat 7-insert_value.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
-Enter password: 
-guillaume@ubuntu:~/$ cat 6-list_values.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+ERROR 1364 (HY000) at line 1: Field 'name' doesn't have a default value
+guillaume@ubuntu:~/$ echo 'SELECT * FROM force_name;' | mysql -hlocalhost -uroot -p hbtn_0d_2
 Enter password: 
 id  name
 89  Holberton School
+guillaume@ubuntu:~/$ 
+</code></pre>
+
+### 4-never_empty.sql
+
+**<p>Script that creates the table <code>id_not_null</code> on your MySQL server.</p>**
+
+<pre><code>guillaume@ubuntu:~/$ cat 4-never_empty.sql | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+guillaume@ubuntu:~/$ echo 'INSERT INTO id_not_null (id, name) VALUES (89, "Holberton School");' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+guillaume@ubuntu:~/$ echo 'SELECT * FROM id_not_null;' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+id  name
 89  Holberton School
+guillaume@ubuntu:~/$ echo 'INSERT INTO id_not_null (name) VALUES ("Holberton");' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+guillaume@ubuntu:~/$ echo 'SELECT * FROM id_not_null;' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+id  name
+89  Holberton School
+1   Holberton
+guillaume@ubuntu:~/$ 
+</code></pre>
+
+### 5-unique_id.sql
+
+**<p>Script that creates the table <code>unique_id</code> on your MySQL server.</p>**
+
+<pre><code>guillaume@ubuntu:~/$ cat 5-unique_id.sql | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+guillaume@ubuntu:~/$ echo 'INSERT INTO unique_id (id, name) VALUES (89, "Holberton School");' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+guillaume@ubuntu:~/$ echo 'SELECT * FROM unique_id;' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+id  name
+89  Holberton School
+guillaume@ubuntu:~/$ echo 'INSERT INTO unique_id (id, name) VALUES (89, "Holberton");' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+ERROR 1062 (23000) at line 1: Duplicate entry '89' for key 'id'
+guillaume@ubuntu:~/$ echo 'SELECT * FROM unique_id;' | mysql -hlocalhost -uroot -p hbtn_0d_2
+Enter password: 
+id  name
 89  Holberton School
 guillaume@ubuntu:~/$ 
-```
-### 8-count_89.sql
+</code></pre>
 
-*Write a script that displays the number of records with id = 89 in the table first_table of the database hbtn_0c_0 in your MySQL server.
+### 6-states.sql
 
-1.  The database name will be passed as an argument of the mysql command
-  
-```
-guillaume@ubuntu:~/$ cat 8-count_89.sql | mysql -hlocalhost -uroot -p hbtn_0c_0 | tail -1
+**<p>Script that creates the database <code>hbtn_0d_usa</code> and the table <code>states</code> (in the database <code>hbtn_0d_usa</code>) on your MySQL server.</p>**
+
+<pre><code>guillaume@ubuntu:~/$ cat 6-states.sql | mysql -hlocalhost -uroot -p
 Enter password: 
-3
+guillaume@ubuntu:~/$ echo 'INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas");' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+guillaume@ubuntu:~/$ echo 'SELECT * FROM states;' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+id  name
+1   California
+2   Arizona
+3   Texas
 guillaume@ubuntu:~/$ 
-```
+</code></pre>
 
-### 9-full_creation.sql
+### 7-cities.sql
 
-*Write a script that creates a table second_table in the database hbtn_0c_0 in your MySQL server and add multiples rows.*
+**<p>Script that creates the database <code>hbtn_0d_usa</code> and the table <code>cities</code> (in the database <code>hbtn_0d_usa</code>) on your MySQL server.</p>**
 
-1.  second_table description:
-    - id INT
-    - name VARCHAR(256)
-    - score INT
-2.  The database name will be passed as an argument to the mysql command
-3.  If the table second_table already exists, your script should not fail
-4.  You are not allowed to use the SELECT and SHOW statements
-5.  Your script should create these records:
-    - id = 1, name = “John”, score = 10
-    - id = 2, name = “Alex”, score = 3
-    - id = 3, name = “Bob”, score = 14
-    - id = 4, name = “George”, score = 8
-```
-guillaume@ubuntu:~/$ cat 9-full_creation.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+<pre><code>guillaume@ubuntu:~/$ cat 7-cities.sql | mysql -hlocalhost -uroot -p
 Enter password: 
-guillaume@ubuntu:~/$  
-```
-
-### 10-top_score.sql
-
-*Write a script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server.*
-
-1.  Results should display both the score and the name (in this order)
-2.  Records should be ordered by score (top first)
-3.  The database name will be passed as an argument of the mysql command
-
-  
-  
-```
-guillaume@ubuntu:~/$ cat 10-top_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+guillaume@ubuntu:~/$ echo 'INSERT INTO cities (state_id, name) VALUES (1, "San Francisco");' | mysql -hlocalhost -uroot -p hbtn_0d_usa
 Enter password: 
-score   name
-14  Bob
-10  John
-8   George
-3   Alex
+guillaume@ubuntu:~/$ echo 'SELECT * FROM cities;' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+id  state_id    name
+1   1   San Francisco
+guillaume@ubuntu:~/$ echo 'INSERT INTO cities (state_id, name) VALUES (10, "Paris");' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+ERROR 1452 (23000) at line 1: Cannot add or update a child row: a foreign key constraint fails (`hbtn_0d_usa`.`cities`, CONSTRAINT `cities_ibfk_1` FOREIGN KEY (`state_id`) REFERENCES `states` (`id`))
+guillaume@ubuntu:~/$ echo 'SELECT * FROM cities;' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+id  state_id    name
+1   1   San Francisco
 guillaume@ubuntu:~/$ 
-```
+</code></pre>
 
-### 11-best_score.sql
+### 8-cities_of_california_subquery.sql
 
-*Write a script that lists all records with a score >= 10 in the table second_table of the database hbtn_0c_0 in your MySQL server.*
+**<p>Script that lists all the cities of California that can be found in the database <code>hbtn_0d_usa</code>.</p>**
 
-1.  Results should display both the score and the name (in this order)
-2.  Records should be ordered by score (top first)
-3.  The database name will be passed as an argument of the mysql command  
-  
-```
-guillaume@ubuntu:~/$ cat 11-best_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+<pre><code>guillaume@ubuntu:~/$ echo 'SELECT * FROM states;' | mysql -hlocalhost -uroot -p hbtn_0d_usa
 Enter password: 
-score   name
-14  Bob
-10  John
+id  name
+1   California
+2   Arizona
+3   Texas
+4   Utah
+guillaume@ubuntu:~/$ echo 'SELECT * FROM cities;' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+id  state_id    name
+1   1   San Francisco
+2   1   San Jose
+4   2   Page
+6   3   Paris
+7   3   Houston
+8   3   Dallas
+guillaume@ubuntu:~/$ cat 8-cities_of_california_subquery.sql | mysql -hlocalhost -uroot -p hbtn_0d_usa
+Enter password: 
+id  name
+1   San Francisco
+2   San Jose
 guillaume@ubuntu:~/$ 
+</code></pre>
 
-```
+### 9-cities_by_state_join.sql
 
+**<p>Script that lists all cities contained in the database <code>hbtn_0d_usa</code>.</p>**
 
-### 12-no_cheating.sql
-
-*Write a script that updates the score of Bob to 10 in the table second_table.*
-
-1.  You are not allowed to use Bob’s id value, only the name field
-2.  The database name will be passed as an argument of the mysql command
-
-```
-guillaume@ubuntu:~/$ cat 12-no_cheating.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+<pre><code>guillaume@ubuntu:~/$ echo 'SELECT * FROM states;' | mysql -hlocalhost -uroot -p hbtn_0d_usa
 Enter password: 
-guillaume@ubuntu:~/$ cat 10-top_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+id  name
+1   California
+2   Arizona
+3   Texas
+4   Utah
+guillaume@ubuntu:~/$ echo 'SELECT * FROM cities;' | mysql -hlocalhost -uroot -p hbtn_0d_usa
 Enter password: 
-score   name
-10  John
-10  Bob
-8   George
-3   Alex
-```
-
-
-### 13-change_class.sql
-
-*Write a script that removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0 in your MySQL server.*
-
-1.  The database name will be passed as an argument of the mysql command
-
-```
-guillaume@ubuntu:~/$ cat 13-change_class.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+id  state_id    name
+1   1   San Francisco
+2   1   San Jose
+4   2   Page
+6   3   Paris
+7   3   Houston
+8   3   Dallas
+guillaume@ubuntu:~/$ cat 9-cities_by_state_join.sql | mysql -hlocalhost -uroot -p hbtn_0d_usa
 Enter password: 
-guillaume@ubuntu:~/$ cat 10-top_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
-Enter password: 
-score   name
-10  John
-10  Bob
-8   George
+id  name    name
+1   San Francisco   California
+2   San Jose    California
+4   Page    Arizona
+6   Paris   Texas
+7   Houston Texas
+8   Dallas  Texas
 guillaume@ubuntu:~/$ 
-```
+</code></pre>
 
-### 14-average.sql
+### 10-genre_id_by_show.sql
 
-*Write a script that computes the score average of all records in the table second_table of the database hbtn_0c_0 in your MySQL server.*
+**<p>Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a></p><p>script that lists all shows contained in <code>hbtn_0d_tvshows</code> that have at least one genre linked.</p>**
 
-1.  The result column name should be average
-2.  The database name will be passed as an argument of the mysql command
-  
-```
-guillaume@ubuntu:~/$ cat 14-average.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+<pre><code>guillaume@ubuntu:~/$ cat 10-genre_id_by_show.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
 Enter password: 
-average
-9.3333
+title   genre_id
+Breaking Bad    1
+Breaking Bad    6
+Breaking Bad    7
+Breaking Bad    8
+Dexter  1
+Dexter  2
+Dexter  6
+Dexter  7
+Dexter  8
+Game of Thrones 1
+Game of Thrones 3
+Game of Thrones 4
+House   1
+House   2
+New Girl    5
+Silicon Valley  5
+The Big Bang Theory 5
+The Last Man on Earth   1
+The Last Man on Earth   5
 guillaume@ubuntu:~/$ 
-```
+</code></pre>
 
-### 15-groups.sql
+### 11-genre_id_all_shows.sql
 
-*Write a script that lists the number of records with the same score in the table second_table of the database hbtn_0c_0 in your MySQL server.*
+**<p>Import the database dump of <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>10-genre_id_by_show.sql</code>)</p><p>script that lists all shows contained in the database <code>hbtn_0d_tvshows</code>.</p>**
 
-1.  The result should display:
-    - the score
-    - the number of records for this score with the label number
-2.  The list should be sorted by the number of records (descending)
-3.  The database name will be passed as an argument to the mysql command
-
-  
-```
-guillaume@ubuntu:~/$ cat 15-groups.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+<pre><code>guillaume@ubuntu:~/$ cat 11-genre_id_all_shows.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
 Enter password: 
-score   number
-10  2
-8   1
+title   genre_id
+Better Call Saul    NULL
+Breaking Bad    1
+Breaking Bad    6
+Breaking Bad    7
+Breaking Bad    8
+Dexter  1
+Dexter  2
+Dexter  6
+Dexter  7
+Dexter  8
+Game of Thrones 1
+Game of Thrones 3
+Game of Thrones 4
+Homeland    NULL
+House   1
+House   2
+New Girl    5
+Silicon Valley  5
+The Big Bang Theory 5
+The Last Man on Earth   1
+The Last Man on Earth   5
 guillaume@ubuntu:~/$ 
-```
+</code></pre>
 
-### 16-no_link.sql
+### 12-no_genre.sql
 
-*Write a script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server.*
+**<p>Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>11-genre_id_all_shows.sql</code>)</p><p>script that lists all shows contained in <code>hbtn_0d_tvshows</code> without a genre linked. </p>**
 
-1.  Don’t list rows without a name value
-2.  Results should display the score and the name (in this order)
-3.  Records should be listed by descending score
-4.  The database name will be passed as an argument to the mysql command
-
-  
-```
-guillaume@ubuntu:~/$ cat 16-no_link.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+<pre><code>guillaume@ubuntu:~/$ cat 12-no_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
 Enter password: 
-score   name
-18  Aria
-12  Aria
-10  John
-10  Bob
+title   genre_id
+Better Call Saul    NULL
+Homeland    NULL
 guillaume@ubuntu:~/$ 
-```
+</code></pre>
 
-### 100-move_to_utf8.sql
+### 13-count_shows_by_genre.sql
 
-*Write a script that converts hbtn_0c_0 database to UTF8 (utf8mb4, collate utf8mb4_unicode_ci) in your MySQL server.  You need to convert all of the following to UTF8:*
+**<p>Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>12-no_genre.sql</code>)</p><p>script that lists all genres from <code>hbtn_0d_tvshows</code> and displays the number of shows linked to each.</p>**
 
-1.  Database hbtn_0c_0
-2.  Table first_table
-3.  Field name in first_table
-
-  
-```
-guillaume@ubuntu:~/$ cat 100-move_to_utf8.sql | mysql -hlocalhost -uroot -p 
+<pre><code>guillaume@ubuntu:~/$ cat 13-count_shows_by_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
 Enter password: 
-guillaume@ubuntu:~/$ cat 5-full_table.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
-Enter password: 
-Table   Create Table
-first_table CREATE TABLE `first_table` (\n  `id` int(11) DEFAULT NULL,\n  `name` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+genre   number_of_shows
+Drama   5
+Comedy  4
+Mystery 2
+Crime   2
+Suspense    2
+Thriller    2
+Adventure   1
+Fantasy 1
 guillaume@ubuntu:~/$ 
-```
+</code></pre>
 
-### 101-avg_temperatures.sql
+### 14-my_genres.sql
 
-*TWrite a script that displays the average temperature (Fahrenheit) by city ordered by temperature (descending).*
+**<p>Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>13-count_shows_by_genre.sql</code>)</p><p>script that uses the <code>hbtn_0d_tvshows</code> database to lists all genres of the show <code>Dexter</code>.</p>**
 
-```
-guillaume@ubuntu:~/$ cat 101-avg_temperatures.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+<pre><code>guillaume@ubuntu:~/$ cat 14-my_genres.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
 Enter password: 
-city    avg_temp
-Chandler    72.8627
-Gilbert 71.8088
-Pismo beach 71.5147
-San Francisco   71.4804
-Sedona  70.7696
-Phoenix 70.5882
-Oakland 70.5637
-Sunnyvale   70.5245
-Chicago 70.4461
+name
+Crime
+Drama
+Mystery
+Suspense
+Thriller
 guillaume@ubuntu:~/$ 
-```
+</code></pre>
 
-### 102-top_city.sql
+### 15-comedy_only.sql
 
-*Write a script that displays the top 3 of cities temperature during July and August ordered by temperature (descending)*
+**<p>Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>14-my_genres.sql</code>)</p><p>script that lists all Comedy shows in the database <code>hbtn_0d_tvshows</code>.</p>**
 
-1.    
-2.    
-3.    
-  
-  
-```
-guillaume@ubuntu:~/$ cat 102-top_city.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+<pre><code>guillaume@ubuntu:~/$ cat 15-comedy_only.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
 Enter password: 
-city    avg_temp
-Naperville  76.9412
-San Diego   73.7941
-Sunnyvale   73.2353
+title
+New Girl
+Silicon Valley
+The Big Bang Theory
+The Last Man on Earth
 guillaume@ubuntu:~/$ 
-```
+</code></pre>
 
-### 103-max_state.sql
+### 16-shows_by_genre.sql
 
-*Import in hbtn_0c_0 database this table dump: download (same as Temperatures #0) Write a script that displays the max temperature of each state (ordered by State name)*
-  
-```
-guillaume@ubuntu:~/$ cat 103-max_state.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+**<p>Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>15-comedy_only.sql</code>)</p><p>script that lists all shows, and all genres linked to that show, from the database <code>hbtn_0d_tvshows</code>.</p>**
+
+<pre><code>guillaume@ubuntu:~/$ cat 16-shows_by_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
 Enter password: 
-state   max_temp
-AZ  110
-CA  110
-IL  110
+title   name
+Better Call Saul    NULL
+Breaking Bad    Crime
+Breaking Bad    Drama
+Breaking Bad    Suspense
+Breaking Bad    Thriller
+Dexter  Crime
+Dexter  Drama
+Dexter  Mystery
+Dexter  Suspense
+Dexter  Thriller
+Game of Thrones Adventure
+Game of Thrones Drama
+Game of Thrones Fantasy
+Homeland    NULL
+House   Drama
+House   Mystery
+New Girl    Comedy
+Silicon Valley  Comedy
+The Big Bang Theory Comedy
+The Last Man on Earth   Comedy
+The Last Man on Earth   Drama
 guillaume@ubuntu:~/$ 
-```
+</code></pre>
 
+### 100-not_my_genres.sql
+
+**<p>Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>16-shows_by_genre.sql</code>)</p><p>script that uses the <code>hbtn_0d_tvshows</code> database to list all genres not linked to the show <code>Dexter</code></p>**
+
+<pre><code>guillaume@ubuntu:~/$ cat 100-not_my_genres.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+Enter password: 
+name
+Adventure
+Comedy
+Fantasy
+guillaume@ubuntu:~/$ 
+</code></pre>
+
+### 101-not_a_comedy.sql
+
+**<p>Import the database dump from <code>hbtn_0d_tvshows</code> to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as <code>100-not_my_genres.sql</code>)</p><p>script that lists all shows without the genre <code>Comedy</code> in the database <code>hbtn_0d_tvshows</code>.</p>**
+
+<pre><code>guillaume@ubuntu:~/$ cat 101-not_a_comedy.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+Enter password: 
+title
+Better Call Saul
+Breaking Bad
+Dexter
+Game of Thrones
+Homeland
+House
+guillaume@ubuntu:~/$ 
+</code></pre>
+
+### 102-rating_shows.sql
+
+**<p>Import the database <code>hbtn_0d_tvshows_rate</code> dump to your MySQL server <a href="https//s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows_rate.sql" title="download" target="_blank">download</a></p><p>script that lists all shows from <code>hbtn_0d_tvshows_rate</code> by their rating.</p>**
+
+<pre><code>guillaume@ubuntu:~/$ cat 102-rating_shows.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows_rate
+Enter password: 
+title   rating
+Better Call Saul    163
+Homeland    145
+Silicon Valley  82
+Game of Thrones 79
+Dexter  24
+House   21
+Breaking Bad    16
+The Last Man on Earth   10
+The Big Bang Theory 0
+New Girl    0
+guillaume@ubuntu:~/$ 
+</code></pre>

@@ -1,20 +1,28 @@
 # 0x06. Python - Classes and Objects
 
-## GENERAL:
+## GENERAL :open_book::open_book::open_book::
 
  <ol>
-	<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
-	<li>All your files will be interpreted/compiled on Ubuntu 14.04 LTS using <code>python3</code> (version 3.4.3)</li>
-	<li>All your files should end with a new line</li>
-	<li>The first line of all your files should be exactly <code>#!/usr/bin/python3</code></li>
-	<li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
-	<li>Your code should use the <code>PEP 8</code> style (version 1.7)</li>
-	<li>All your files must be executable</li>
-	<li>The length of your files will be tested using <code>wc</code></li>
-	<li>All your modules should have a documentation (<code>python3 -c 'print(__import__("my_module").__doc__)'</code>)</li>
-	<li>All your classes should have a documentation (<code>python3 -c 'print(__import__("my_module").MyClass.__doc__)'</code>)</li>
-	<li>All your functions (inside and outside a class) should have a documentation (<code>python3 -c 'print(__import__("my_module").my_function.__doc__)'</code> and <code>python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'</code>)</li>
-	<li>A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)</li>
+	<li>Why Python programming is awesome </li>
+	<li>What is OOP</li>
+	<li>“first-class everything”</li>
+	<li>What is a class</li>
+	<li>What is an object and an instance</li>
+	<li>What is the difference between a class and an object or instance</li>
+	<li>What is an attribute</li>
+	<li>What are and how to use public, protected and private attributes</li>
+	<li>What is <code>self</code></li>
+	<li>What is a method</li>
+	<li>What is the special <code>__init__</code> method and how to use it</li>
+	<li>What is Data Abstraction, Data Encapsulation, and Information Hiding</li>
+	<li>What is a property</li>
+	<li>What is the difference between an attribute and a property in Python</li>
+	<li>What is the Pythonic way to write getters and setters in Python</li>
+	<li>How to dynamically create arbitrary new attributes for existing instances of a class</li>
+	<li>How to bind attributes to object and classes</li>
+	<li>What is the <code>__dict__</code> of a class and/or instance of a class and what does it contain</li>
+	<li>How does Python find the attributes of an object or class</li>
+	<li>How to use the <code>getattr</code> function</li>
 </ol>
 
 ## RESOURCES:
@@ -28,28 +36,26 @@
 	<li><a href="/rltoken/DK1vkIQ0xT1fmMrmBcSGiA" title="Object Oriented Programming" target="_blank">Object Oriented Programming</a> </li>
 </ol>
 
-## INTRODUCTION TO FILES:
+## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
 
-0.	[**0-square.py**:](#0-squarepy) n empty class <code>Square</code> that defines a square:
-1.	[**1-square.py**:](#1-squarepy)  class <code>Square</code> that defines a square by: (based on <code>0-square.py</code>)<strong>Why?</strong><em>Why <code>size</code> is private attribute?</em>The size of a square is crucial for a square, many things depend of it (area computation, etc.), so you, as class builder, must control the type and value of this attribute. 
+0.	[**0-square.py**:](#0-squarepy) An empty class <code>Square</code> that defines a square
+1.	[**1-square.py**:](#1-squarepy) Class <code>Square</code> that defines a square by (based on <code>0-square.py</code>)<strong>Why?</strong><em>Why <code>size</code> is private attribute?</em>The size of a square is crucial for a square, many things depend of it (area computation, etc.), so you, as class builder, must control the type and value of this attribute. 
 One way to have the control is to keep it privately. 
 You will see in next tasks how to get, update and validate the size value.
-2.	[**2-square.py**:](#2-squarepy)  class <code>Square</code> that defines a square by: (based on <code>1-square.py</code>)
-3.	[**3-square.py**:](#3-squarepy)  class <code>Square</code> that defines a square by: (based on <code>2-square.py</code>)
-4.	[**4-square.py**:](#4-squarepy)  class <code>Square</code> that defines a square by: (based on <code>3-square.py</code>)<strong>Why?</strong><em>Why a getter and setter?</em>Reminder: <code>size</code> is a private attribute. We did that to make sure we control the type and value. 
+2.	[**2-square.py**:](#2-squarepy) Class <code>Square</code> that defines a square by (based on <code>1-square.py</code>)
+3.	[**3-square.py**:](#3-squarepy) Class <code>Square</code> that defines a square by (based on <code>2-square.py</code>)
+4.	[**4-square.py**:](#4-squarepy) Class <code>Square</code> that defines a square by (based on <code>3-square.py</code>)<strong>Why?</strong><em>Why a getter and setter?</em>Reminder <code>size</code> is a private attribute. We did that to make sure we control the type and value. 
 Getter and setter methods are not 100% Python, but more OOP. 
 With them, you will be able to validate the assignment of a private attribute and also define how getting the attribute value will be available from outside - by copy? by assignment? etc.
 Also, adding type/value validation in the setter will centralize the logic, since you will do it in only one place.
-5.	[**5-square.py**:](#5-squarepy)  class <code>Square</code> that defines a square by: (based on <code>4-square.py</code>)
-6.	[**6-square.py**:](#6-squarepy)  class <code>Square</code> that defines a square by: (based on <code>5-square.py</code>)
-## FILES:
+5.	[**5-square.py**:](#5-squarepy) Class <code>Square</code> that defines a square by (based on <code>4-square.py</code>)
+6.	[**6-square.py**:](#6-squarepy) Class <code>Square</code> that defines a square by (based on <code>5-square.py</code>)
+
+## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::
 
 ### 0-square.py
 
-*<p>An empty class <code>Square</code> that defines a square:</p>*
-
-<ul>
-</ul>
+**<p>An empty class <code>Square</code> that defines a square</p>**
 
 <pre><code>guillaume@ubuntu:~/0x06$ cat 0-main.py
 #!/usr/bin/python3
@@ -67,14 +73,9 @@ guillaume@ubuntu:~/0x06$
 
 ### 1-square.py
 
-*<p>class <code>Square</code> that defines a square by: (based on <code>0-square.py</code>)</p><p><strong>Why?</strong></p><p><em>Why <code>size</code> is private attribute?</em></p><p>The size of a square is crucial for a square, many things depend of it (area computation, etc.), so you, as class builder, must control the type and value of this attribute. 
+**<p>Class <code>Square</code> that defines a square by (based on <code>0-square.py</code>)</p><p><strong>Why?</strong></p><p><em>Why <code>size</code> is private attribute?</em></p><p>The size of a square is crucial for a square, many things depend of it (area computation, etc.), so you, as class builder, must control the type and value of this attribute. 
 One way to have the control is to keep it privately. 
-You will see in next tasks how to get, update and validate the size value.</p>*
-
-<ul>
-	<li>Private instance attribute: <code>size</code></li>
-	<li>Instantiation with <code>size</code> (no type/value verification)</li>
-</ul>
+You will see in next tasks how to get, update and validate the size value.</p>**
 
 <pre><code>guillaume@ubuntu:~/0x06$ cat 1-main.py
 #!/usr/bin/python3
@@ -104,17 +105,7 @@ guillaume@ubuntu:~/0x06$
 
 ### 2-square.py
 
-*<p>class <code>Square</code> that defines a square by: (based on <code>1-square.py</code>)</p>*
-
-<ul>
-	<li>Private instance attribute: <code>size</code></li>
-	<li>Instantiation with optional <code>size</code>: <code>def __init__(self, size=0):</code>
-
-<ul>
-	<li><code>size</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>size must be an integer</code><br></li>
-	<li>if <code>size</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>size must be &gt;= 0</code></li>
-</ul></li>
-</ul>
+**<p>Class <code>Square</code> that defines a square by (based on <code>1-square.py</code>)</p>**
 
 <pre><code>guillaume@ubuntu:~/0x06$ cat 2-main.py
 #!/usr/bin/python3
@@ -166,18 +157,7 @@ guillaume@ubuntu:~/0x06$
 
 ### 3-square.py
 
-*<p>class <code>Square</code> that defines a square by: (based on <code>2-square.py</code>)</p>*
-
-<ul>
-	<li>Private instance attribute: <code>size</code></li>
-	<li>Instantiation with optional <code>size</code>: <code>def __init__(self, size=0):</code>
-
-<ul>
-	<li><code>size</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>size must be an integer</code><br></li>
-	<li>if <code>size</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>size must be &gt;= 0</code></li>
-</ul></li>
-	<li>Public instance method: <code>def area(self):</code> that returns the current square area</li>
-</ul>
+**<p>Class <code>Square</code> that defines a square by (based on <code>2-square.py</code>)</p>**
 
 <pre><code>guillaume@ubuntu:~/0x06$ cat 3-main.py
 #!/usr/bin/python3
@@ -209,26 +189,10 @@ guillaume@ubuntu:~/0x06$
 
 ### 4-square.py
 
-*<p>class <code>Square</code> that defines a square by: (based on <code>3-square.py</code>)</p><p><strong>Why?</strong></p><p><em>Why a getter and setter?</em></p><p>Reminder: <code>size</code> is a private attribute. We did that to make sure we control the type and value. 
+**<p>Class <code>Square</code> that defines a square by (based on <code>3-square.py</code>)</p><p><strong>Why?</strong></p><p><em>Why a getter and setter?</em></p><p>Reminder <code>size</code> is a private attribute. We did that to make sure we control the type and value. 
 Getter and setter methods are not 100% Python, but more OOP. 
 With them, you will be able to validate the assignment of a private attribute and also define how getting the attribute value will be available from outside - by copy? by assignment? etc.
-Also, adding type/value validation in the setter will centralize the logic, since you will do it in only one place.</p>*
-
-<ul>
-	<li>Private instance attribute: <code>size</code>:
-
-<ul>
-	<li>property <code>def size(self):</code> to retrieve it</li>
-	<li>property setter <code>def size(self, value):</code> to set it:
-
-<ul>
-	<li><code>size</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>size must be an integer</code><br></li>
-	<li>if <code>size</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>size must be &gt;= 0</code></li>
-</ul></li>
-</ul></li>
-	<li>Instantiation with optional <code>size</code>: <code>def __init__(self, size=0):</code></li>
-	<li>Public instance method: <code>def area(self):</code> that returns the current square area</li>
-</ul>
+Also, adding type/value validation in the setter will centralize the logic, since you will do it in only one place.</p>**
 
 <pre><code>guillaume@ubuntu:~/0x06$ cat 4-main.py
 #!/usr/bin/python3
@@ -255,28 +219,7 @@ guillaume@ubuntu:~/0x06$
 
 ### 5-square.py
 
-*<p>class <code>Square</code> that defines a square by: (based on <code>4-square.py</code>)</p>*
-
-<ul>
-	<li>Private instance attribute: <code>size</code>:
-
-<ul>
-	<li>property <code>def size(self):</code> to retrieve it</li>
-	<li>property setter <code>def size(self, value):</code> to set it:
-
-<ul>
-	<li><code>size</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>size must be an integer</code><br></li>
-	<li>if <code>size</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>size must be &gt;= 0</code></li>
-</ul></li>
-</ul></li>
-	<li>Instantiation with optional <code>size</code>: <code>def __init__(self, size=0):</code></li>
-	<li>Public instance method: <code>def area(self):</code> that returns the current square area</li>
-	<li>Public instance method: <code>def my_print(self):</code> that prints in stdout the square with the character <code>#</code>:
-
-<ul>
-	<li>if <code>size</code> is equal to 0, print an empty line</li>
-</ul></li>
-</ul>
+**<p>Class <code>Square</code> that defines a square by (based on <code>4-square.py</code>)</p>**
 
 <pre><code>guillaume@ubuntu:~/0x06$ cat 5-main.py
 #!/usr/bin/python3
@@ -320,39 +263,7 @@ guillaume@ubuntu:~/0x06$
 
 ### 6-square.py
 
-*<p>class <code>Square</code> that defines a square by: (based on <code>5-square.py</code>)</p>*
-
-<ul>
-	<li>Private instance attribute: <code>size</code>:
-
-<ul>
-	<li>property <code>def size(self):</code> to retrieve it</li>
-	<li>property setter <code>def size(self, value):</code> to set it:
-
-<ul>
-	<li><code>size</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>size must be an integer</code><br></li>
-	<li>if <code>size</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>size must be &gt;= 0</code></li>
-</ul></li>
-</ul></li>
-	<li>Private instance attribute: <code>position</code>:
-
-<ul>
-	<li>property <code>def position(self):</code> to retrieve it</li>
-	<li>property setter <code>def position(self, value):</code> to set it:
-
-<ul>
-	<li><code>position</code> must be a tuple of 2 positive integers, otherwise raise a <code>TypeError</code> exception with the message <code>position must be a tuple of 2 positive integers</code><br></li>
-</ul></li>
-</ul></li>
-	<li>Instantiation with optional <code>size</code> and optional <code>position</code>: <code>def __init__(self, size=0, position=(0, 0)):</code></li>
-	<li>Public instance method: <code>def area(self):</code> that returns the current square area</li>
-	<li>Public instance method: <code>def my_print(self):</code> that prints in stdout the square with the character <code>#</code>:
-
-<ul>
-	<li>if <code>size</code> is equal to 0, print an empty line</li>
-	<li><code>position</code> should be use by using space - <strong>Don’t fill lines by spaces</strong> when <code>position[1] &gt; 0</code></li>
-</ul></li>
-</ul>
+**<p>Class <code>Square</code> that defines a square by (based on <code>5-square.py</code>)</p>**
 
 <pre><code>guillaume@ubuntu:~/0x06$ cat 6-main.py
 #!/usr/bin/python3
@@ -389,3 +300,4 @@ ___###$
 --$
 guillaume@ubuntu:~/0x06$ 
 </code></pre>
+

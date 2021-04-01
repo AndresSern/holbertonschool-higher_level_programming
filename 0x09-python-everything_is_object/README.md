@@ -1,861 +1,425 @@
-# 0x13. C - More singly linked lists
+# 0x09. Python - Everything is object
 
-## GENERAL:
+## GENERAL :open_book::open_book::open_book::
 
  <ol>
-	<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
-	<li>All your files will be compiled on Ubuntu 14.04 LTS</li>
-	<li>Your programs and functions will be compiled with <code>gcc 4.8.4</code> using the flags <code>-Wall</code> <code>-Werror</code> <code>-Wextra</code> <code>and -pedantic</code></li>
-	<li>All your files should end with a new line</li>
-	<li>A <code>README.md</code> file, at the root of the folder of the project is mandatory</li>
-	<li>Your code should use the <code>Betty</code> style. It will be checked using <a href="https://github.com/holbertonschool/Betty/blob/master/betty-style.pl" title="betty-style.pl" target="_blank">betty-style.pl</a> and <a href="https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl" title="betty-doc.pl" target="_blank">betty-doc.pl</a></li>
-	<li>You are not allowed to use global variables</li>
-	<li>No more than 5 functions per file</li>
-	<li>The only C standard library functions allowed are <code>malloc</code>, <code>free</code> and <code>exit</code>. Any use of functions like <code>printf</code>, <code>puts</code>, <code>calloc</code>, <code>realloc</code> etc… is forbidden</li>
-	<li>You are allowed to use <a href="https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c" title="_putchar" target="_blank">_putchar</a></li>
-	<li>You don’t have to push <code>_putchar.c</code>, we will use our file. If you do it won’t be taken into account</li>
-	<li>In the following examples, the <code>main.c</code> files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own <code>main.c</code> files at compilation. Our <code>main.c</code> files might be different from the one shown in the examples</li>
-	<li>The prototypes of all your functions and the prototype of the function <code>_putchar</code> should be included in your header file called <code>lists.h</code></li>
-	<li>Don’t forget to push your header file</li>
-	<li>All your header files should be include guarded</li>
+	<li>Why Python programming is awesome</li>
+	<li>What is an object</li>
+	<li>What is the difference between a class and an object or instance</li>
+	<li>What is the difference between immutable object and mutable object</li>
+	<li>What is a reference</li>
+	<li>What is an assignment</li>
+	<li>What is an alias</li>
+	<li>How to know if two variables are identical</li>
+	<li>How to know if two variables are linked to the same object</li>
+	<li>How to display the variable identifier (which is the memory address in the CPython implementation)</li>
+	<li>What is mutable and immutable</li>
+	<li>What are the built-in mutable types</li>
+	<li>What are the built-in immutable types</li>
+	<li>How does Python pass variables to functions</li>
 </ol>
 
 ## RESOURCES:
 
  <ol>
-	<li><a href="/rltoken/VxmJXbHtjDMJAKj7dU-6sg" title="Google" target="_blank">Google</a> </li>
-	<li><a href="/rltoken/PqebvZ1ey95sB8eDiYl8_A" title="Youtube" target="_blank">Youtube</a> </li>
+	<li><a href="/rltoken/n1x09X-KJSllpJkJorBw2A" title="9.10. Objects and values" target="_blank">9.10. Objects and values</a> </li>
+	<li><a href="/rltoken/3teQMNNfDeyGvCtZfjsf5g" title="9.11. Aliasing" target="_blank">9.11. Aliasing</a> </li>
+	<li><a href="/rltoken/JuPVygeoG27Q_qKxB2lP8g" title="Immutable vs mutable types" target="_blank">Immutable vs mutable types</a> </li>
+	<li><a href="/rltoken/UbL96sV3cIxewdQPW_zwRw" title="Mutation" target="_blank">Mutation</a> (<em>Only this chapter</em>)</li>
+	<li><a href="/rltoken/-t_1VsmKlgWHszL5y1YiKA" title="9.12. Cloning lists" target="_blank">9.12. Cloning lists</a> </li>
+	<li><a href="/rltoken/IdBAdTYNLuS3YpRRQIam6Q" title="Python tuples: immutable but potentially changing" target="_blank">Python tuples: immutable but potentially changing</a> </li>
 </ol>
 
-## INTRODUCTION TO FILES:
+## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
 
-0.	[0-print_listint.c:](#0-print_listintc) Write a function that prints all the elements of a
-1.	[1-listint_len.c:](#1-listint_lenc) Write a function that returns the number of elements in a linked
-2.	[2-add_nodeint.c:](#2-add_nodeintc) Write a function that adds a new node at the beginning of a
-3.	[3-add_nodeint_end.c:](#3-add_nodeint_endc) Write a function that adds a new node at the end of a
-4.	[4-free_listint.c:](#4-free_listintc) Write a function that frees a
-5.	[5-free_listint2.c:](#5-free_listint2c) Write a function that frees a
-6.	[6-pop_listint.c:](#6-pop_listintc) Write a function that deletes the head node of a
-7.	[7-get_nodeint.c:](#7-get_nodeintc) Write a function that returns the nth node of a
-8.	[8-sum_listint.c:](#8-sum_listintc) Write a function that returns the sum of all the data (n) of a
-9.	[9-insert_nodeint.c:](#9-insert_nodeintc) Write a function that inserts a new node at a given position.
-10.	[10-delete_nodeint.c:](#10-delete_nodeintc) Write a function that deletes the node at index
-11.	[100-reverse_listint.c:](#100-reverse_listintc) Write a function that reverses a
-## FILES:
+0.	[**0-answer.txt**:](#0-answertxt) What function would you use to print the type of an object?Write the name of the function in the file, without <code>()</code>.
+1.	[**1-answer.txt**:](#1-answertxt) How do you get the variable identifier (which is the memory address in the CPython implementation)?Write the name of the function in the file, without <code>()</code>.
+2.	[**2-answer.txt**:](#2-answertxt) In the following code, do <code>a</code> and <code>b</code> point to the same object?
+Answer with <code>Yes</code> or <code>No</code>.
+3.	[**3-answer.txt**:](#3-answertxt) In the following code, do <code>a</code> and <code>b</code> point to the same object?
+Answer with <code>Yes</code> or <code>No</code>.
+4.	[**4-answer.txt**:](#4-answertxt) In the following code, do <code>a</code> and <code>b</code> point to the same object?
+Answer with <code>Yes</code> or <code>No</code>.
+5.	[**5-answer.txt**:](#5-answertxt) In the following code, do <code>a</code> and <code>b</code> point to the same object?
+Answer with <code>Yes</code> or <code>No</code>.
+6.	[**6-answer.txt**:](#6-answertxt) What do these 3 lines print?
+7.	[**7-answer.txt**:](#7-answertxt) What do these 3 lines print?
+8.	[**8-answer.txt**:](#8-answertxt) What do these 3 lines print?
+9.	[**9-answer.txt**:](#9-answertxt) What do these 3 lines print?
+10.	[**10-answer.txt**:](#10-answertxt) What do these 3 lines print?
+11.	[**11-answer.txt**:](#11-answertxt) What do these 3 lines print?
+12.	[**12-answer.txt**:](#12-answertxt) What do these 3 lines print?
+13.	[**13-answer.txt**:](#13-answertxt) What do these 3 lines print?
+14.	[**14-answer.txt**:](#14-answertxt) What does this script print?
+15.	[**15-answer.txt**:](#15-answertxt) What does this script print?
+16.	[**16-answer.txt**:](#16-answertxt) What does this script print?
+17.	[**17-answer.txt**:](#17-answertxt) What does this script print?
+18.	[**18-answer.txt**:](#18-answertxt) What does this script print?
+19.	[**20-answer.txt**:](#20-answertxt) Is <code>a</code> a tuple? Answer with <code>Yes</code> or <code>No</code>.
+20.	[**21-answer.txt**:](#21-answertxt) Is <code>a</code> a tuple? Answer with <code>Yes</code> or <code>No</code>.
+21.	[**22-answer.txt**:](#22-answertxt) Is <code>a</code> a tuple? Answer with <code>Yes</code> or <code>No</code>.
+22.	[**23-answer.txt**:](#23-answertxt) Is <code>a</code> a tuple? Answer with <code>Yes</code> or <code>No</code>.
+23.	[**24-answer.txt**:](#24-answertxt) What does this script print?
+24.	[**25-answer.txt**:](#25-answertxt) What does this script print?
+25.	[**26-answer.txt**:](#26-answertxt) What does this script print?
+26.	[**27-answer.txt**:](#27-answertxt) Will the last line of this script print <code>139926795932424</code>? Answer with <code>Yes</code> or <code>No</code>.
+27.	[**28-answer.txt**:](#28-answertxt) Will the last line of this script print <code>139926795932424</code>? Answer with <code>Yes</code> or <code>No</code>.
+28.	[**100-magic_string.py**:](#100-magic_stringpy) Function <code>magic_string()</code> that returns a string “Holberton” n times the number of the iteration (see code)
+29.	[**101-locked_class.py**:](#101-locked_classpy) Class <code>LockedClass</code> with no class or object attribute, that prevents the user from dynamically creating new instance attributes, except if the new instance attribute is called <code>first_name</code>.
+30.	[**103-line1.txt, 103-line2.txt**:](#103-line1txt-103-line2txt) Assuming we are using a CPython implementation of Python3 with default options/configuration
+31.	[**104-line1.txt, 104-line2.txt, 104-line3.txt, 104-line4.txt, 104-line5.txt**:](#104-line1txt-104-line2txt-104-line3txt-104-line4txt-104-line5txt) Assuming we are using a CPython implementation of Python3 with default options/configuration
+32.	[**105-line1.txt**:](#105-line1txt) Assuming we are using a CPython implementation of Python3 with default options/configurationHint <code>NSMALLPOSINTS</code>, <code>NSMALLNEGINTS</code><img src="https//holbertonintranet.s3.amazonaws.com/uploads/medias/2020/9/70f9ea0e969dfcc407a7427aba4786d87a920494.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210401%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210401T012356Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=607ab6716ff4756788e8140ff63f28aff3bec5bce126e399458b0e5adfda4f93" alt="" style="">
+33.	[**106-line1.txt, 106-line2.txt, 106-line3.txt, 106-line4.txt, 106-line5.txt**:](#106-line1txt-106-line2txt-106-line3txt-106-line4txt-106-line5txt) Assuming we are using a CPython implementation of Python3 with default options/configuration (For answers with numbers use integers, don’t spell out the word)
 
-### 0-print_listint.c
+## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::
 
-*<p>Function that prints all the elements of a <code>listint_t</code> list.</p>*
+### 0-answer.txt
 
-<ul>
-	<li>Prototype: <code>size_t print_listint(const listint_t *h);</code></li>
-	<li>Return: the number of nodes</li>
-	<li>Format: see example</li>
-	<li>You are allowed to use <code>printf</code></li>
-</ul>
+**<p>What function would you use to print the type of an object?</p><p>Write the name of the function in the file, without <code>()</code>.</p>**
 
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 0-main.c
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include "lists.h"
+None
 
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    listint_t *head;
-    listint_t *new;
-    listint_t hello = {8, NULL};
-    size_t n;
+### 1-answer.txt
 
-    head = &amp;hello;
-    new = malloc(sizeof(listint_t));
-    if (new == NULL)
-    {
-        printf("Error\n");
-        return (1);
-    }
-    new-&gt;n = 9;
-    new-&gt;next = head;
-    head = new;
-    n = print_listint(head);
-    printf("-&gt; %lu elements\n", n);
-    free(new);
-    return (0);
-}
-julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 0-main.c 0-print_listint.c -o a
-julien@ubuntu:~/0x13. More singly linked lists$ ./a
-9
-8
--&gt; 2 elements
-julien@ubuntu:~/0x13. More singly linked lists$
+**<p>How do you get the variable identifier (which is the memory address in the CPython implementation)?</p><p>Write the name of the function in the file, without <code>()</code>.</p>**
+
+None
+
+### 2-answer.txt
+
+**<p>In the following code, do <code>a</code> and <code>b</code> point to the same object?
+Answer with <code>Yes</code> or <code>No</code>.</p>**
+
+<pre><code>&gt;&gt;&gt; a = 89
+&gt;&gt;&gt; b = 100
 </code></pre>
 
-### 1-listint_len.c
+### 3-answer.txt
 
-*<p>Function that returns the number of elements in a linked <code>listint_t</code> list.</p>*
+**<p>In the following code, do <code>a</code> and <code>b</code> point to the same object?
+Answer with <code>Yes</code> or <code>No</code>.</p>**
 
-<ul>
-	<li>Prototype: <code>size_t listint_len(const listint_t *h);</code></li>
-</ul>
-
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 1-main.c
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include "lists.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    listint_t *head;
-    listint_t *new;
-    listint_t hello = {8, NULL};
-    size_t n;
-
-    head = &amp;hello;
-    new = malloc(sizeof(listint_t));
-    if (new == NULL)
-    {
-        printf("Error\n");
-        return (1);
-    }
-    new-&gt;n = 9;
-    new-&gt;next = head;
-    head = new;
-    n = listint_len(head);
-    printf("-&gt; %lu elements\n", n);
-    free(new);
-    return (0);
-}
-julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 1-main.c 1-listint_len.c -o b
-julien@ubuntu:~/0x13. More singly linked lists$ ./b
--&gt; 2 elements
-julien@ubuntu:~/0x13. More singly linked lists$
+<pre><code>&gt;&gt;&gt; a = 89
+&gt;&gt;&gt; b = 89
 </code></pre>
 
-### 2-add_nodeint.c
+### 4-answer.txt
 
-*<p>Function that adds a new node at the beginning of a <code>listint_t</code> list.</p>*
+**<p>In the following code, do <code>a</code> and <code>b</code> point to the same object?
+Answer with <code>Yes</code> or <code>No</code>.</p>**
 
-<ul>
-	<li>Prototype: <code>listint_t *add_nodeint(listint_t **head, const int n);</code></li>
-	<li>Return: the address of the new element, or <code>NULL</code> if it failed</li>
-</ul>
-
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 2-main.c
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include "lists.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    listint_t *head;
-
-    head = NULL;
-    add_nodeint(&amp;head, 0);
-    add_nodeint(&amp;head, 1);
-    add_nodeint(&amp;head, 2);
-    add_nodeint(&amp;head, 3);
-    add_nodeint(&amp;head, 4);
-    add_nodeint(&amp;head, 98);
-    add_nodeint(&amp;head, 402);
-    add_nodeint(&amp;head, 1024);
-    print_listint(head);
-    return (0);
-}
-julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 2-main.c 2-add_nodeint.c 0-print_listint.c -o c
-julien@ubuntu:~/0x13. More singly linked lists$ ./c
-1024
-402
-98
-4
-3
-2
-1
-0
-julien@ubuntu:~/0x13. More singly linked lists$
+<pre><code>&gt;&gt;&gt; a = 89
+&gt;&gt;&gt; b = a
 </code></pre>
 
-### 3-add_nodeint_end.c
+### 5-answer.txt
 
-*<p>Function that adds a new node at the end of a <code>listint_t</code> list.</p>*
+**<p>In the following code, do <code>a</code> and <code>b</code> point to the same object?
+Answer with <code>Yes</code> or <code>No</code>.</p>**
 
-<ul>
-	<li>Prototype: <code>listint_t *add_nodeint_end(listint_t **head, const int n);</code></li>
-	<li>Return: the address of the new element, or <code>NULL</code> if it failed</li>
-</ul>
-
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 3-main.c
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include "lists.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    listint_t *head;
-
-    head = NULL;
-    add_nodeint_end(&amp;head, 0);
-    add_nodeint_end(&amp;head, 1);
-    add_nodeint_end(&amp;head, 2);
-    add_nodeint_end(&amp;head, 3);
-    add_nodeint_end(&amp;head, 4);
-    add_nodeint_end(&amp;head, 98);
-    add_nodeint_end(&amp;head, 402);
-    add_nodeint_end(&amp;head, 1024);
-    print_listint(head);
-    return (0);
-}
-julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 3-main.c 3-add_nodeint_end.c 0-print_listint.c -o d
-julien@ubuntu:~/0x13. More singly linked lists$ ./d
-0
-1
-2
-3
-4
-98
-402
-1024
-julien@ubuntu:~/0x13. More singly linked lists$
+<pre><code>&gt;&gt;&gt; a = 89
+&gt;&gt;&gt; b = a + 1
 </code></pre>
 
-### 4-free_listint.c
+### 6-answer.txt
 
-*<p>Function that frees a <code>listint_t</code> list.</p>*
+**<p>What do these 3 lines print?</p>**
 
-<ul>
-	<li>Prototype: <code>void free_listint(listint_t *head);</code></li>
-</ul>
-
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 4-main.c
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include "lists.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    listint_t *head;
-
-    head = NULL;
-    add_nodeint_end(&amp;head, 0);
-    add_nodeint_end(&amp;head, 1);
-    add_nodeint_end(&amp;head, 2);
-    add_nodeint_end(&amp;head, 3);
-    add_nodeint_end(&amp;head, 4);
-    add_nodeint_end(&amp;head, 98);
-    add_nodeint_end(&amp;head, 402);
-    add_nodeint_end(&amp;head, 1024);
-    print_listint(head);
-    free_listint(head);
-    head = NULL;
-    return (0);
-}
-julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 4-main.c 3-add_nodeint_end.c 0-print_listint.c 4-free_listint.c -o e
-julien@ubuntu:~/0x13. More singly linked lists$ valgrind ./e
-==3643== Memcheck, a memory error detector
-==3643== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==3643== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==3643== Command: ./e
-==3643==
-0
-1
-2
-3
-4
-98
-402
-1024
-==3643==
-==3643== HEAP SUMMARY:
-==3643==     in use at exit: 0 bytes in 0 blocks
-==3643==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
-==3643==
-==3643== All heap blocks were freed -- no leaks are possible
-==3643==
-==3643== For counts of detected and suppressed errors, rerun with: -v
-==3643== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-julien@ubuntu:~/0x13. More singly linked lists$
+<pre><code>&gt;&gt;&gt; s1 = "Holberton"
+&gt;&gt;&gt; s2 = s1
+&gt;&gt;&gt; print(s1 == s2)
 </code></pre>
 
-### 5-free_listint2.c
+### 7-answer.txt
 
-*<p>Function that frees a <code>listint_t</code> list.</p>*
+**<p>What do these 3 lines print?</p>**
 
-<ul>
-	<li>Prototype: <code>void free_listint2(listint_t **head);</code></li>
-	<li>The function sets the <code>head</code> to <code>NULL</code></li>
-</ul>
-
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 5-main.c
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include "lists.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    listint_t *head;
-
-    head = NULL;
-    add_nodeint_end(&amp;head, 0);
-    add_nodeint_end(&amp;head, 1);
-    add_nodeint_end(&amp;head, 2);
-    add_nodeint_end(&amp;head, 3);
-    add_nodeint_end(&amp;head, 4);
-    add_nodeint_end(&amp;head, 98);
-    add_nodeint_end(&amp;head, 402);
-    add_nodeint_end(&amp;head, 1024);
-    print_listint(head);
-    free_listint2(&amp;head);
-    printf("%p\n", (void *)head);
-    return (0);
-}
-julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 5-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c -o f
-julien@ubuntu:~/0x13. More singly linked lists$ valgrind ./f
-==3843== Memcheck, a memory error detector
-==3843== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==3843== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==3843== Command: ./f
-==3843==
-0
-1
-2
-3
-4
-98
-402
-1024
-(nil)
-==3843==
-==3843== HEAP SUMMARY:
-==3843==     in use at exit: 0 bytes in 0 blocks
-==3843==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
-==3843==
-==3843== All heap blocks were freed -- no leaks are possible
-==3843==
-==3843== For counts of detected and suppressed errors, rerun with: -v
-==3843== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-julien@ubuntu:~/0x13. More singly linked lists$
+<pre><code>&gt;&gt;&gt; s1 = "Holberton"
+&gt;&gt;&gt; s2 = s1
+&gt;&gt;&gt; print(s1 is s2)
 </code></pre>
 
-### 6-pop_listint.c
+### 8-answer.txt
 
-*<p>Function that deletes the head node of a <code>listint_t</code> linked list, and returns the head node’s data (n).</p>*
+**<p>What do these 3 lines print?</p>**
 
-<ul>
-	<li>Prototype: <code>int pop_listint(listint_t **head);</code></li>
-	<li>if the linked list is empty return <code>0</code></li>
-</ul>
-
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 6-main.c
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include "lists.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    listint_t *head;
-    int n;
-
-    head = NULL;
-    add_nodeint_end(&amp;head, 0);
-    add_nodeint_end(&amp;head, 1);
-    add_nodeint_end(&amp;head, 2);
-    add_nodeint_end(&amp;head, 3);
-    add_nodeint_end(&amp;head, 4);
-    add_nodeint_end(&amp;head, 98);
-    add_nodeint_end(&amp;head, 402);
-    add_nodeint_end(&amp;head, 1024);
-    print_listint(head);
-    n = pop_listint(&amp;head);
-    printf("- %d\n", n);
-    print_listint(head);
-    n = pop_listint(&amp;head);
-    printf("- %d\n", n);
-    print_listint(head);
-    free_listint2(&amp;head);
-    printf("%p\n", (void *)head);
-    return (0);
-}
-julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 6-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 6-pop_listint.c -o g
-julien@ubuntu:~/0x13. More singly linked lists$ valgrind ./g
-==4369== Memcheck, a memory error detector
-==4369== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==4369== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==4369== Command: ./g
-==4369==
-0
-1
-2
-3
-4
-98
-402
-1024
-- 0
-1
-2
-3
-4
-98
-402
-1024
-- 1
-2
-3
-4
-98
-402
-1024
-(nil)
-==4369==
-==4369== HEAP SUMMARY:
-==4369==     in use at exit: 0 bytes in 0 blocks
-==4369==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
-==4369==
-==4369== All heap blocks were freed -- no leaks are possible
-==4369==
-==4369== For counts of detected and suppressed errors, rerun with: -v
-==4369== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-julien@ubuntu:~/0x13. More singly linked lists$
+<pre><code>&gt;&gt;&gt; s1 = "Holberton"
+&gt;&gt;&gt; s2 = "Holberton"
+&gt;&gt;&gt; print(s1 == s2)
 </code></pre>
 
-### 7-get_nodeint.c
+### 9-answer.txt
 
-*<p>Function that returns the nth node of a <code>listint_t</code> linked list.</p>*
+**<p>What do these 3 lines print?</p>**
 
-<ul>
-	<li>Prototype: <code>listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);</code></li>
-	<li>where <code>index</code> is the index of the node, starting at <code>0</code></li>
-	<li>if the node does not exist, return <code>NULL</code></li>
-</ul>
-
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 7-main.c
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include "lists.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    listint_t *head;
-    listint_t *node;
-
-    head = NULL;
-    add_nodeint_end(&amp;head, 0);
-    add_nodeint_end(&amp;head, 1);
-    add_nodeint_end(&amp;head, 2);
-    add_nodeint_end(&amp;head, 3);
-    add_nodeint_end(&amp;head, 4);
-    add_nodeint_end(&amp;head, 98);
-    add_nodeint_end(&amp;head, 402);
-    add_nodeint_end(&amp;head, 1024);
-    print_listint(head);
-    node = get_nodeint_at_index(head, 5);
-    printf("%d\n", node-&gt;n);
-    print_listint(head);
-    free_listint2(&amp;head);
-    return (0);
-}
-julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 7-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 7-get_nodeint.c -o h
-julien@ubuntu:~/0x13. More singly linked lists$ ./h
-0
-1
-2
-3
-4
-98
-402
-1024
-98
-0
-1
-2
-3
-4
-98
-402
-1024
-julien@ubuntu:~/0x13. More singly linked lists$
+<pre><code>&gt;&gt;&gt; s1 = "Holberton"
+&gt;&gt;&gt; s2 = "Holberton"
+&gt;&gt;&gt; print(s1 is s2)
 </code></pre>
 
-### 8-sum_listint.c
+### 10-answer.txt
 
-*<p>Function that returns the sum of all the data (n) of a <code>listint_t</code> linked list.</p>*
+**<p>What do these 3 lines print?</p>**
 
-<ul>
-	<li>Prototype: <code>int sum_listint(listint_t *head);</code></li>
-	<li>if the list is empty, return <code>0</code></li>
-</ul>
-
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 8-main.c
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include "lists.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    listint_t *head;
-    int sum;
-
-    head = NULL;
-    add_nodeint_end(&amp;head, 0);
-    add_nodeint_end(&amp;head, 1);
-    add_nodeint_end(&amp;head, 2);
-    add_nodeint_end(&amp;head, 3);
-    add_nodeint_end(&amp;head, 4);
-    add_nodeint_end(&amp;head, 98);
-    add_nodeint_end(&amp;head, 402);
-    add_nodeint_end(&amp;head, 1024);
-    sum = sum_listint(head);
-    printf("sum = %d\n", sum);
-    free_listint2(&amp;head);
-    return (0);
-}
-julien@ubuntu:~/c0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 8-main.c 3-add_nodeint_end.c 5-free_listint2.c 8-sum_listint.c -o i
-julien@ubuntu:~/0x13. More singly linked lists$ ./i
-sum = 1534
-julien@ubuntu:~/0x13. More singly linked lists$
+<pre><code>&gt;&gt;&gt; l1 = [1, 2, 3]
+&gt;&gt;&gt; l2 = [1, 2, 3] 
+&gt;&gt;&gt; print(l1 == l2)
 </code></pre>
 
-### 9-insert_nodeint.c
+### 11-answer.txt
 
-*<p>Function that inserts a new node at a given position.</p>*
+**<p>What do these 3 lines print?</p>**
 
-<ul>
-	<li>Prototype: <code>listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);</code></li>
-	<li>where <code>idx</code> is the index of the list where the new node should be added. Index starts at <code>0</code></li>
-	<li>Returns: the address of the new node, or <code>NULL</code> if it failed</li>
-	<li>if it is not possible to add the new node at index <code>idx</code>, do not add the new node and return <code>NULL</code></li>
-</ul>
-
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 9-main.c
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include "lists.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    listint_t *head;
-
-    head = NULL;
-    add_nodeint_end(&amp;head, 0);
-    add_nodeint_end(&amp;head, 1);
-    add_nodeint_end(&amp;head, 2);
-    add_nodeint_end(&amp;head, 3);
-    add_nodeint_end(&amp;head, 4);
-    add_nodeint_end(&amp;head, 98);
-    add_nodeint_end(&amp;head, 402);
-    add_nodeint_end(&amp;head, 1024);
-    print_listint(head);
-    printf("-----------------\n");
-    insert_nodeint_at_index(&amp;head, 5, 4096);
-    print_listint(head);
-    free_listint2(&amp;head);
-    return (0);
-}
-julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 9-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 9-insert_nodeint.c -o j
-julien@ubuntu:~/0x13. More singly linked lists$ ./j
-0
-1
-2
-3
-4
-98
-402
-1024
------------------
-0
-1
-2
-3
-4
-4096
-98
-402
-1024
-julien@ubuntu:~/0x13. More singly linked lists$
+<pre><code>&gt;&gt;&gt; l1 = [1, 2, 3]
+&gt;&gt;&gt; l2 = [1, 2, 3] 
+&gt;&gt;&gt; print(l1 is l2)
 </code></pre>
 
-### 10-delete_nodeint.c
+### 12-answer.txt
 
-*<p>Function that deletes the node at index <code>index</code> of a <code>listint_t</code> linked list.</p>*
+**<p>What do these 3 lines print?</p>**
 
-<ul>
-	<li>Prototype: <code>int delete_nodeint_at_index(listint_t **head, unsigned int index);</code></li>
-	<li>where <code>index</code> is the index of the node that should be deleted. Index starts at <code>0</code></li>
-	<li>Returns: <code>1</code> if it succeeded, <code>-1</code> if it failed</li>
-</ul>
-
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 10-main.c
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include "lists.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    listint_t *head;
-
-    head = NULL;
-    add_nodeint_end(&amp;head, 0);
-    add_nodeint_end(&amp;head, 1);
-    add_nodeint_end(&amp;head, 2);
-    add_nodeint_end(&amp;head, 3);
-    add_nodeint_end(&amp;head, 4);
-    add_nodeint_end(&amp;head, 98);
-    add_nodeint_end(&amp;head, 402);
-    add_nodeint_end(&amp;head, 1024);
-    print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 5);
-    print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    print_listint(head);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    printf("-----------------\n");
-    delete_nodeint_at_index(&amp;head, 0);
-    print_listint(head);
-    return (0);
-}
-julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 10-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 10-delete_nodeint.c -o k
-julien@ubuntu:~/0x13. More singly linked lists$ valgrind ./k
-==5571== Memcheck, a memory error detector
-==5571== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==5571== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==5571== Command: ./k
-==5571==
-0
-1
-2
-3
-4
-98
-402
-1024
------------------
-0
-1
-2
-3
-4
-402
-1024
------------------
-1
-2
-3
-4
-402
-1024
------------------
-2
-3
-4
-402
-1024
------------------
-3
-4
-402
-1024
------------------
-4
-402
-1024
------------------
-402
-1024
------------------
-1024
------------------
------------------
------------------
------------------
------------------
------------------
------------------
------------------
------------------
------------------
-==5571==
-==5571== HEAP SUMMARY:
-==5571==     in use at exit: 0 bytes in 0 blocks
-==5571==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
-==5571==
-==5571== All heap blocks were freed -- no leaks are possible
-==5571==
-==5571== For counts of detected and suppressed errors, rerun with: -v
-==5571== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-julien@ubuntu:~/0x13. More singly linked lists$
+<pre><code>&gt;&gt;&gt; l1 = [1, 2, 3]
+&gt;&gt;&gt; l2 = l1
+&gt;&gt;&gt; print(l1 == l2)
 </code></pre>
 
-### 100-reverse_listint.c
+### 13-answer.txt
 
-*<p>Function that reverses a <code>listint_t</code> linked list.</p>*
+**<p>What do these 3 lines print?</p>**
 
-<ul>
-	<li>Prototype: <code>listint_t *reverse_listint(listint_t **head);</code></li>
-	<li>Returns: a pointer to the first node of the reversed list</li>
-	<li>You are not allowed to use more than <code>1</code> loop.</li>
-	<li>You are not allowed to use <code>malloc</code>, <code>free</code> or arrays</li>
-	<li>You can only declare a maximum of two variables in your function</li>
-</ul>
-
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 100-main.c
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include "lists.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    listint_t *head;
-
-    head = NULL;
-    add_nodeint_end(&amp;head, 0);
-    add_nodeint_end(&amp;head, 1);
-    add_nodeint_end(&amp;head, 2);
-    add_nodeint_end(&amp;head, 3);
-    add_nodeint_end(&amp;head, 4);
-    add_nodeint_end(&amp;head, 98);
-    add_nodeint_end(&amp;head, 402);
-    add_nodeint_end(&amp;head, 1024);
-    print_listint(head);
-    reverse_listint(&amp;head);
-    print_listint(head);
-    free_listint2(&amp;head);
-    return (0);
-}
-julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 100-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 100-reverse_listint.c -o l
-julien@ubuntu:~/0x13. More singly linked lists$ valgrind ./l
-==3117== Memcheck, a memory error detector
-==3117== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==3117== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==3117== Command: ./l
-==3117==
-0
-1
-2
-3
-4
-98
-402
-1024
-1024
-402
-98
-4
-3
-2
-1
-0
-==3117==
-==3117== HEAP SUMMARY:
-==3117==     in use at exit: 0 bytes in 0 blocks
-==3117==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
-==3117==
-==3117== All heap blocks were freed -- no leaks are possible
-==3117==
-==3117== For counts of detected and suppressed errors, rerun with: -v
-==3117== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-julien@ubuntu:~/0x13. More singly linked lists$
+<pre><code>&gt;&gt;&gt; l1 = [1, 2, 3]
+&gt;&gt;&gt; l2 = l1
+&gt;&gt;&gt; print(l1 is l2)
 </code></pre>
+
+### 14-answer.txt
+
+**<p>What does this script print?</p>**
+
+<pre><code>l1 = [1, 2, 3]
+l2 = l1
+l1.append(4)
+print(l2)
+</code></pre>
+
+### 15-answer.txt
+
+**<p>What does this script print?</p>**
+
+<pre><code>l1 = [1, 2, 3]
+l2 = l1
+l1 = l1 + [4]
+print(l2)
+</code></pre>
+
+### 16-answer.txt
+
+**<p>What does this script print?</p>**
+
+<pre><code>def increment(n):
+    n += 1
+
+a = 1
+increment(a)
+print(a)
+</code></pre>
+
+### 17-answer.txt
+
+**<p>What does this script print?</p>**
+
+<pre><code>def increment(n):
+    n.append(4)
+
+l = [1, 2, 3]
+increment(l)
+print(l)
+</code></pre>
+
+### 18-answer.txt
+
+**<p>What does this script print?</p>**
+
+<pre><code>def assign_value(n, v):
+    n = v
+
+l1 = [1, 2, 3]
+l2 = [4, 5, 6]
+assign_value(l1, l2)
+print(l1)
+</code></pre>
+
+### 20-answer.txt
+
+**<p>Is <code>a</code> a tuple? Answer with <code>Yes</code> or <code>No</code>.</p>**
+
+<pre><code>a = ()
+</code></pre>
+
+### 21-answer.txt
+
+**<p>Is <code>a</code> a tuple? Answer with <code>Yes</code> or <code>No</code>.</p>**
+
+<pre><code>a = (1, 2)
+</code></pre>
+
+### 22-answer.txt
+
+**<p>Is <code>a</code> a tuple? Answer with <code>Yes</code> or <code>No</code>.</p>**
+
+<pre><code>a = (1)
+</code></pre>
+
+### 23-answer.txt
+
+**<p>Is <code>a</code> a tuple? Answer with <code>Yes</code> or <code>No</code>.</p>**
+
+<pre><code>a = (1, )
+</code></pre>
+
+### 24-answer.txt
+
+**<p>What does this script print?</p>**
+
+<pre><code>a = (1)
+b = (1)
+a is b
+</code></pre>
+
+### 25-answer.txt
+
+**<p>What does this script print?</p>**
+
+<pre><code>a = (1, 2)
+b = (1, 2)
+a is b
+</code></pre>
+
+### 26-answer.txt
+
+**<p>What does this script print?</p>**
+
+<pre><code>a = ()
+b = ()
+a is b
+</code></pre>
+
+### 27-answer.txt
+
+**<p>Will the last line of this script print <code>139926795932424</code>? Answer with <code>Yes</code> or <code>No</code>.</p>**
+
+<pre><code>&gt;&gt;&gt; id(a)
+139926795932424
+&gt;&gt;&gt; a
+[1, 2, 3, 4]
+&gt;&gt;&gt; a = a + [5]
+&gt;&gt;&gt; id(a)
+</code></pre>
+
+### 28-answer.txt
+
+**<p>Will the last line of this script print <code>139926795932424</code>? Answer with <code>Yes</code> or <code>No</code>.</p>**
+
+<pre><code>&gt;&gt;&gt; a
+[1, 2, 3]
+&gt;&gt;&gt; id (a)
+139926795932424
+&gt;&gt;&gt; a += [4]
+&gt;&gt;&gt; id(a)
+</code></pre>
+
+### 100-magic_string.py
+
+**<p>Function <code>magic_string()</code> that returns a string “Holberton” n times the number of the iteration (see code)</p><p></p>**
+
+<pre><code>guillaume@ubuntu:~/0x09$ cat 100-main.py
+#!/usr/bin/python3
+magic_string = __import__('100-magic_string').magic_string
+
+for i in range(10):
+    print(magic_string())
+
+guillaume@ubuntu:~/0x09$ ./100-main.py | cat -e
+Holberton$
+Holberton, Holberton$
+Holberton, Holberton, Holberton$
+Holberton, Holberton, Holberton, Holberton$
+Holberton, Holberton, Holberton, Holberton, Holberton$
+Holberton, Holberton, Holberton, Holberton, Holberton, Holberton$
+Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton$
+Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton$
+Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton$
+Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton$
+guillaume@ubuntu:~/0x09$ wc -l 100-magic_string.py 
+4 100-magic_string.py
+guillaume@ubuntu:~/0x09$ 
+</code></pre>
+
+### 101-locked_class.py
+
+**<p>Class <code>LockedClass</code> with no class or object attribute, that prevents the user from dynamically creating new instance attributes, except if the new instance attribute is called <code>first_name</code>.</p><p></p>**
+
+<pre><code>guillaume@ubuntu:~/0x09$ cat 101-main.py
+#!/usr/bin/python3
+LockedClass = __import__('101-locked_class').LockedClass
+
+lc = LockedClass()
+lc.first_name = "John"
+try:
+    lc.last_name = "Snow"
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+guillaume@ubuntu:~/0x09$ ./101-main.py
+[AttributeError] 'LockedClass' object has no attribute 'last_name'
+guillaume@ubuntu:~/0x09$ 
+</code></pre>
+
+### 103-line1.txt, 103-line2.txt
+
+**<p>Assuming we are using a CPython implementation of Python3 with default options/configuration</p>**
+
+<pre><code>julien@ubuntu:/python3$ cat int.py 
+a = 1
+b = 1
+julien@ubuntu:/python3$ 
+</code></pre>
+
+### 104-line1.txt, 104-line2.txt, 104-line3.txt, 104-line4.txt, 104-line5.txt
+
+**<p>Assuming we are using a CPython implementation of Python3 with default options/configuration</p>**
+
+<pre><code>julien@ubuntu:/python3$ cat int.py 
+a = 1024
+b = 1024
+del a
+del b
+c = 1024
+julien@ubuntu:/python3$ 
+</code></pre>
+
+### 105-line1.txt
+
+**<p>Assuming we are using a CPython implementation of Python3 with default options/configuration</p><p>Hint <code>NSMALLPOSINTS</code>, <code>NSMALLNEGINTS</code></p><p><img src="https//holbertonintranet.s3.amazonaws.com/uploads/medias/2020/9/70f9ea0e969dfcc407a7427aba4786d87a920494.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210401%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210401T012356Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=607ab6716ff4756788e8140ff63f28aff3bec5bce126e399458b0e5adfda4f93" alt="" style=""></p>**
+
+<pre><code>julien@twix:/tmp/so$ cat int.py 
+print("I")
+print("Love")
+print("Python")
+julien@ubuntu:/tmp/so$ 
+</code></pre>
+
+### 106-line1.txt, 106-line2.txt, 106-line3.txt, 106-line4.txt, 106-line5.txt
+
+**<p>Assuming we are using a CPython implementation of Python3 with default options/configuration (For answers with numbers use integers, don’t spell out the word)</p>**
+
+<pre><code>guillaume@ubuntu:/python3$ cat string.py 
+a = "HBTN"
+b = "HBTN"
+del a
+del b
+c = "HBTN"
+guillaume@ubuntu:/python3$ 
+</code></pre>
+

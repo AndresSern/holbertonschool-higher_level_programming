@@ -1,6 +1,6 @@
 # 0x07. Python - Test-driven development
 
-## GENERAL:
+## GENERAL :open_book::open_book::open_book::
 
  <ol>
 	<li>Why Python programming is awesome</li>
@@ -15,33 +15,25 @@
 ## RESOURCES:
 
  <ol>
-	<li>Based on the requirements of each task, <strong>you should always write the documentation (module(s) + function(s)) and tests first</strong>, before you actually code anything</li>
-	<li>The intranet checks for Python projects won’t be released before their first deadline, in order for you to focus more on TDD and think about all possible cases</li>
-	<li>We strongly encourage you to work together on test cases, so that you don’t miss any edge case. <strong>But not in the implementation of them!</strong></li>
-	<li><strong>Don’t trust the user</strong>, always think about all possible edge cases</li>
+	<li><a href="/rltoken/alaT1C9CeCbkRKh-yjMRww" title="doctest — Test interactive Python examples" target="_blank">doctest — Test interactive Python examples</a> (<em>until “26.2.3.7. Warnings” included</em>)</li>
+	<li><a href="/rltoken/cpEYbv_Z55QrSVRiuG5tUw" title="doctest – Testing through documentation" target="_blank">doctest – Testing through documentation</a> </li>
+	<li><a href="/rltoken/CELicn3K8hODQsWZak_h0g" title="Unit Tests in Python" target="_blank">Unit Tests in Python</a></li>
 </ol>
 
-## INTRODUCTION TO FILES:
+## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
 
-0.	[**0-add_integer.py**:](#0-add_integerpy)  function that adds 2 integers.
-1.	[**2-matrix_divided.py*:](#2-matrix_dividedpy)  function that divides all elements of a matrix.Note: you might have a different number of tests than in the above example. As usual, your tests should cover all possible cases.
-2.	[**3-say_my_name.py**:](#3-say_my_namepy)  function that prints <code>My name is &lt;first name&gt; &lt;last name&gt;</code>Note: you might have a different number of tests than in the above example. As usual, your tests should cover all possible cases.
-3.	[**4-print_square.py**:](#4-print_squarepy)  function that prints a square with the character <code>#</code>.
-4.	[**5-text_indentation.py**:](#5-text_indentationpy)  function that prints a text with 2 new lines after each of these characters: <code>.</code>, <code>?</code> and <code>:</code>
-5.	[**tests/6-max_integer_test.py**:](#tests6-max_integer_testpy) Since the beginning you have been creating “Interactive tests”. For this exercise, you will add Unittests.In this task, you will write unittests for the function <code>def max_integer(list=[]):</code>.
+0.	[**0-add_integer.py, tests/0-add_integer.txt**:](#0-add_integerpy-tests0-add_integertxt) Function that adds 2 integers.
+1.	[**2-matrix_divided.py, tests/2-matrix_divided.txt**:](#2-matrix_dividedpy-tests2-matrix_dividedtxt) Function that divides all elements of a matrix.Note you might have a different number of tests than in the above example. As usual, your tests should cover all possible cases.
+2.	[**3-say_my_name.py, tests/3-say_my_name.txt**:](#3-say_my_namepy-tests3-say_my_nametxt) Function that prints <code>My name is &lt;first name&gt; &lt;last name&gt;</code>Note you might have a different number of tests than in the above example. As usual, your tests should cover all possible cases.
+3.	[**4-print_square.py, tests/4-print_square.txt**:](#4-print_squarepy-tests4-print_squaretxt) Function that prints a square with the character <code>#</code>.
+4.	[**5-text_indentation.py, tests/5-text_indentation.txt**:](#5-text_indentationpy-tests5-text_indentationtxt) Function that prints a text with 2 new lines after each of these characters <code>.</code>, <code>?</code> and <code></code>
+5.	[**tests/6-max_integer_test.py**:](#tests6-max_integer_testpy) Since the beginning you have been creating “Interactive tests”. For this exercise, you will add Unittests.In this task, you will write unittests for the function <code>def max_integer(list=[])</code>.
 
-## FILES:
+## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::
 
-### 0-add_integer.py
+### 0-add_integer.py, tests/0-add_integer.txt
 
-*<p>Function that adds 2 integers.</p>*
-
-<ul>
-	<li>Prototype: <code>def add_integer(a, b=98):</code></li>
-	<li><code>a</code> and <code>b</code> must be integers or floats, otherwise raise a <code>TypeError</code> exception with the message <code>a must be an integer</code> or <code>b must be an integer</code></li>
-	<li><code>a</code> and <code>b</code> must be first casted to integers if they are float</li>
-	<li>Returns an integer: the addition of <code>a</code> and <code>b</code></li>
-</ul>
+**<p>Function that adds 2 integers.</p>**
 
 <pre><code>guillaume@ubuntu:~/0x07$ cat 0-main.py
 #!/usr/bin/python3
@@ -74,22 +66,12 @@ guillaume@ubuntu:~/0x07$ python3 -c 'print(__import__("0-add_integer").__doc__)'
 5
 guillaume@ubuntu:~/0x07$ python3 -c 'print(__import__("0-add_integer").add_integer.__doc__)' | wc -l
 3
-guillaume@ubuntu:~/0x07$ 
+guillaume@ubuntu:~/0x07$
 </code></pre>
 
-### 2-matrix_divided.py
+### 2-matrix_divided.py, tests/2-matrix_divided.txt
 
-*<p>Function that divides all elements of a matrix.</p><p>Note: you might have a different number of tests than in the above example. As usual, your tests should cover all possible cases.</p>*
-
-<ul>
-	<li>Prototype: <code>def matrix_divided(matrix, div):</code></li>
-	<li><code>matrix</code> must be a list of lists of integers or floats, otherwise raise a <code>TypeError</code> exception with the message <code>matrix must be a matrix (list of lists) of integers/floats</code></li>
-	<li>Each row of the <code>matrix</code> must be of the same size, otherwise raise a <code>TypeError</code> exception with the message <code>Each row of the matrix must have the same size</code></li>
-	<li><code>div</code> must be a number (integer or float), otherwise raise a <code>TypeError</code> exception with the message <code>div must be a number</code></li>
-	<li><code>div</code> can’t be equal to <code>0</code>, otherwise raise a <code>ZeroDivisionError</code> exception with the message <code>division by zero</code></li>
-	<li>All elements of the matrix should be divided by <code>div</code>, rounded to 2 decimal places </li>
-	<li>Returns a new matrix</li>
-</ul>
+**<p>Function that divides all elements of a matrix.</p><p>Note you might have a different number of tests than in the above example. As usual, your tests should cover all possible cases.</p>**
 
 <pre><code>guillaume@ubuntu:~/0x07$ cat 2-main.py
 #!/usr/bin/python3
@@ -108,17 +90,12 @@ guillaume@ubuntu:~/0x07$ ./2-main.py
 guillaume@ubuntu:~/0x07$ python3 -m doctest -v ./tests/2-matrix_divided.txt | tail -2
 5 passed and 0 failed.
 Test passed.
-guillaume@ubuntu:~/0x07$ 
+guillaume@ubuntu:~/0x07$
 </code></pre>
 
-### 3-say_my_name.py
+### 3-say_my_name.py, tests/3-say_my_name.txt
 
-*<p>Function that prints <code>My name is &lt;first name&gt; &lt;last name&gt;</code></p><p>Note: you might have a different number of tests than in the above example. As usual, your tests should cover all possible cases.</p>*
-
-<ul>
-	<li>Prototype: <code>def say_my_name(first_name, last_name=""):</code></li>
-	<li><code>first_name</code> and <code>last_name</code> must be strings otherwise, raise a <code>TypeError</code> exception with the message <code>first_name must be a string</code> or <code>last_name must be a string</code></li>
-</ul>
+**<p>Function that prints <code>My name is &lt;first name&gt; &lt;last name&gt;</code></p><p>Note you might have a different number of tests than in the above example. As usual, your tests should cover all possible cases.</p>**
 
 <pre><code>guillaume@ubuntu:~/0x07$ cat 3-main.py
 #!/usr/bin/python3
@@ -140,20 +117,12 @@ first_name must be a string$
 guillaume@ubuntu:~/0x07$ python3 -m doctest -v ./tests/3-say_my_name.txt | tail -2
 5 passed and 0 failed.
 Test passed.
-guillaume@ubuntu:~/0x07$ 
+guillaume@ubuntu:~/0x07$
 </code></pre>
 
-### 4-print_square.py
+### 4-print_square.py, tests/4-print_square.txt
 
-*<p>Function that prints a square with the character <code>#</code>.</p>*
-
-<ul>
-	<li>Prototype: <code>def print_square(size):</code></li>
-	<li><code>size</code> is the size length of the square</li>
-	<li><code>size</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>size must be an integer</code></li>
-	<li>if <code>size</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>size must be &gt;= 0</code></li>
-	<li>if <code>size</code> is a float and is less than 0, raise a <code>TypeError</code> exception with the message <code>size must be an integer</code></li>
-</ul>
+**<p>Function that prints a square with the character <code>#</code>.</p>**
 
 <pre><code>guillaume@ubuntu:~/0x07$ cat 4-main.py
 #!/usr/bin/python3
@@ -196,18 +165,12 @@ guillaume@ubuntu:~/0x07$ ./4-main.py
 size must be &gt;= 0
 
 guillaume@ubuntu:~/0x07$ python3 -m doctest -v ./tests/4-print_square.txt
-guillaume@ubuntu:~/0x07$ 
+guillaume@ubuntu:~/0x07$
 </code></pre>
 
-### 5-text_indentation.py
+### 5-text_indentation.py, tests/5-text_indentation.txt
 
-*<p>Function that prints a text with 2 new lines after each of these characters: <code>.</code>, <code>?</code> and <code>:</code></p>*
-
-<ul>
-	<li>Prototype: <code>def text_indentation(text):</code></li>
-	<li><code>text</code> must be a string, otherwise raise a <code>TypeError</code> exception with the message <code>text must be a string</code></li>
-	<li>There should be no space at the beginning or at the end of each printed line</li>
-</ul>
+**<p>Function that prints a text with 2 new lines after each of these characters <code>.</code>, <code>?</code> and <code></code></p>**
 
 <pre><code>guillaume@ubuntu:~/0x07$ cat 5-main.py
 #!/usr/bin/python3
@@ -252,21 +215,12 @@ Quae animi affectio suum cuique tribuens atque hanc, quam dico.$
 $
 Utinam quidem dicerent alium alio beatiorem! Iam ruinas videresguillaume@ubuntu:~/0x07$
 guillaume@ubuntu:~/0x07$ python3 -m doctest -v ./tests/5-text_indentation.txt
-guillaume@ubuntu:~/0x07$ 
+guillaume@ubuntu:~/0x07$
 </code></pre>
 
 ### tests/6-max_integer_test.py
 
-*<p>Since the beginning you have been creating “Interactive tests”. For this exercise, you will add Unittests.</p><p>In this task, you will write unittests for the function <code>def max_integer(list=[]):</code>.</p>*
-
-<ul>
-	<li>test file should be inside a folder <code>tests</code></li>
-	<li>You have to use the <a href="/rltoken/qMqF1bBJXSAIjg8tugitHQ" title="unittest module" target="_blank">unittest module</a> </li>
-	<li>test file should be python files (extension: <code>.py</code>)</li>
-	<li>test file should be executed by using this command: <code>python3 -m unittest tests.6-max_integer_test</code> </li>
-	<li>All tests you make must be passable by the function below</li>
-	<li>We strongly encourage you to work together on test cases, so that you don’t miss any edge case</li>
-</ul>
+**<p>Since the beginning you have been creating “Interactive tests”. For this exercise, you will add Unittests.</p><p>In this task, you will write unittests for the function <code>def max_integer(list=[])</code>.</p>**
 
 <pre><code>guillaume@ubuntu:~/0x07$ cat 6-max_integer.py
 #!/usr/bin/python3
@@ -288,7 +242,7 @@ def max_integer(list=[]):
         i += 1
     return result
 
-guillaume@ubuntu:~/0x07$ 
+guillaume@ubuntu:~/0x07$
 guillaume@ubuntu:~/0x07$ cat 6-main.py
 #!/usr/bin/python3
 max_integer = __import__('6-max_integer').max_integer
@@ -303,7 +257,7 @@ guillaume@ubuntu:~/0x07$
 guillaume@ubuntu:~/0x07$ python3 -m unittest tests.6-max_integer_test 2&gt;&amp;1 | tail -1
 OK
 guillaume@ubuntu:~/0x07$
-guillaume@ubuntu:~/0x07$ head -7 tests/6-max_integer_test.py 
+guillaume@ubuntu:~/0x07$ head -7 tests/6-max_integer_test.py
 #!/usr/bin/python3
 """Unittest for max_integer([..])
 """
@@ -311,5 +265,6 @@ import unittest
 max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
-guillaume@ubuntu:~/0x07$ 
+guillaume@ubuntu:~/0x07$
 </code></pre>
+
