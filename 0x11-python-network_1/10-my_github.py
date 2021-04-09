@@ -13,5 +13,5 @@ if __name__ == "__main__":
     headers = {"Authorization": 'token'}
     res = requests.get("https://api.github.com/user",
                        auth=HTTPBasicAuth(username, password))
-    id_json =res.json().get("id")
+    id_json = res.json().get("id")
     print(id_json)
