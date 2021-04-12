@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Start link class to table in database
+"""
+Start link class to table in database
 """
 from sys import argv
 from model_state import Base, State
@@ -21,5 +22,5 @@ if __name__ == "__main__":
     result = session.query(State).order_by(State.id.asc().all())
 
     for row in result:
-        print("{} : {}".format(row.id, row.name))
+        print("{}: {}".format(row.id, row.name))
     session.close()
