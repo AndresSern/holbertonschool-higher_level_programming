@@ -1,7 +1,7 @@
 #!/usr/bin/node
 /*
  * Script that prints the number of movies where the character "Wedge Antilles"
- * is present
+ * is present.
 */
 const url = 'https://swapi-api.hbtn.io/api/films';
 const request = require('request');
