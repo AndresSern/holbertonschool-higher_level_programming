@@ -5,10 +5,10 @@
 
 const fs = require('fs');
 const file = process.argv[2];
-const string_write = process.argv[3];
+const stringWrite = process.argv[3];
 
-fs.writeFile(file, string_write, function (err) {
+fs.writeFile(file, stringWrite, function (err) {
   if (err) {
-    console.log(error);
+    console.log(err);
   }
 });
