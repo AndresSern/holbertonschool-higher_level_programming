@@ -9,7 +9,7 @@ const request = require('request');
 
 request(url, function (err, result, body) {
   const films = body;
-  const ocurrencesFilms = films.split('/people/18/').length - 1;
+  const ocurrencesFilms = films.split('https://swapi-api.hbtn.io/api/people/18/').length - 1;
   console.log(ocurrencesFilms);
   if (err) {
     console.log(err);
