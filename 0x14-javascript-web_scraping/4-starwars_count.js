@@ -9,8 +9,8 @@ const request = require('request');
 
 request(url, function (err, result, body) {
   const films = body;
-  const ocurrencesFilms = films.split('https://swapi-api.hbtn.io/api/people/18/').length - 1;
-  console.log(ocurrencesFilms);
+  const countFilms = films.split('https://swapi-api.hbtn.io/api/people/18/').length - 1;
+  countFilms === -1 ? console.log(0) : console.log(countFilms);
   if (err) {
     console.log(err);
   }
