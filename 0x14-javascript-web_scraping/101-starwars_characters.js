@@ -12,7 +12,8 @@ request.get(url, (err, res, body) => {
     console.error(err);
   } else {
     const characters = JSON.parse(body).characters;
-    for (let i = 0; i < characters.length; i++) {
+    let i = 0;
+    while(i < characters.length) {
       request.get(characters[i], (err, res, body) => {
         if (err) {
           console.error(err);
@@ -21,6 +22,7 @@ request.get(url, (err, res, body) => {
           console.log(name);
         }
       });
+     i++;
     }
   }
 });
