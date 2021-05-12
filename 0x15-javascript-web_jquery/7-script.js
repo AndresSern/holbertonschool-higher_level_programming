@@ -1,8 +1,10 @@
-/* Script that updates the text of the <header> element to 
-New Header!!! when the user clicks on DIV#update_header */
+/* Write a JavaScript script that fetches the character name 
+from this URL: https://swapi-api.hbtn.io/api/people/5/?format=jsonr */
 $(document).ready(function () {
-	divUpdateHeader = $("div#update_header");
-	$(divUpdateHeader).click(function () {
-		$(divUpdateHeader).text("New Header!!!");
-	});
+	$.getJSON(
+		"https://swapi-api.hbtn.io/api/people/5/?format=json",
+		function (data) {
+			$("div#character").text(data.name);
+		}
+	);
 });
