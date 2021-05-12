@@ -1,2 +1,2 @@
 header = document.querySelector("header");
-header.text = "Hola";
+header.style.color = "#FF0000";
