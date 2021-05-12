@@ -1,7 +1,7 @@
 /* Script that adds a <li> element to a list when 
 the user clicks on the tag DIV#add_item: */
 $(document).ready(function () {
-	divAddItem = $("div#add_item");
+	const divAddItem = $("div#add_item");
 	$(divAddItem).click(function () {
 		$(".my_list").append("<li>Item</li>");
 	});
