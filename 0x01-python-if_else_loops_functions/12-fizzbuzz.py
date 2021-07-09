@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+""" #!/usr/bin/python3 """
 def fizzbuzz():
     count = 1
     while(count < 100):
