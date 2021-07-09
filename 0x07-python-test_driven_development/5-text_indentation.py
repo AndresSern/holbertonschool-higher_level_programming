@@ -8,8 +8,7 @@ def text_indentation(text):
     '''Function that a text with 2 new lines
     after each of these characters: .,? and :
     '''
-
-    if type(text) is not str:
+    if isinstance(text, str):
         raise TypeError("text must be a string")
 
     i = 0
